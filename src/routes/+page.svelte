@@ -2,6 +2,8 @@
 	import Test from '$components/Test.svelte';
 </script>
 
-<h1 class="font-bold text-4xl">Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<Test />
+<div class="h-[5000px] z-[1] text-white overflow-hidden">
+	<span class="font-bold text-4xl">Welcome to SvelteKit</span>
+	<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+	<Test />
+</div>
