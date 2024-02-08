@@ -4,13 +4,20 @@
 	export let position: string = '';
 	export let zIndex: string = '';
 	export let timing: string = '0s';
+	export let isRerverse: boolean = false;
 </script>
 
 <div
-	class="w-[200px] h-[200px] absolute bottom-2 avatar-jump {position} {zIndex} "
+	class="w-[220px] h-[220px] 3xl:w-[270px] 3xl:h-[270px] absolute bottom-2 avatar-jump
+   {position} {zIndex}"
 	style={`--delay-sec:${timing};`}
 >
-	<img src={path} draggable="false" alt="image{index}" class="object-cover scale-125" />
+	<img
+		src={path}
+		draggable="false"
+		alt="image{index}"
+		class="object-cover {isRerverse && 'revert'}"
+	/>
 </div>
 
 <style>
@@ -18,6 +25,15 @@
 	:root {
 		--delay-sec: -2s;
 	}
+
+	.avatar-jump {
+		animation: jump 8s var(--delay-sec) infinite;
+	}
+
+	.revert {
+		transform: scaleX(-1);
+	}
+
 	@keyframes jump {
 		0% {
 			transform: translateY(0px);
@@ -88,9 +104,5 @@
 		100% {
 			transform: translateY(0px);
 		}
-	}
-
-	.avatar-jump {
-		animation: jump 8s var(--delay-sec) infinite;
 	}
 </style>
