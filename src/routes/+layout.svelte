@@ -4,4 +4,6 @@
 </script>
 
 <Background />
-<slot />
+<div class="w-full h-[8000px] relative box-border">
+	<slot />
+</div>

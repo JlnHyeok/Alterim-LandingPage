@@ -1,9 +1,14 @@
 <script lang="ts">
+	import Intro from './../components/Intro/Intro.svelte';
 	import Test from '$components/Test.svelte';
+	import Header from '$components/Header/Header.svelte';
+	import Order from '$components/Order/Order.svelte';
 </script>
 
-<div class="h-[5000px] z-[1] text-white overflow-hidden">
-	<span class="font-bold text-4xl">Welcome to SvelteKit</span>
-	<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-	<Test />
+<div class="z-[1] text-white relative">
+	<Header />
+	<div class="pt-16">
+		<Intro />
+		<Order />
+	</div>
 </div>

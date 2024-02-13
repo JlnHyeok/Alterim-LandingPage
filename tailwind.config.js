@@ -13,7 +13,11 @@ export default {
 				'3xl': '1920px',
 				'4xl': '2560px'
 			},
-
+			fontFamily: {
+				Pretendard_ExtraLight: ['Pretendard-ExtraLight'],
+				Pretendard_Light: ['Pretendard-Light'],
+				Pretendard_Regular: ['Pretendard-Regular']
+			},
 			colors: {
 				...colors,
 				font: {
