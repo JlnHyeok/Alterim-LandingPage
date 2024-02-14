@@ -9,6 +9,7 @@
 	<!-- For more features use the AutoHTML plugin window in figma ... -->
 	<a
 		href="https://alterim-ai.gitbook.io/welcometoalterim/"
+		target="_blank"
 		class="bg-[#ffffff] rounded-[40px] py-2 flex flex-row gap-2.5 items-center justify-center w-[200px] relative overflow-hidden"
 		style="box-shadow: 0px 9px 34px 0px rgba(212, 212, 212, 0.50); "
 	>

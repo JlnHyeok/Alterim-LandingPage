@@ -18,6 +18,11 @@ import ScrollDown from './scroll-down.png';
 import CardWrap from './card-wrap.png';
 import CardIn from './card-in.png';
 import ProfileCat from './profile/profile-cat.png';
+import StartingImg from './starting.png';
+import Comming1 from './comming-1.png';
+import Comming2 from './comming-2.png';
+import Comming3 from './comming-3.png';
+import Comming4 from './comming-4.png';
 
 export const Avatar = [
 	Avatar1,
@@ -37,4 +42,15 @@ export const Avatar = [
 	Avatar15
 ];
 
-export { Logo, ScrollDown, CardWrap, CardIn, ProfileCat };
+export {
+	Logo,
+	ScrollDown,
+	CardWrap,
+	CardIn,
+	ProfileCat,
+	StartingImg,
+	Comming1,
+	Comming2,
+	Comming3,
+	Comming4
+};
