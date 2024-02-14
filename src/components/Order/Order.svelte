@@ -1,84 +1,102 @@
 <script lang="ts">
-	import { CardIn, CardWrap } from '$lib/assets/images';
+	import Arrow from './Arrow.svelte';
 	import { inview } from 'svelte-inview';
+	import ThirdCard from './ThirdCard.svelte';
+	import ClickBtn from './ClickBtn.svelte';
+	import SecondCard from './SecondCard.svelte';
+	import { fade } from 'svelte/transition';
 
+	let isTextInView: boolean;
 	let isCardInView: boolean;
+	let currentNumber: number = 2;
+
+	function changeNumber() {
+		if (currentNumber == 2) {
+			currentNumber = 3;
+		} else {
+			currentNumber = 2;
+		}
+	}
+
+	let timer = setInterval(() => {
+		changeNumber();
+	}, 15000);
+
+	function onClickNumberBtn(number: number) {
+		currentNumber = number;
+		clearInterval(timer);
+		timer = setInterval(() => {
+			changeNumber();
+		}, 15000);
+	}
 </script>
 
-<div class="relative w-full h-screen p-10 box-border">
-	<main class="relative w-full h-full flex flex-col gap-4 justify-center">
+<div class="relative w-full h-[100vh] p-10 box-border">
+	<main
+		class="relative w-full h-full flex flex-col justify-center gap-10"
+		use:inview={{ unobserveOnEnter: false, rootMargin: '-40%' }}
+		on:inview_change={({ detail }) => {
+			const { inView } = detail;
+			isTextInView = inView;
+		}}
+	>
 		<!-- TEXT SECTION -->
 		<div
-			class="w-[800px] h-[300px] font-Pretendard_Regular text-[3rem] mx-auto text-center duration-[1.2s]
-			{isCardInView ? 'opacity-1 scale-100' : 'opacity-0 scale-0'}"
+			class="w-[800px] h-[300px] font-Pretendard_Regular text-[3rem] mx-auto flex flex-col items-center justify-center gap-2 duration-[1.5s]
+      {isTextInView ? 'opacity-100' : 'opacity-0'}"
 		>
-			<span class="text-white">Welcome to </span>
-			<span class="text-font-highlight">Alterim</span>
-			<span class="text-white"> , where your </span> <br />
-			<span> PFP now has a story, </span><br />
-			<span>a personality, and a life of its own </span>
+			<div>
+				<span class="text-white">Revitalize Your </span>
+				<span class="text-font-highlight"> PFP </span>
+				<span class="text-white">into </span>
+				<span class="text-font-highlight">Clone</span>
+			</div>
+			<div class="font-Pretendard_Light text-[1.5rem] text-center">
+				<span>Your PFP is no longer just a collectible; it’s uniquely crafted personas </span><br />
+				<span>with their own identity powered by </span>
+				<span class="text-font-subHighlight">Alterim.ai</span>
+			</div>
 		</div>
 
 		<!-- SOUL CARD SECTION -->
 		<div
-			class="relative flex justify-center w-[300px] 3xl:w-[450px] h-20 items-center mx-auto"
-			use:inview={{ unobserveOnEnter: false, rootMargin: '0%' }}
+			class="relative flex flex-col gap-12 justify-start w-[1000px] h-full 3xl:w-[1200px] items-center mx-auto duration-[1s]
+      {isCardInView ? 'opacity-100' : 'opacity-0'}"
+			use:inview={{ unobserveOnEnter: false, rootMargin: '-45%' }}
 			on:inview_change={({ detail }) => {
 				const { inView } = detail;
 				isCardInView = inView;
 			}}
 		>
-			<div
-				class="absolute w-20 h-20 opacity-0 left-[0px]
-				{isCardInView && `card-wrap-animation`}"
-			>
-				<img src={CardWrap} alt="card-wrap" class="object-cover w-full" />
+			<div class="flex w-full justify-center items-center gap-5">
+				<ClickBtn number={1} text="Select Your NFT" onClick={() => {}} />
+				<Arrow />
+				<ClickBtn
+					number={2}
+					text="Generating AI Soul"
+					isSelect={currentNumber == 2}
+					onClick={() => onClickNumberBtn(2)}
+				/>
+				<Arrow />
+				<ClickBtn
+					number={3}
+					text="Meet Clone"
+					isSelect={currentNumber == 3}
+					onClick={() => onClickNumberBtn(3)}
+				/>
 			</div>
-			<div
-				id="card-in"
-				class="absolute w-14 h-14 opacity-0 right-[0px]
-				{isCardInView && `card-in-animation`}"
-			>
-				<img src={CardIn} alt="card-in" class="object-cover w-full h-full" />
+			<div class="w-full h-full flex justify-center">
+				{#if currentNumber === 2}
+					<!-- content here -->
+					<div in:fade={{ duration: 300 }} out:fade={{ duration: 0 }}>
+						<SecondCard />
+					</div>
+				{:else if currentNumber === 3}
+					<div in:fade={{ duration: 300 }} out:fade={{ duration: 0 }}>
+						<ThirdCard />
+					</div>
+				{/if}
 			</div>
 		</div>
 	</main>
 </div>
-
-<style>
-	/* Generate translate X absolute Animation */
-	@keyframes card-wrap-animation {
-		0% {
-			left: 0px;
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-			left: 50%;
-			transform: translateX(-50%);
-		}
-	}
-	@keyframes card-in-animation {
-		0% {
-			right: 0px;
-			opacity: 0;
-		}
-		60% {
-			filter: brightness(1);
-		}
-		100% {
-			opacity: 1;
-			right: 50%;
-			transform: translateX(50%);
-			filter: brightness(0);
-		}
-	}
-
-	/* Generate Animation class */
-	.card-wrap-animation {
-		animation: card-wrap-animation 1s 0.4s ease-in-out forwards;
-	}
-	.card-in-animation {
-		animation: card-in-animation 1s 0.4s ease-in-out forwards;
-	}
-</style>

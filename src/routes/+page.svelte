@@ -2,6 +2,7 @@
 	import Intro from './../components/Intro/Intro.svelte';
 	import Test from '$components/Test.svelte';
 	import Header from '$components/Header/Header.svelte';
+	import Welcome from '$components/Welcome/Welcome.svelte';
 	import Order from '$components/Order/Order.svelte';
 </script>
 
@@ -9,6 +10,7 @@
 	<Header />
 	<div class="pt-16">
 		<Intro />
+		<Welcome />
 		<Order />
 	</div>
 </div>

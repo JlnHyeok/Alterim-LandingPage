@@ -17,6 +17,7 @@ import Logo from './logo.png';
 import ScrollDown from './scroll-down.png';
 import CardWrap from './card-wrap.png';
 import CardIn from './card-in.png';
+import ProfileCat from './profile/profile-cat.png';
 
 export const Avatar = [
 	Avatar1,
@@ -36,4 +37,4 @@ export const Avatar = [
 	Avatar15
 ];
 
-export { Logo, ScrollDown, CardWrap, CardIn };
+export { Logo, ScrollDown, CardWrap, CardIn, ProfileCat };
