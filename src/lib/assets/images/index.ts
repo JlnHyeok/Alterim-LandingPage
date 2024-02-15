@@ -23,6 +23,8 @@ import Comming1 from './comming-1.png';
 import Comming2 from './comming-2.png';
 import Comming3 from './comming-3.png';
 import Comming4 from './comming-4.png';
+import RoadMapDefault from './roadmap-default.png';
+import RoadMapHover from './roadmap-hover.png';
 
 export const Avatar = [
 	Avatar1,
@@ -52,5 +54,7 @@ export {
 	Comming1,
 	Comming2,
 	Comming3,
-	Comming4
+	Comming4,
+	RoadMapDefault,
+	RoadMapHover
 };

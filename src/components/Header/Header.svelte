@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Title from './Title.svelte';
+	import Title from '$components/Common/Title.svelte';
 </script>
 
 <div class="h-20 w-full z-20 fixed bg-opacity-0 flex justify-between items-center px-5">
 	<div>
-		<Title />
+		<Title iconColor="white" textColor="white" />
 	</div>
 	<!-- For more features use the AutoHTML plugin window in figma ... -->
 	<a

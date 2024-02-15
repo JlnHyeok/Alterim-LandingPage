@@ -11,6 +11,7 @@
 	import Learn from '$components/Learn/Learn.svelte';
 	import RoadMap from '$components/RoadMap/RoadMap.svelte';
 	import Footer from '$components/Footer/Footer.svelte';
+	import Outro from '$components/Outro/Outro.svelte';
 </script>
 
 <div class="z-[1] text-white relative">
@@ -25,6 +26,7 @@
 		<Comming />
 		<Learn />
 		<RoadMap />
+		<Outro />
 		<Footer />
 	</div>
 </div>

@@ -5,7 +5,7 @@
 	let isInView: boolean;
 </script>
 
-<div class="relative w-full h-[120vh] p-10">
+<div id="welcome" class="relative w-full h-[90vh] p-10">
 	<main class="relative w-full h-full flex flex-col gap-4 mt-20 justify-center">
 		<!-- TEXT SECTION -->
 		<div

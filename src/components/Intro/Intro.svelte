@@ -3,9 +3,9 @@
 	import AvatarList from './AvatarList.svelte';
 </script>
 
-<div class="relative w-full text-white">
+<div class="relative w-full h-screen text-white">
 	<!-- TITLE SECTION -->
-	<div class="w-full h-[450px] flex flex-col items-center relative">
+	<div class="w-full h-1/2 flex flex-col items-center relative">
 		<!-- LOGO -->
 		<div class="w-16 h-20 mt-[160px]">
 			<img src={Logo} alt="logo" class="object-cover" />
@@ -21,7 +21,7 @@
 			<p>Where Your Digital Clone Comes to Life powered by AI</p>
 		</div>
 
-		<div class="absolute flex flex-col items-center h-14 -bottom-24 z-20">
+		<a href="#welcome" class="absolute flex flex-col items-center h-14 -bottom-24 z-20">
 			<span
 				class="font-Pretendard_ExtraLight [text-shadow:0px_0px_10px_#ffffff80] text-[#ffffffbf] text-[1rem]"
 				>scroll down</span
@@ -29,11 +29,11 @@
 			<div class="relative mt-4">
 				<img src={ScrollDown} alt="scroll-down" />
 			</div>
-		</div>
+		</a>
 	</div>
 
 	<!-- AVATAR SECTION -->
-	<div class="w-full relative text-center">
+	<div class="w-full h-[calc(50%-80px)] relative text-center flex items-end">
 		<AvatarList />
 	</div>
 </div>
