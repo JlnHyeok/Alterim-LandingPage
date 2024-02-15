@@ -4,7 +4,14 @@
 	import { Logo, ScrollDown } from '$lib/assets/images';
 	import AvatarList from './AvatarList.svelte';
 
-	export let isInView: boolean;
+	let isFirstTime: boolean = true;
+	let isInView: boolean;
+
+	setTimeout(() => {
+		isFirstTime = false;
+	}, 5000);
+
+	$: delay = isFirstTime ? 3300 : 0;
 </script>
 
 <div
@@ -21,7 +28,7 @@
 		{#if isInView}
 			<div
 				class="w-16 h-20 mt-[160px]"
-				in:scale={{ duration: 400, delay: 300, start: 1.5, opacity: 0 }}
+				in:scale={{ duration: 400, delay: delay, start: 1.5, opacity: 0 }}
 			>
 				<img src={Logo} alt="logo" class="object-cover" />
 			</div>
@@ -31,7 +38,7 @@
 		{#if isInView}
 			<div
 				class="font-Pretendard_Regular font-normal text-white text-[48px]"
-				in:scale={{ duration: 400, delay: 500, start: 1.5, opacity: 0 }}
+				in:scale={{ duration: 400, delay: delay + 200, start: 1.5, opacity: 0 }}
 			>
 				<h1>Meet Your Other Self in the Web3</h1>
 			</div>
@@ -41,7 +48,7 @@
 		{#if isInView}
 			<div
 				class="font-Pretendard_Light text-[24px] text-[#ffffffbf]"
-				in:scale={{ duration: 800, delay: 800, start: 1, opacity: 0 }}
+				in:scale={{ duration: 800, delay: delay + 500, start: 1, opacity: 0 }}
 			>
 				<p>Where Your Digital Clone Comes to Life powered by AI</p>
 			</div>
@@ -60,6 +67,6 @@
 
 	<!-- AVATAR SECTION -->
 	<div class="w-full h-[calc(50%-80px)] relative text-center flex items-end">
-		<AvatarList bind:isInView />
+		<AvatarList bind:isInView bind:isFirstTime />
 	</div>
 </div>

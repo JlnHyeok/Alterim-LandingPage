@@ -1,8 +1,11 @@
 <script lang="ts">
 	import AvatarCard from '$components/Common/AvatarCard/AvatarCard.svelte';
 	import { Avatar } from '$lib/assets/images';
-	import { slide, fade, fly, scale } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 	export let isInView: boolean;
+	export let isFirstTime: boolean;
+
+	$: delay = isFirstTime ? 2500 : 0;
 </script>
 
 <div class="relative w-full h-[400px] m-auto z-10 overflow-hidden">
@@ -11,7 +14,7 @@
 		<!-- content here -->
 		<div
 			class="h-full w-full absolute"
-			in:fly={{ x: -200, y: 300, duration: 3000 }}
+			in:fly={{ x: -200, y: 300, duration: 3000, delay: delay }}
 			out:fade={{ duration: 1000 }}
 		>
 			<AvatarCard path={Avatar[0]} index={0} position="left-[-3%]" zIndex="z-[10]" timing="-3s" />
@@ -32,7 +35,7 @@
 	{/if}
 	<!-- CENTER SECTION -->
 	{#if isInView}
-		<div in:fade={{ duration: 2000 }} out:fade={{ duration: 1000 }}>
+		<div in:fade={{ duration: 2200, delay: delay }} out:fade={{ duration: 1000 }}>
 			<AvatarCard path={Avatar[7]} index={7} position="left-[44%]" zIndex="z-[3]" timing="-4.3s" />
 		</div>
 	{/if}
@@ -42,7 +45,7 @@
 		<!-- content here -->
 		<div
 			class="w-full h-full absolute"
-			in:fly={{ x: 200, y: 300, duration: 3000 }}
+			in:fly={{ x: 200, y: 300, duration: 3000, delay: delay }}
 			out:fade={{ duration: 1000 }}
 		>
 			<AvatarCard path={Avatar[8]} index={8} position="left-[51%]" zIndex="z-[4]" timing="-2.3s" />
