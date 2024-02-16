@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="scale-animation w-full text-font-dark h-screen z-30 fixed bg-black font-Pretendard_Light flex justify-center items-center text-[3rem] gap-3"
+	class="scale-animation w-screen h-screen text-font-dark z-30 fixed bg-black font-Pretendard_Light flex justify-center items-center text-[3rem] gap-3"
 >
 	<svg
 		class="fade-in opacity-0 duration-200 w-[60px] h-[60px] scale-90 relative overflow-visible flex justify-center items-center"

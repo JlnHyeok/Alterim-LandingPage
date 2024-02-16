@@ -17,7 +17,7 @@
 	];
 </script>
 
-<div class="min-w-screen lg:w-screen h-screen fixed bg-black z-0">
+<div class="w-screen h-screen fixed bg-black z-0">
 	<!-- CLOUD SECTION -->
 	<!-- TOP RIGHT -->
 	<Cloud position="top-[200px] right-[600px]" />
