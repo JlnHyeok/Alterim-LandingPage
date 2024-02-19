@@ -8,15 +8,15 @@
 
 	let isTextInView: boolean;
 	let isCardInView: boolean;
-	let currentNumber: number = 2;
+	let currentNumber: number = 3;
 	let timer: number;
 
 	function changeNumber() {
-		if (currentNumber == 2) {
-			currentNumber = 3;
-		} else {
-			currentNumber = 2;
-		}
+		// if (currentNumber == 2) {
+		// 	currentNumber = 3;
+		// } else {
+		// 	currentNumber = 2;
+		// }
 	}
 
 	$: if (isCardInView) {
@@ -34,7 +34,7 @@
 	}
 </script>
 
-<div class="relative box-border w-screen p-10 md:h-[100vh]">
+<div class="relative box-border h-screen w-screen p-10">
 	<main
 		class="relative flex h-full w-full flex-col justify-center gap-10"
 		use:inview={{ unobserveOnEnter: false, rootMargin: '-40%' }}

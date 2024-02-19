@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="relative flex h-[60vh] flex-col-reverse items-center justify-center gap-10 md:flex-row md:gap-[98px]"
+	class="relative flex h-[100vh] flex-col-reverse items-center justify-center gap-10 md:flex-row md:gap-[98px]"
 >
 	<div class="relative flex shrink-0 flex-col items-center justify-start gap-12">
 		<div

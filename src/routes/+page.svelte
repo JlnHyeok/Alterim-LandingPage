@@ -19,11 +19,10 @@
 		<Intro />
 		<Welcome />
 		<!-- WIDTH 해결 -->
-		<!-- <Order /> -->
+		<Order />
 		<Starting />
 		<Chat />
 		<Meet />
-		<!-- WIDTH 해결 -->
 		<Comming />
 		<Learn />
 
