@@ -21,6 +21,7 @@
 		>
 			Join Alterim World with
 		</h1>
+		<br class="hidden md:flex" />
 		<h1
 			class="font-Pretendard_Regular text-2xl text-font-dark opacity-0 duration-500 md:text-[3rem]
       {isTextInView ? 'scale-100 opacity-100' : 'scale-[2]'}"

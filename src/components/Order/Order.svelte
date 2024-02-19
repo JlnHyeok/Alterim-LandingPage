@@ -34,7 +34,7 @@
 	}
 </script>
 
-<div class="relative box-border h-screen w-screen p-10">
+<div class="relative box-border h-[120vh] w-screen p-10">
 	<main
 		class="relative flex h-full w-full flex-col justify-center gap-10"
 		use:inview={{ unobserveOnEnter: false, rootMargin: '-40%' }}

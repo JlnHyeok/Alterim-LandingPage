@@ -1,13 +1,24 @@
 <script lang="ts">
+	import { fade } from 'svelte/transition';
+	import { inview } from 'svelte-inview';
 	import { StartingImg } from '$lib/assets/images';
+
+	let isInView: boolean = false;
 </script>
 
 <div
-	class="relative flex h-[100vh] flex-col-reverse items-center justify-center gap-10 md:flex-row md:gap-[98px]"
+	class="relative flex h-[120vh] flex-col-reverse items-center justify-center gap-10 md:flex-row md:gap-[98px]"
+	use:inview={{ unobserveOnEnter: false, rootMargin: '-40%' }}
+	on:inview_change={({ detail }) => {
+		const { inView } = detail;
+		isInView = inView;
+	}}
 >
 	<div class="relative flex shrink-0 flex-col items-center justify-start gap-12">
 		<div
 			class="relative flex w-full items-center justify-center self-stretch text-left font-['Pretendard-Medium',_sans-serif] text-[32px] font-medium leading-[120%] md:text-right"
+			in:fade={{ duration: 1000, delay: 0 }}
+			out:fade={{ duration: 1000, delay: 0 }}
 		>
 			<div class="w-full">
 				<span class="relative w-full">Starting from</span><br />
@@ -24,10 +35,15 @@
 			utilize our platform, irrespective of their blockchain preference.
 		</div>
 	</div>
-	<img
-		class="relative h-[85%] max-h-[374px] w-[85%] max-w-[374px] shrink-0 rounded-[20px]"
-		style="object-fit: cover; "
-		src={StartingImg}
-		alt="StartingImg"
-	/>
+	{#if isInView}
+		<!-- content here -->
+		<img
+			in:fade={{ duration: 1000, delay: 0 }}
+			out:fade={{ duration: 1000, delay: 0 }}
+			class="relative h-[85%] max-h-[374px] w-[85%] max-w-[374px] shrink-0 rounded-[20px]"
+			style="object-fit: cover; "
+			src={StartingImg}
+			alt="StartingImg"
+		/>
+	{/if}
 </div>

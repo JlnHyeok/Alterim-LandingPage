@@ -17,7 +17,7 @@
 			alt={'comming' + idx}
 		/>
 	</div>
-	<div>
-		<img src={CommingBottom} alt="bottom" />
+	<div class="relative h-[4vw] w-full">
+		<img src={CommingBottom} alt="bottom" class="h-full w-full object-cover" />
 	</div>
 </div>
