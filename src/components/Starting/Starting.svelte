@@ -2,32 +2,32 @@
 	import { StartingImg } from '$lib/assets/images';
 </script>
 
-<div class="w-full h-[80vh] flex justify-center">
-	<div class="flex flex-row gap-[98px] items-center justify-start relative">
-		<div class="flex flex-col gap-12 items-end justify-start shrink-0 relative">
-			<div
-				class="text-right font-['Pretendard-Medium',_sans-serif] text-[32px] leading-[120%] font-medium relative self-stretch flex items-center justify-end"
-			>
-				<div>
-					<span class="starting-from-brc-20-to-multichain-span">Starting from</span><br />
-					<span class="text-font-highlight">BRC-20</span>
-					<span class="starting-from-brc-20-to-multichain-span3"> to multichain </span>
-				</div>
-			</div>
-			<div
-				class="text-[#ffffff] text-right font-['Pretendard-Light',_sans-serif] text-base leading-[160%] font-light relative w-[420px] flex items-center justify-end"
-			>
-				Embracing Interoperability with Alterim AI. While leveraging the excitement of the Bitcoin
-				ecosystem and its BRC-20 advantage, we go beyond. Alterim supports a wide array of chains,
-				enabling various wallet integrations. This approach ensures that any PFP holder can access
-				and utilize our platform, irrespective of their blockchain preference.
+<div
+	class="relative flex flex-col-reverse items-center justify-center gap-10 md:flex-row md:gap-[98px]"
+>
+	<div class="relative flex shrink-0 flex-col items-center justify-start gap-12">
+		<div
+			class="relative flex w-full items-center justify-center self-stretch text-left font-['Pretendard-Medium',_sans-serif] text-[32px] font-medium leading-[120%] md:text-right"
+		>
+			<div class="w-full">
+				<span class="relative w-full">Starting from</span><br />
+				<span class="relative w-full text-font-highlight">BRC-20</span>
+				<span class="relative w-full"> to multichain </span>
 			</div>
 		</div>
-		<img
-			class="rounded-[20px] shrink-0 w-[376px] h-[376px] relative"
-			style="object-fit: cover; "
-			src={StartingImg}
-			alt="StartingImg"
-		/>
+		<div
+			class="relative flex w-[85vw] items-center justify-end text-left font-Pretendard_Light font-light leading-[160%] text-[#ffffff] md:w-[420px] md:text-right"
+		>
+			Embracing Interoperability with Alterim AI. While leveraging the excitement of the Bitcoin
+			ecosystem and its BRC-20 advantage, we go beyond. Alterim supports a wide array of chains,
+			enabling various wallet integrations. This approach ensures that any PFP holder can access and
+			utilize our platform, irrespective of their blockchain preference.
+		</div>
 	</div>
+	<img
+		class="relative h-[376px] w-[376px] shrink-0 rounded-[20px]"
+		style="object-fit: cover; "
+		src={StartingImg}
+		alt="StartingImg"
+	/>
 </div>

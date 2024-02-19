@@ -2,7 +2,7 @@
 	import Title from '$components/Common/Title.svelte';
 </script>
 
-<div class="h-20 w-full z-20 fixed bg-opacity-0 flex justify-between items-center px-5">
+<div class="h-20 w-screen z-20 fixed bg-opacity-0 flex justify-between items-center px-2 md:px-5">
 	<div>
 		<Title iconColor="white" textColor="white" />
 	</div>
@@ -10,15 +10,15 @@
 	<a
 		href="https://alterim-ai.gitbook.io/welcometoalterim/"
 		target="_blank"
-		class="bg-[#ffffff] rounded-[40px] py-2 flex flex-row gap-2.5 items-center justify-center w-[200px] relative overflow-hidden"
+		class="bg-[#ffffff] rounded-[40px] py-2 flex flex-row gap-2.5 items-center justify-center w-[100px] md:w-[200px] relative overflow-hidden"
 		style="box-shadow: 0px 9px 34px 0px rgba(212, 212, 212, 0.50); "
 	>
 		<div
-			class="text-[#020202] text-center font-Pretendard_Regular text-lg font-normal relative flex items-center justify-center gap-2"
+			class="text-[#020202] text-center font-Pretendard_Regular text-sm md:text-lg font-normal relative flex items-center justify-center gap-2"
 		>
 			<span>Document</span>
 			<svg
-				class="shrink-0 w-[9.59px] h-[9.6px] relative overflow-visible"
+				class="shrink-0 w-[9.59px] h-[9.6px] relative overflow-visible hidden md:block"
 				style=""
 				width="10"
 				height="10"

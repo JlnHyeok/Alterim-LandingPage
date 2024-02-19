@@ -6,6 +6,6 @@
 
 <div class="w-screen relative box-border">
 	<Background />
-	<BackgroundIntro />
+	<!-- <BackgroundIntro /> -->
 	<slot />
 </div>

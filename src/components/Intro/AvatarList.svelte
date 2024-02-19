@@ -8,12 +8,12 @@
 	$: delay = isFirstTime ? 2500 : 0;
 </script>
 
-<div class="relative w-full h-[400px] m-auto z-10 overflow-hidden">
+<div class="relative z-10 m-auto h-[400px] w-full overflow-hidden">
 	<!-- LEFT SECTION -->
 	{#if isInView}
 		<!-- content here -->
 		<div
-			class="h-full w-full absolute"
+			class="absolute h-full w-full"
 			in:fly={{ x: -200, y: 300, duration: 3000, delay: delay }}
 			out:fade={{ duration: 1000 }}
 		>
@@ -32,19 +32,14 @@
 				isRerverse={true}
 			/>
 		</div>
-	{/if}
-	<!-- CENTER SECTION -->
-	{#if isInView}
+		<!-- CENTER SECTION -->
 		<div in:fade={{ duration: 2200, delay: delay }} out:fade={{ duration: 1000 }}>
 			<AvatarCard path={Avatar[7]} index={7} position="left-[44%]" zIndex="z-[3]" timing="-4.3s" />
 		</div>
-	{/if}
 
-	<!-- RIGHT SECTION -->
-	{#if isInView}
-		<!-- content here -->
+		<!-- RIGHT SECTION -->
 		<div
-			class="w-full h-full absolute"
+			class="absolute h-full w-full"
 			in:fly={{ x: 200, y: 300, duration: 3000, delay: delay }}
 			out:fade={{ duration: 1000 }}
 		>

@@ -5,12 +5,12 @@
 	let isInView: boolean;
 </script>
 
-<div id="welcome" class="relative w-full h-[90vh] p-10">
-	<main class="relative w-full h-full flex flex-col gap-4 mt-20 justify-center">
+<div id="welcome" class="relative h-[90vh] w-screen p-10">
+	<main class="relative mt-20 flex h-full w-full flex-col justify-center gap-4">
 		<!-- TEXT SECTION -->
 		<div
-			class="w-[800px] h-[300px] font-Pretendard_Regular text-[3rem] mx-auto text-center duration-[1.2s]
-			{isInView ? 'opacity-1 scale-100' : 'opacity-0 scale-0'}"
+			class="mx-auto h-[300px] w-full text-center font-Pretendard_Regular text-[3rem] duration-[1.2s]
+			{isInView ? 'opacity-1 scale-100' : 'scale-0 opacity-0'}"
 			use:inview={{ unobserveOnEnter: false, rootMargin: '-30%' }}
 			on:inview_change={({ detail }) => {
 				const { inView } = detail;
@@ -25,19 +25,19 @@
 		</div>
 
 		<!-- SOUL CARD SECTION -->
-		<div class="relative flex justify-center w-[300px] 3xl:w-[450px] h-20 items-center mx-auto">
+		<div class="relative mx-auto flex h-20 w-[300px] items-center justify-center 3xl:w-[450px]">
 			<div
-				class="absolute w-20 h-20 opacity-0 left-[0px] duration-300
+				class="absolute left-[0px] h-20 w-20 opacity-0 duration-300
 				{isInView ? `card-wrap-animation` : 'disappear-wrap'}"
 			>
-				<img src={CardWrap} alt="card-wrap" class="object-cover w-full" />
+				<img src={CardWrap} alt="card-wrap" class="w-full object-cover" />
 			</div>
 			<div
 				id="card-in"
-				class="absolute w-14 h-14 opacity-0 right-[0px] duration-300
+				class="absolute right-[0px] h-14 w-14 opacity-0 duration-300
 				{isInView ? `card-in-animation` : 'disappear-in'}"
 			>
-				<img src={CardIn} alt="card-in" class="object-cover w-full h-full" />
+				<img src={CardIn} alt="card-in" class="h-full w-full object-cover" />
 			</div>
 		</div>
 	</main>

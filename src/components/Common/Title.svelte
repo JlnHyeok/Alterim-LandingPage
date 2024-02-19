@@ -4,7 +4,7 @@
 </script>
 
 <svg
-	class="w-[117.43px] h-[24.45px] relative overflow-visible"
+	class="w-[117.43px] h-[24.45px] relative overflow-visible scale-[0.85] md:scale-100"
 	style=""
 	width="118"
 	height="26"
