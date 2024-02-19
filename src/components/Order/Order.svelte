@@ -36,7 +36,7 @@
 
 <div class="relative box-border h-[120vh] w-screen p-10">
 	<main
-		class="relative flex h-full w-full flex-col justify-center gap-10"
+		class="relative flex h-full w-full flex-col justify-center gap-0 md:gap-10"
 		use:inview={{ unobserveOnEnter: false, rootMargin: '-40%' }}
 		on:inview_change={({ detail }) => {
 			const { inView } = detail;
@@ -62,7 +62,8 @@
 					>it’s uniquely crafted personas with their own</span
 				>
 				<span class="flex h-5 items-center justify-center"
-					>identity powered by <strong class="text-font-subHighlight">Alterim.ai</strong></span
+					>identity powered by &nbsp;<strong class="text-font-subHighlight">Alterim.ai</strong
+					></span
 				>
 			</div>
 		</div>
