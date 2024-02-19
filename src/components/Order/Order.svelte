@@ -20,6 +20,8 @@
 	}
 
 	$: if (isCardInView) {
+		if (timer) clearInterval(timer);
+
 		timer = setInterval(() => {
 			changeNumber();
 		}, 8000);
