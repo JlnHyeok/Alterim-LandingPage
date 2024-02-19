@@ -8,15 +8,15 @@
 
 	let isTextInView: boolean;
 	let isCardInView: boolean;
-	let currentNumber: number = 3;
+	let currentNumber: number = 2;
 	let timer: number;
 
 	function changeNumber() {
-		// if (currentNumber == 2) {
-		// 	currentNumber = 3;
-		// } else {
-		// 	currentNumber = 2;
-		// }
+		if (currentNumber == 2) {
+			currentNumber = 3;
+		} else {
+			currentNumber = 2;
+		}
 	}
 
 	$: if (isCardInView) {
