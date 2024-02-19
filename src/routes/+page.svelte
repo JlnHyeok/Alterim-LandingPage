@@ -13,17 +13,20 @@
 	import Outro from '$components/Outro/Outro.svelte';
 </script>
 
-<div class="z-[1] text-white w-full md:min-w-[768px] relative">
+<div class="relative z-[1] w-full text-white md:min-w-[768px]">
 	<Header />
-	<div class="pt-16 w-full relative">
+	<div class="relative w-full pt-16">
 		<Intro />
 		<Welcome />
-		<Order />
+		<!-- WIDTH 해결 -->
+		<!-- <Order /> -->
 		<Starting />
 		<Chat />
 		<Meet />
+		<!-- WIDTH 해결 -->
 		<Comming />
 		<Learn />
+
 		<RoadMap />
 		<Outro />
 		<Footer />

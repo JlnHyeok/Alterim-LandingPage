@@ -15,7 +15,7 @@
 </script>
 
 <div
-	class="relative h-screen w-full text-white"
+	class="relative h-[calc(100vh-80px)] w-full text-white"
 	use:inview={{ unobserveOnEnter: false, rootMargin: '-40%' }}
 	on:inview_change={({ detail }) => {
 		const { inView } = detail;
@@ -32,29 +32,26 @@
 			>
 				<img src={Logo} alt="logo" class="object-cover" />
 			</div>
-		{/if}
-
-		<!-- MAIN TEXT -->
-		{#if isInView}
+			<!-- MAIN TEXT -->
 			<div
 				class="w-[80%] text-center font-Pretendard_Regular text-[2rem] font-normal text-white md:text-[48px]"
 				in:scale={{ duration: 400, delay: delay + 200, start: 1.5, opacity: 0 }}
 			>
 				<h1>Meet Your Other Self in the Web3</h1>
 			</div>
-		{/if}
-
-		<!-- SUB TEXT -->
-		{#if isInView}
+			<!-- SUB TEXT -->
 			<div
-				class="w-[80%] text-center font-Pretendard_Light text-xl text-[#ffffffbf] md:text-[24px]"
+				class="mt-6 w-[80%] text-center font-Pretendard_Light text-lg text-[#ffffffbf] md:mt-0 md:text-[24px]"
 				in:scale={{ duration: 800, delay: delay + 500, start: 1, opacity: 0 }}
 			>
 				<p>Where Your Digital Clone Comes to Life powered by AI</p>
 			</div>
 		{/if}
 
-		<a href="#welcome" class="absolute -bottom-24 z-20 flex h-14 flex-col items-center">
+		<a
+			href="#welcome"
+			class="absolute -bottom-36 z-20 flex h-14 flex-col items-center md:-bottom-24"
+		>
 			<span
 				class="font-Pretendard_ExtraLight text-[1rem] text-[#ffffffbf] [text-shadow:0px_0px_10px_#ffffff80]"
 				>scroll down</span

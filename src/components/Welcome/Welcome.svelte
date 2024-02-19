@@ -5,11 +5,11 @@
 	let isInView: boolean;
 </script>
 
-<div id="welcome" class="relative h-[90vh] w-screen p-10">
-	<main class="relative mt-20 flex h-full w-full flex-col justify-center gap-4">
+<div id="welcome" class="relative h-[100vh] w-full p-10">
+	<main class="relative flex h-full w-full flex-col justify-center gap-4 md:mt-20">
 		<!-- TEXT SECTION -->
 		<div
-			class="mx-auto h-[300px] w-full text-center font-Pretendard_Regular text-[3rem] duration-[1.2s]
+			class="mx-auto flex h-[130px] w-full flex-col justify-center text-center font-Pretendard_Regular text-xl duration-[1.2s] md:h-[300px] md:text-[3rem]
 			{isInView ? 'opacity-1 scale-100' : 'scale-0 opacity-0'}"
 			use:inview={{ unobserveOnEnter: false, rootMargin: '-30%' }}
 			on:inview_change={({ detail }) => {
@@ -17,24 +17,26 @@
 				isInView = inView;
 			}}
 		>
-			<span class="text-white">Welcome to </span>
-			<span class="text-font-highlight">Alterim</span>
-			<span class="text-white"> , where your </span> <br />
-			<span> PFP now has a story, </span><br />
+			<span class="text-white"
+				>Welcome to <strong class="text-font-highlight">Alterim</strong> , where your</span
+			> <br class="hidden md:inline" />
+			<span class=""> PFP now has a story, </span><br class="hidden md:inline" />
 			<span>a personality, and a life of its own </span>
 		</div>
 
 		<!-- SOUL CARD SECTION -->
-		<div class="relative mx-auto flex h-20 w-[300px] items-center justify-center 3xl:w-[450px]">
+		<div
+			class="relative mx-auto flex h-14 w-[300px] items-center justify-center md:h-20 3xl:w-[450px]"
+		>
 			<div
-				class="absolute left-[0px] h-20 w-20 opacity-0 duration-300
+				class="absolute left-[0px] h-14 w-14 opacity-0 duration-300 md:h-20 md:w-20
 				{isInView ? `card-wrap-animation` : 'disappear-wrap'}"
 			>
 				<img src={CardWrap} alt="card-wrap" class="w-full object-cover" />
 			</div>
 			<div
 				id="card-in"
-				class="absolute right-[0px] h-14 w-14 opacity-0 duration-300
+				class="absolute right-[0px] h-10 w-10 opacity-0 duration-300 md:h-14 md:w-14
 				{isInView ? `card-in-animation` : 'disappear-in'}"
 			>
 				<img src={CardIn} alt="card-in" class="h-full w-full object-cover" />

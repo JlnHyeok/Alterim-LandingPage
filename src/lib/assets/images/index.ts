@@ -25,6 +25,8 @@ import Comming3 from './comming-3.png';
 import Comming4 from './comming-4.png';
 import RoadMapDefault from './roadmap-default.png';
 import RoadMapHover from './roadmap-hover.png';
+import CommingBottom from './comming-card-bottom.png';
+import Learn from './learn.png';
 
 export const Avatar = [
 	Avatar1,
@@ -56,5 +58,7 @@ export {
 	Comming3,
 	Comming4,
 	RoadMapDefault,
-	RoadMapHover
+	RoadMapHover,
+	CommingBottom,
+	Learn
 };

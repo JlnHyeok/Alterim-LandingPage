@@ -1,5 +1,5 @@
 <svg
-	class="shrink-0 w-5 h-5 relative overflow-visible"
+	class="relative hidden h-5 w-5 shrink-0 overflow-visible md:block"
 	style=""
 	width="21"
 	height="20"

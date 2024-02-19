@@ -4,11 +4,11 @@
 
 	const roadMapTexts = [
 		{
-			text: 'Q1 2024',
+			text: '2024 Q1',
 			contents: ['$AIM token Launchpad', 'Genesis NFT Sale: AI Soul', 'Launching MVP product(Chat)']
 		},
 		{
-			text: 'Q2 2024',
+			text: '2024 Q2',
 			contents: [
 				'Release Social Realm',
 				'Community Beta Testing (CBT)',
@@ -16,15 +16,15 @@
 			]
 		},
 		{
-			text: 'Q3 2024',
+			text: '2024 Q3',
 			contents: ['Add Stake and Earn', 'Launch official product', 'Launching Alter-Trading feature']
 		},
 		{
-			text: 'Q4 2024',
+			text: '2024 Q4',
 			contents: ['Launch Community Agora DevelopmentEnhancement', 'of AI-based Algorithms']
 		},
 		{
-			text: 'Q1 2025',
+			text: '2025 Q1',
 			contents: ['Token Marketplace', 'Supporting Multi-Chain', 'Launching Squad Feature']
 		}
 	];
@@ -39,31 +39,40 @@
 	}
 </script>
 
-<div class="w-full h-[80vh] flex justify-center items-center">
-	<div class="w-[924px] h-[428.95px] flex-col justify-start items-start gap-[72px] inline-flex">
+<div class="flex h-[80vh] w-full items-center justify-center">
+	<div class="inline-flex h-[428.95px] w-[924px] flex-col items-start justify-start gap-[72px]">
 		<div
-			class="w-full text-center text-neutral-100 text-[3rem] font-normal font-Pretendard_Regular"
+			class="w-full text-center font-Pretendard_Regular text-[3rem] font-normal text-neutral-100"
 		>
 			<span> Roadmap </span>
 		</div>
-		<div class="flex-col justify-start items-center gap-12 flex">
-			<div class="w-[924px] justify-between items-start inline-flex">
+		<div class="flex flex-col items-center justify-start gap-12">
+			<!-- BUTTON SECTION -->
+			<div
+				class="inline-flex w-[90%] flex-wrap items-start justify-center gap-5 md:w-[924px] md:justify-between md:gap-10"
+			>
 				{#each roadMapTexts as { text }, idx (text)}
 					<button on:mouseenter={() => handleHover(idx)}>
 						<RoadMapBtn {idx} {text} isHover={isHoverArr[idx]} />
 					</button>
 				{/each}
 			</div>
+
+			<!-- INFO SECTION -->
 			<div
-				class="mt-10 border-t-[1px] border-b-[1px] border-opacity-25 border-emerald-50 3xl:w-[900px] h-[180px]"
+				class="mt-10 w-[85%] border-b-[1px] border-t-[1px] border-emerald-50 border-opacity-25 py-8 md:h-[180px] md:w-full"
 			>
-				<div class="h-full self-stretch justify-start items-center gap-12 flex">
-					<div class="text-emerald-200 w-28 h-20 text-center text-2xl font-Pretendard_Regular">
+				<div class="flex h-full items-center justify-start gap-4 self-stretch md:gap-12">
+					<div
+						class="h-20 w-32 flex-shrink-0 text-center font-Pretendard_Regular text-2xl text-emerald-200"
+					>
 						{roadMapTexts[infoIndex].text}
 					</div>
-					<ul class="text-white text-base font-normal font-Pretendard_Light h-20">
+					<ul class="h-30 text-left font-Pretendard_Light font-normal text-white">
 						{#each roadMapTexts[infoIndex].contents as content (content)}
-							<li in:fade out:fade={{ duration: 0 }}>{content}</li>
+							<li class="flex w-full justify-start" in:fade out:fade={{ duration: 0 }}>
+								{content}
+							</li>
 						{/each}
 					</ul>
 				</div>

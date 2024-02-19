@@ -4,8 +4,8 @@
 	import '../global.css';
 </script>
 
-<div class="w-screen relative box-border">
+<div class="relative box-border w-screen">
 	<Background />
-	<!-- <BackgroundIntro /> -->
+	<BackgroundIntro />
 	<slot />
 </div>

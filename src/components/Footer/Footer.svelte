@@ -17,18 +17,19 @@
 	};
 </script>
 
-<div class="w-full px-6 py-7 h-36">
-	<div class="w-full h-full bg-white rounded-2xl flex justify-between items-center xl:px-8">
-		<!-- Title -->
-		<div>
-			<Title iconColor="black" />
-		</div>
+<div
+	class="mx-auto flex h-full w-[90%] items-center justify-between rounded-b-none rounded-t-2xl bg-white px-2 py-7 md:mb-2 md:rounded-b-2xl md:px-4 xl:px-8"
+>
+	<!-- Title -->
+	<div>
+		<Title iconColor="black" />
+	</div>
 
-		<!-- Links -->
-		<div class="flex flex-row gap-8 items-start justify-start shrink-0 relative">
-			{#each iconArray.icon as icon, idx}
-				<FooterIcon {icon} links={iconArray.links[idx]} />
-			{/each}
-		</div>
+	<!-- Links -->
+	<div class="relative flex shrink-0 flex-row items-start justify-start gap-4 md:gap-8">
+		{#each iconArray.icon as icon, idx}
+			<FooterIcon {icon} links={iconArray.links[idx]} />
+		{/each}
 	</div>
 </div>
+<!-- <div class="absolute bottom-6 left-0 h-10 w-full bg-black md:hidden"></div> -->

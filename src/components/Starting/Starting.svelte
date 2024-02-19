@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="relative flex flex-col-reverse items-center justify-center gap-10 md:flex-row md:gap-[98px]"
+	class="relative flex h-[60vh] flex-col-reverse items-center justify-center gap-10 md:flex-row md:gap-[98px]"
 >
 	<div class="relative flex shrink-0 flex-col items-center justify-start gap-12">
 		<div
@@ -25,7 +25,7 @@
 		</div>
 	</div>
 	<img
-		class="relative h-[376px] w-[376px] shrink-0 rounded-[20px]"
+		class="relative h-[85%] max-h-[374px] w-[85%] max-w-[374px] shrink-0 rounded-[20px]"
 		style="object-fit: cover; "
 		src={StartingImg}
 		alt="StartingImg"

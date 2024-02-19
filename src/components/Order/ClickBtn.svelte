@@ -6,22 +6,21 @@
 </script>
 
 <!-- For more features use the AutoHTML plugin window in figma ... -->
-<button on:click={onClick} class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
+<button on:click={onClick} class="relative flex shrink-0 flex-row items-center justify-start gap-2">
 	<div
-		class="{isSelect
-			? `bg-[#c4dacc]`
-			: 'bg-[rgba(255,255,255,0.20)]'} rounded-[48px] pt-2 pr-[15px] pb-2 pl-[15px] flex flex-row gap-0 items-center justify-center shrink-0 w-8 h-8 relative"
+		class="relative flex h-8 w-8 shrink-0 flex-row items-center justify-center gap-0 rounded-[48px] pb-2 pl-[15px] pr-[15px] pt-2
+		{isSelect ? `bg-[#c4dacc]` : 'bg-[rgba(255,255,255,0.20)]'} "
 	>
 		<div
-			class="{isSelect
-				? 'text-[#020202]'
-				: 'text-white'} text-center font-['Pretendard-Regular',_sans-serif] text-base leading-normal font-normal relative flex items-center justify-center"
+			class=" relative flex items-center justify-center text-center font-['Pretendard-Regular',_sans-serif] text-base font-normal leading-normal
+			 {isSelect ? 'text-[#020202]' : 'text-white'}"
 		>
 			{number}
 		</div>
 	</div>
 	<div
-		class="text-[#ffffff] text-left font-['Pretendard-Regular',_sans-serif] text-base leading-normal font-normal relative flex items-center justify-start"
+		class="relative flex items-center justify-start text-left font-['Pretendard-Regular',_sans-serif] text-base font-normal leading-normal text-[#ffffff]
+		{isSelect ? 'block' : 'hidden'}"
 	>
 		{text}
 	</div>

@@ -1,14 +1,15 @@
 <script lang="ts">
-	import Arrow from './Arrow.svelte';
 	import { inview } from 'svelte-inview';
+	import { fade } from 'svelte/transition';
+	import Arrow from './Arrow.svelte';
 	import ThirdCard from './ThirdCard.svelte';
 	import ClickBtn from './ClickBtn.svelte';
 	import SecondCard from './SecondCard.svelte';
-	import { fade } from 'svelte/transition';
 
 	let isTextInView: boolean;
 	let isCardInView: boolean;
 	let currentNumber: number = 2;
+	let timer: number;
 
 	function changeNumber() {
 		if (currentNumber == 2) {
@@ -18,16 +19,18 @@
 		}
 	}
 
-	let timer = setInterval(() => {
-		changeNumber();
-	}, 15000);
+	$: if (isCardInView) {
+		timer = setInterval(() => {
+			changeNumber();
+		}, 8000);
+	}
 
 	function onClickNumberBtn(number: number) {
 		currentNumber = number;
 		clearInterval(timer);
 		timer = setInterval(() => {
 			changeNumber();
-		}, 15000);
+		}, 8000);
 	}
 </script>
 
@@ -42,7 +45,7 @@
 	>
 		<!-- TEXT SECTION -->
 		<div
-			class="mx-auto flex h-[300px] w-full flex-col items-center justify-center gap-2 font-Pretendard_Regular text-[3rem] duration-[1.5s]
+			class="mx-auto flex h-[300px] w-full flex-col items-center justify-center gap-4 font-Pretendard_Light text-2xl duration-[1.5s] md:gap-8 md:text-[3rem]
       {isTextInView ? 'opacity-100' : 'opacity-0'}"
 		>
 			<div>
@@ -51,10 +54,16 @@
 				<span class="text-white">into </span>
 				<span class="text-font-highlight">Clone</span>
 			</div>
-			<div class="text-center font-Pretendard_Light text-[1.5rem]">
-				<span>Your PFP is no longer just a collectible; it’s uniquely crafted personas </span><br />
-				<span>with their own identity powered by </span>
-				<span class="text-font-subHighlight">Alterim.ai</span>
+			<div class="flex flex-col gap-0 text-center text-[0.8rem] md:gap-3 md:text-[1.5rem]">
+				<span class="flex h-5 items-center justify-center"
+					>Your PFP is no longer just a collectible</span
+				>
+				<span class="flex h-5 items-center justify-center"
+					>it’s uniquely crafted personas with their own</span
+				>
+				<span class="flex h-5 items-center justify-center"
+					>identity powered by <strong class="text-font-subHighlight">Alterim.ai</strong></span
+				>
 			</div>
 		</div>
 

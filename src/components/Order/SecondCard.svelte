@@ -3,18 +3,18 @@
 </script>
 
 <div
-	class="w-[1000px] h-[630px] rounded-[20px] flex flex-row gap-[49px] items-center justify-center bg-black border border-opacity-30 border-white p-10 relative"
+	class="relative flex h-[50vh] w-[82vw] flex-row items-center justify-center gap-[49px] rounded-[20px] border border-white border-opacity-30 bg-black p-10 md:h-[65vh] md:w-[60vw]"
 	style="background: linear-gradient(180deg, rgba(200, 207, 214, 0.11) 0%,rgba(200, 207, 214, 0.00) 100%); backdrop-filter:blur(32px);"
 >
-	<div class="flex flex-col gap-[49px] items-center justify-start shrink-0 relative">
+	<div class="relative flex shrink-0 flex-col items-center justify-start gap-[49px]">
 		<div
-			class="text-[#ffffff] text-center font-Pretendard_Light text-base leading-[120%] font-normal relative flex items-center justify-center"
+			class="relative flex items-center justify-center text-center font-Pretendard_Light text-base font-normal leading-[120%] text-[#ffffff]"
 		>
 			Crafting Soul for your pfp<br />with Alterim AI...
 		</div>
-		<div class="flex flex-row items-start justify-center shrink-0 relative">
+		<div class="relative flex shrink-0 flex-row items-start justify-center">
 			<svg
-				class="flex flex-col items-center justify-start shrink-0 h-[auto] relative overflow-visible"
+				class="relative flex h-[auto] shrink-0 flex-col items-center justify-start overflow-visible"
 				style=""
 				width="195"
 				height="195"
