@@ -121,13 +121,13 @@
 	<div class="relative mx-auto flex h-full w-[90%] min-w-[300px] flex-col justify-end md:hidden">
 		<!-- UPPER SECTION -->
 		<div class="relative z-10 h-1/3 w-full">
-			<AvatarCard path={Avatar[0]} index={0} position="left-[-5%]" zIndex="z-[10]" timing="-3s" />
-			<AvatarCard path={Avatar[1]} index={1} position="left-[15%]" zIndex="z-[9]" timing="-4s" />
-			<AvatarCard path={Avatar[2]} index={2} position="left-[36%]" zIndex="z-[8]" timing="-5s" />
+			<AvatarCard path={Avatar[0]} index={0} position="left-[-10%]" zIndex="z-[10]" timing="-3s" />
+			<AvatarCard path={Avatar[1]} index={1} position="left-[12%]" zIndex="z-[9]" timing="-4s" />
+			<AvatarCard path={Avatar[2]} index={2} position="left-[33%]" zIndex="z-[8]" timing="-5s" />
 			<AvatarCard
 				path={Avatar[4]}
 				index={4}
-				position="left-[58%]"
+				position="left-[56%]"
 				zIndex="z-[9]"
 				timing="-1.2s"
 				isRerverse={true}
@@ -139,17 +139,17 @@
 			<AvatarCard
 				path={Avatar[11]}
 				index={11}
-				position="left-[-7%]"
+				position="left-[-11%]"
 				zIndex="z-[10]"
 				timing="-6s"
 				isRerverse={true}
 			/>
-			<AvatarCard path={Avatar[12]} index={12} position="left-[10%]" zIndex="z-[9]" timing="-1s" />
-			<AvatarCard path={Avatar[7]} index={7} position="left-[34%]" zIndex="z-[8]" timing="-4.3s" />
+			<AvatarCard path={Avatar[12]} index={12} position="left-[8%]" zIndex="z-[9]" timing="-1s" />
+			<AvatarCard path={Avatar[7]} index={7} position="left-[31%]" zIndex="z-[8]" timing="-4.3s" />
 			<AvatarCard
 				path={Avatar[13]}
 				index={13}
-				position="left-[57%]"
+				position="left-[52%]"
 				zIndex="z-[9]"
 				timing="-5s"
 				isRerverse={true}
@@ -157,7 +157,7 @@
 			<AvatarCard
 				path={Avatar[14]}
 				index={14}
-				position="left-[75%]"
+				position="left-[72%]"
 				zIndex="z-[10]"
 				timing="-4s"
 				isRerverse={true}

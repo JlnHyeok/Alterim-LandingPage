@@ -8,7 +8,7 @@
 </script>
 
 <div
-	class="w-[120px] h-[120px] md:w-[13vw] md:h-[13vw] absolute -bottom-5 avatar-jump
+	class="avatar-jump absolute -bottom-5 h-[140px] w-[140px] md:h-[13vw] md:w-[13vw]
    {position} {zIndex}"
 	style={`--delay-sec:${timing};`}
 >

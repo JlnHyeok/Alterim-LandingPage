@@ -15,19 +15,19 @@
 >
 	{#if isTextInView}
 		<!-- content here -->
-		<div
-			class="relative flex flex-col items-center justify-start gap-[73px]"
-			in:fade={{ duration: 1000, delay: 0 }}
-			out:fade={{ duration: 1000, delay: 0 }}
-		>
+		<div class="relative flex flex-col items-center justify-start gap-[73px]">
 			<div class="relative flex shrink-0 flex-col items-center justify-start gap-8">
 				<div
 					class="relative flex items-center justify-center text-center font-Pretendard_Regular text-[32px] font-medium leading-[120%] text-[#ffffff]"
+					in:fade={{ duration: 1000, delay: 0 }}
+					out:fade={{ duration: 1000, delay: 0 }}
 				>
 					Meet your AI Soul
 				</div>
 				<div
 					class="relative flex items-center justify-center text-center font-Pretendard_Light text-base font-light leading-[140%] text-font-subHighlight"
+					in:fade={{ duration: 1000, delay: 300 }}
+					out:fade={{ duration: 1000, delay: 0 }}
 				>
 					at the heart of Alterim&#039;s Genesis NFT Collection.
 				</div>
@@ -35,6 +35,8 @@
 			<div
 				class="relative h-56 w-[184px] shrink-0 overflow-hidden rounded-[20px] bg-[#ffffff]"
 				style="box-shadow: 0px 4px 44px 0px rgba(255, 255, 255, 0.25); "
+				in:fade={{ duration: 1000, delay: 700 }}
+				out:fade={{ duration: 1000, delay: 700 }}
 			>
 				<div class="absolute" style="inset: 0; ">
 					<div
