@@ -39,8 +39,8 @@
 	}
 </script>
 
-<div class="flex h-[80vh] w-full items-center justify-center">
-	<div class="inline-flex h-[428.95px] w-[924px] flex-col items-start justify-start gap-[72px]">
+<div class="flex h-[100vh] w-full items-center justify-center md:h-[80vh]">
+	<div class="inline-flex flex-col items-start justify-start gap-[72px]">
 		<div
 			class="w-full text-center font-Pretendard_Regular text-[3rem] font-normal text-neutral-100"
 		>

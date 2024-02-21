@@ -2,7 +2,7 @@
 	import { Learn } from '$lib/assets/images';
 </script>
 
-<div class="flex h-[80vh] w-full items-center justify-center">
+<div class="flex h-screen w-full items-center justify-center">
 	<div class="relative flex flex-col-reverse items-center justify-start md:flex-row md:gap-[91px]">
 		<div
 			class="relative flex shrink-0 flex-col items-center justify-start gap-[35px] md:items-start"

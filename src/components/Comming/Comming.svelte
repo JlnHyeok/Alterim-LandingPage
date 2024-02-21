@@ -12,7 +12,7 @@
 </script>
 
 <div
-	class="relative flex h-screen w-full flex-col items-center justify-center gap-14 md:flex-row md:gap-[90px]"
+	class="relative flex h-[120vh] w-full flex-col items-center justify-center gap-14 md:flex-row md:gap-[90px]"
 >
 	<!-- SMALL SIZE TITLE SECTION -->
 	<div

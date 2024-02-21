@@ -23,8 +23,11 @@
 		if (timer) clearInterval(timer);
 
 		timer = setInterval(() => {
-			changeNumber();
-		}, 8000);
+			currentNumber = 3;
+		}, 3000);
+	} else {
+		currentNumber = 2;
+		clearInterval(timer);
 	}
 
 	function onClickNumberBtn(number: number) {
@@ -32,7 +35,7 @@
 		clearInterval(timer);
 		timer = setInterval(() => {
 			changeNumber();
-		}, 8000);
+		}, 3000);
 	}
 </script>
 

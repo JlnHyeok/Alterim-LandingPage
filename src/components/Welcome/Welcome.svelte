@@ -6,10 +6,10 @@
 </script>
 
 <div id="welcome" class="relative h-[100vh] w-full p-10">
-	<main class="relative flex h-full w-full flex-col justify-center gap-4 md:mt-20">
+	<main class="relative flex h-full w-full flex-col justify-center gap-4">
 		<!-- TEXT SECTION -->
 		<div
-			class="mx-auto flex h-[130px] w-full flex-col justify-center text-center font-Pretendard_Regular text-xl duration-[1.2s] md:h-[300px] md:text-[3rem]
+			class="mx-auto flex h-[130px] w-full flex-col justify-center text-center font-Pretendard_ExtraLight text-xl duration-[1.2s] md:h-[300px] md:text-[3rem]
 			{isInView ? 'opacity-1 scale-100' : 'scale-0 opacity-0'}"
 			use:inview={{ unobserveOnEnter: false, rootMargin: '-30%' }}
 			on:inview_change={({ detail }) => {
