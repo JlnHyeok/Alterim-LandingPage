@@ -27,6 +27,12 @@ import RoadMapDefault from './roadmap-default.png';
 import RoadMapHover from './roadmap-hover.png';
 import CommingBottom from './comming-card-bottom.png';
 import Learn from './learn.png';
+import ProfileWhiteCat from './profile/profile-white-cat.png';
+import ChatClick from './icon/chat-click.png';
+import FriendNormal from './icon/friend-normal.png';
+import InvestmentNormal from './icon/investment-normal.png';
+import SettingNormal from './icon/setting-normal.png';
+import SocialNormal from './icon/social-normal.png';
 
 export const Avatar = [
 	Avatar1,
@@ -60,5 +66,11 @@ export {
 	RoadMapDefault,
 	RoadMapHover,
 	CommingBottom,
-	Learn
+	ProfileWhiteCat,
+	Learn,
+	ChatClick,
+	FriendNormal,
+	InvestmentNormal,
+	SettingNormal,
+	SocialNormal
 };

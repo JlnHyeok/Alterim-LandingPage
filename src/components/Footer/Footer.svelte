@@ -1,20 +1,17 @@
 <script lang="ts">
 	import Title from '$components/Common/Title.svelte';
-	import FooterIcon from './FooterIcon.svelte';
+	import SnsIcon from '../Common/SnsIcon.svelte';
 
-	interface IFooterIconProps {
-		icon: Array<'telegram' | 'discord' | 'twitter'>;
-		links: Array<string>;
+	interface ISnsIconProps {
+		icon: 'telegram' | 'discord' | 'twitter';
+		link: string;
 	}
 
-	const iconArray: IFooterIconProps = {
-		icon: ['telegram', 'discord', 'twitter'],
-		links: [
-			'https://t.me/pretendard',
-			'https://discord.gg/pretendard',
-			'https://twitter.com/Alterim_ai'
-		]
-	};
+	const iconArray: ISnsIconProps[] = [
+		{ icon: 'telegram', link: 'https://t.me/pretendard' },
+		{ icon: 'discord', link: 'https://discord.gg/pretendard' },
+		{ icon: 'twitter', link: 'https://twitter.com/Alterim_ai' }
+	];
 </script>
 
 <div
@@ -27,8 +24,8 @@
 
 	<!-- Links -->
 	<div class="relative flex shrink-0 flex-row items-start justify-start gap-4 md:gap-8">
-		{#each iconArray.icon as icon, idx}
-			<FooterIcon {icon} links={iconArray.links[idx]} />
+		{#each iconArray as { icon, link }}
+			<SnsIcon {icon} {link} />
 		{/each}
 	</div>
 </div>
