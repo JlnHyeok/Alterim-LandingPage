@@ -27,7 +27,7 @@
 
 	<!-- CHATTING SECTION -->
 	<div class="flex h-full flex-col justify-end overflow-hidden p-3">
-		<div class={isInView ? 'talking_y_animation' : ''}>
+		<div class={isInView ? 'sm_talking_y_animation xl:xl_talking_y_animation' : ''}>
 			{#each investChatPropsArray as { sender, message, time, component }}
 				<InvestChat {sender} {message} {time} {component} />
 			{/each}
@@ -45,7 +45,7 @@
 		box-shadow: 0px 4px 40px 0px rgba(174, 246, 203, 0.2);
 	}
 
-	@keyframes translate-talking-y {
+	@keyframes xl-translate-talking-y {
 		0% {
 			transform: translateY(700px);
 		}
@@ -72,7 +72,38 @@
 		}
 	}
 
-	.talking_y_animation {
-		animation: translate-talking-y 12s forwards;
+	@keyframes sm-translate-talking-y {
+		0% {
+			transform: translateY(800px);
+		}
+		15% {
+			transform: translateY(630px);
+		}
+		30% {
+			transform: translateY(530px);
+		}
+		45% {
+			transform: translateY(480px);
+		}
+		60% {
+			transform: translateY(400px);
+		}
+		75% {
+			transform: translateY(180px);
+		}
+		90% {
+			transform: translateY(110px);
+		}
+		100% {
+			transform: translateY(10px);
+		}
+	}
+
+	.xl_talking_y_animation {
+		animation: xl-translate-talking-y 12s forwards;
+	}
+
+	.sm_talking_y_animation {
+		animation: sm-translate-talking-y 12s forwards;
 	}
 </style>

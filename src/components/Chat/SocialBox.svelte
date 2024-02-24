@@ -11,7 +11,7 @@
 >
 	<div
 		class="relative flex h-full w-full flex-col items-center justify-center gap-4 p-2
-		{isInView ? 'social_y_animation' : ''}"
+		{isInView ? 'sm_social_y_animation xl:xl_social_y_animation' : ''}"
 	>
 		<!-- SOCIAL CHAT BOX -->
 		{#each avatarInfoArray as avatarInfo}
@@ -21,7 +21,7 @@
 </div>
 
 <style>
-	@keyframes translate-social-y {
+	@keyframes xl-translate-social-y {
 		0% {
 			transform: translateY(620px);
 		}
@@ -42,7 +42,32 @@
 		}
 	}
 
-	.social_y_animation {
-		animation: translate-social-y 8s forwards;
+	@keyframes sm-translate-social-y {
+		0% {
+			transform: translateY(620px);
+		}
+		20% {
+			transform: translateY(430px);
+		}
+		40% {
+			transform: translateY(310px);
+		}
+		60% {
+			transform: translateY(150px);
+		}
+		80% {
+			transform: translateY(40px);
+		}
+		100% {
+			transform: translateY(-120px);
+		}
+	}
+
+	.xl_social_y_animation {
+		animation: xl-translate-social-y 8s forwards;
+	}
+
+	.sm_social_y_animation {
+		animation: sm-translate-social-y 8s forwards;
 	}
 </style>
