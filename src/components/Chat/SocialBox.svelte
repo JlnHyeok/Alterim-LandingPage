@@ -2,8 +2,17 @@
 	import SocialChat from '$components/Common/ChatCard/SocialChat.svelte';
 	import type { IAvatarInfo } from '$components/Common/ChatCard/type';
 
+	export let screenSize: 'sm' | 'xl' = 'xl';
 	export let isInView: boolean;
 	export let avatarInfoArray: IAvatarInfo[];
+
+	let animationClass = '';
+
+	if (screenSize === 'xl') {
+		animationClass = 'xl_social_y_animation';
+	} else {
+		animationClass = 'sm_social_y_animation';
+	}
 </script>
 
 <div
@@ -11,7 +20,7 @@
 >
 	<div
 		class="relative flex h-full w-full flex-col items-center justify-center gap-4 p-2
-		{isInView ? 'sm_social_y_animation xl:xl_social_y_animation' : ''}"
+		{isInView ? animationClass : ''}"
 	>
 		<!-- SOCIAL CHAT BOX -->
 		{#each avatarInfoArray as avatarInfo}

@@ -1,12 +1,11 @@
 <script lang="ts">
+	export let screenSize: 'sm' | 'xl' = 'xl';
 	export let isInView: boolean;
 	export let talkingChatPropsArray: ITalkingChatProps[];
 
 	import TalkingChat from '$components/Common/ChatCard/TalkingChat.svelte';
 	import { flip } from 'svelte/animate';
 	import type { ITalkingChatProps } from './constants';
-
-	let chatArr: ITalkingChatProps[] = [];
 </script>
 
 <!-- CHAT BOX SECTION -->

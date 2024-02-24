@@ -2,6 +2,7 @@
 	import InvestChat from '$components/Common/ChatCard/InvestChat.svelte';
 	import type { ComponentType, SvelteComponent } from 'svelte';
 
+	export let screenSize: 'sm' | 'xl' = 'xl';
 	export let isInView: boolean;
 	export let investChatPropsArray: {
 		sender: 'me' | 'you';
@@ -9,6 +10,14 @@
 		time?: string | undefined;
 		component?: ComponentType<SvelteComponent> | undefined;
 	}[];
+
+	let animationClass = '';
+
+	if (screenSize === 'xl') {
+		animationClass = 'xl_talking_y_animation';
+	} else {
+		animationClass = 'sm_talking_y_animation';
+	}
 </script>
 
 <!-- CHAT BOX SECTION -->
@@ -27,7 +36,7 @@
 
 	<!-- CHATTING SECTION -->
 	<div class="flex h-full flex-col justify-end overflow-hidden p-3">
-		<div class={isInView ? 'sm_talking_y_animation xl:xl_talking_y_animation' : ''}>
+		<div id="invest-chat" class={isInView ? animationClass : ''}>
 			{#each investChatPropsArray as { sender, message, time, component }}
 				<InvestChat {sender} {message} {time} {component} />
 			{/each}

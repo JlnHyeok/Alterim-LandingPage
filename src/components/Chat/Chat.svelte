@@ -106,11 +106,15 @@
 					>
 						{#if idx == 0}
 							<!-- CHAT BOX SECTION -->
-							<ChatBox isInView={isInViewArr[idx]} {talkingChatPropsArray} />
+							<ChatBox screenSize="sm" isInView={isInViewArr[idx]} {talkingChatPropsArray} />
 						{:else if idx == 1}
-							<SocialBox isInView={isInViewArr[idx]} avatarInfoArray={socialAvatarInfoArray} />
+							<SocialBox
+								screenSize="sm"
+								isInView={isInViewArr[idx]}
+								avatarInfoArray={socialAvatarInfoArray}
+							/>
 						{:else}
-							<InvestBox isInView={isInViewArr[idx]} {investChatPropsArray} />
+							<InvestBox screenSize="sm" isInView={isInViewArr[idx]} {investChatPropsArray} />
 						{/if}
 					</div>
 				{/if}
