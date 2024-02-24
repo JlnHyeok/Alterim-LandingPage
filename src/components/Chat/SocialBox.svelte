@@ -1,0 +1,48 @@
+<script lang="ts">
+	import SocialChat from '$components/Common/ChatCard/SocialChat.svelte';
+	import type { IAvatarInfo } from '$components/Common/ChatCard/type';
+
+	export let isInView: boolean;
+	export let avatarInfoArray: IAvatarInfo[];
+</script>
+
+<div
+	class="chatbox_background relative mx-auto flex h-[450px] w-[90%] flex-col justify-start overflow-hidden rounded-xl xl:h-[600px] xl:w-[450px]"
+>
+	<div
+		class="relative flex h-full w-full flex-col items-center justify-center gap-4 p-2
+		{isInView ? 'social_y_animation' : ''}"
+	>
+		<!-- SOCIAL CHAT BOX -->
+		{#each avatarInfoArray as avatarInfo}
+			<SocialChat {avatarInfo} />
+		{/each}
+	</div>
+</div>
+
+<style>
+	@keyframes translate-social-y {
+		0% {
+			transform: translateY(620px);
+		}
+		20% {
+			transform: translateY(480px);
+		}
+		40% {
+			transform: translateY(360px);
+		}
+		60% {
+			transform: translateY(230px);
+		}
+		80% {
+			transform: translateY(110px);
+		}
+		100% {
+			transform: translateY(-20px);
+		}
+	}
+
+	.social_y_animation {
+		animation: translate-social-y 8s forwards;
+	}
+</style>

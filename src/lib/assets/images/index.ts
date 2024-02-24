@@ -29,10 +29,23 @@ import CommingBottom from './comming-card-bottom.png';
 import Learn from './learn.png';
 import ProfileWhiteCat from './profile/profile-white-cat.png';
 import ChatClick from './icon/chat-click.png';
+import ChatNormal from './icon/chat-normal.png';
 import FriendNormal from './icon/friend-normal.png';
 import InvestmentNormal from './icon/investment-normal.png';
 import SettingNormal from './icon/setting-normal.png';
 import SocialNormal from './icon/social-normal.png';
+import SocialClick from './icon/social-click.png';
+import SocialJames from './profile/social-james.png';
+import SocialJason from './profile/social-jason.png';
+import SocialMario from './profile/social-mario.png';
+import SocialTommy from './profile/social-tommy.png';
+import Liked from './icon/liked.png';
+import Certed from './icon/certed.png';
+import Retweet from './icon/retweet.png';
+import Comment from './icon/comment.png';
+import EmptyLiked from './icon/empty-liked.png';
+import Share from './icon/share.png';
+import Sub from './icon/sub.png';
 
 export const Avatar = [
 	Avatar1,
@@ -72,5 +85,18 @@ export {
 	FriendNormal,
 	InvestmentNormal,
 	SettingNormal,
-	SocialNormal
+	SocialNormal,
+	SocialClick,
+	ChatNormal,
+	SocialJames,
+	SocialJason,
+	SocialMario,
+	SocialTommy,
+	Liked,
+	Certed,
+	Retweet,
+	Comment,
+	EmptyLiked,
+	Share,
+	Sub
 };

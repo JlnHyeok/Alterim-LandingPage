@@ -1,0 +1,78 @@
+<script lang="ts">
+	import InvestChat from '$components/Common/ChatCard/InvestChat.svelte';
+	import type { ComponentType, SvelteComponent } from 'svelte';
+
+	export let isInView: boolean;
+	export let investChatPropsArray: {
+		sender: 'me' | 'you';
+		message: string;
+		time?: string | undefined;
+		component?: ComponentType<SvelteComponent> | undefined;
+	}[];
+</script>
+
+<!-- CHAT BOX SECTION -->
+<div
+	class="chatbox_background relative mx-auto flex h-[450px] w-[90%] flex-col justify-start rounded-xl xl:h-[600px] xl:w-[450px]"
+>
+	<!-- NAME SECTION -->
+	<div class="overflow-hidden rounded-t-xl">
+		<div class="name_background flex h-14 items-center justify-center">
+			<span class="font-Pretendard_Regular"> James </span>
+			<span class="inline font-Pretendard_Light text-[#6E7984] xl:hidden">
+				@Bitcoin Cats #9260</span
+			>
+		</div>
+	</div>
+
+	<!-- CHATTING SECTION -->
+	<div class="flex h-full flex-col justify-end overflow-hidden p-3">
+		<div class={isInView ? 'talking_y_animation' : ''}>
+			{#each investChatPropsArray as { sender, message, time, component }}
+				<InvestChat {sender} {message} {time} {component} />
+			{/each}
+		</div>
+	</div>
+</div>
+
+<style>
+	.name_background {
+		background: linear-gradient(91deg, #131c1a 10.8%, rgba(19, 28, 26, 0) 94.74%);
+	}
+	.chatbox_background {
+		background: rgba(31, 31, 31, 0.6);
+		backdrop-filter: blur(17px);
+		box-shadow: 0px 4px 40px 0px rgba(174, 246, 203, 0.2);
+	}
+
+	@keyframes translate-talking-y {
+		0% {
+			transform: translateY(700px);
+		}
+		15% {
+			transform: translateY(610px);
+		}
+		30% {
+			transform: translateY(510px);
+		}
+		45% {
+			transform: translateY(450px);
+		}
+		60% {
+			transform: translateY(385px);
+		}
+		75% {
+			transform: translateY(180px);
+		}
+		90% {
+			transform: translateY(110px);
+		}
+		100% {
+			transform: translateY(10px);
+		}
+	}
+
+	.talking_y_animation {
+		animation: translate-talking-y 12s forwards;
+	}
+</style>
