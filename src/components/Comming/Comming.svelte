@@ -36,7 +36,7 @@
 
 		<!-- CARDS SECTION -->
 		<div
-			class="relative flex w-[85vw] shrink-0 flex-row flex-wrap items-center justify-center gap-6 md:w-[35vw] md:min-w-[440px] md:gap-8"
+			class=" relative flex w-[85vw] shrink-0 flex-row flex-wrap items-center justify-center gap-6 md:w-[35vw] md:min-w-[440px] md:max-w-[400px] md:gap-8"
 			in:fade={{ duration: 1000, delay: 1000 }}
 			out:fade={{ duration: 1000, delay: 0 }}
 		>
