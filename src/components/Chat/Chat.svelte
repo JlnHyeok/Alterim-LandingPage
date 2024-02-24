@@ -98,26 +98,24 @@
 					/>
 				</div>
 
-				{#if isInViewArr[idx]}
-					<div
-						class="relative flex w-full flex-col gap-3 sm:w-[600px]"
-						in:fade={{ duration: 1000, delay: 700 }}
-						out:fade={{ duration: 1000, delay: 700 }}
-					>
-						{#if idx == 0}
-							<!-- CHAT BOX SECTION -->
-							<ChatBox screenSize="sm" isInView={isInViewArr[idx]} {talkingChatPropsArray} />
-						{:else if idx == 1}
-							<SocialBox
-								screenSize="sm"
-								isInView={isInViewArr[idx]}
-								avatarInfoArray={socialAvatarInfoArray}
-							/>
-						{:else}
-							<InvestBox screenSize="sm" isInView={isInViewArr[idx]} {investChatPropsArray} />
-						{/if}
-					</div>
-				{/if}
+				<div
+					class="relative flex w-full flex-col gap-3 sm:w-[600px]"
+					in:fade={{ duration: 1000, delay: 700 }}
+					out:fade={{ duration: 1000, delay: 700 }}
+				>
+					{#if idx == 0}
+						<!-- CHAT BOX SECTION -->
+						<ChatBox screenSize="sm" isInView={isInViewArr[idx]} {talkingChatPropsArray} />
+					{:else if idx == 1}
+						<SocialBox
+							screenSize="sm"
+							isInView={isInViewArr[idx]}
+							avatarInfoArray={socialAvatarInfoArray}
+						/>
+					{:else}
+						<InvestBox screenSize="sm" isInView={isInViewArr[idx]} {investChatPropsArray} />
+					{/if}
+				</div>
 			</div>
 		{/each}
 	</div>
