@@ -82,14 +82,7 @@
 	<!-- SMALL SIZE -->
 	<div class="flex flex-col gap-44 xl:hidden">
 		{#each Array(3) as _, idx}
-			<div
-				class="flex flex-col items-center justify-center gap-10"
-				use:inview={{ unobserveOnEnter: false, rootMargin: '-30%' }}
-				on:inview_change={({ detail }) => {
-					const { inView } = detail;
-					isInViewArr[idx] = inView;
-				}}
-			>
+			<div class="flex flex-col items-center justify-center gap-10">
 				<div class="flex flex-col items-start gap-4 text-center">
 					<TitleBox
 						isInView={isInViewArr[idx]}
@@ -98,11 +91,7 @@
 					/>
 				</div>
 
-				<div
-					class="relative flex w-full flex-col gap-3 sm:w-[600px]"
-					in:fade={{ duration: 1000, delay: 700 }}
-					out:fade={{ duration: 1000, delay: 700 }}
-				>
+				<div class="relative flex w-full flex-col gap-3 sm:w-[600px]">
 					{#if idx == 0}
 						<!-- CHAT BOX SECTION -->
 						<ChatBox screenSize="sm" isInView={isInViewArr[idx]} {talkingChatPropsArray} />
