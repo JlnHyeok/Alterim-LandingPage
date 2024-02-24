@@ -82,7 +82,14 @@
 	<!-- SMALL SIZE -->
 	<div class="flex flex-col gap-44 xl:hidden">
 		{#each Array(3) as _, idx}
-			<div class="flex flex-col items-center justify-center gap-10">
+			<div
+				class="flex flex-col items-center justify-center gap-10"
+				use:inview={{ unobserveOnEnter: false, rootMargin: '-30%' }}
+				on:inview_change={({ detail }) => {
+					const { inView } = detail;
+					isInViewArr[idx] = inView;
+				}}
+			>
 				<div class="flex flex-col items-start gap-4 text-center">
 					<TitleBox
 						isInView={isInViewArr[idx]}
