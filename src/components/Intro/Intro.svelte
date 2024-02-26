@@ -15,8 +15,8 @@
 </script>
 
 <div
-	class="relative h-[calc(100vh-80px)] w-full text-white"
-	use:inview={{ unobserveOnEnter: false, rootMargin: '-40%' }}
+	class="relative z-50 h-[calc(100vh-80px)] w-full text-white"
+	use:inview={{ unobserveOnEnter: true, rootMargin: '-40%' }}
 	on:inview_change={({ detail }) => {
 		const { inView } = detail;
 		isInView = inView;
@@ -63,7 +63,7 @@
 	</div>
 
 	<!-- AVATAR SECTION -->
-	<div class="relative flex h-[calc(50%-80px)] w-full items-end text-center">
+	<div class="relative flex h-[calc(50%-80px)] w-full items-end bg-opacity-100 text-center">
 		<AvatarList bind:isInView bind:isFirstTime />
 	</div>
 </div>

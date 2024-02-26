@@ -23,7 +23,7 @@
 			<!-- mt 와 Liked 의 h 의 크기 맞춰줄 것. -->
 			<figure
 				class="h-10 w-10 overflow-hidden rounded-full
-			{avatarInfo?.liked ? 'mt-8' : 'mt-6'}
+			{avatarInfo?.liked ? 'mt-9' : 'mt-4'}
 			"
 			>
 				<img src={avatarInfo?.src} alt="twitter_profile" />
@@ -35,7 +35,7 @@
 			<!-- LIKE SECTION -->
 			<div
 				class="relative w-full font-Pretendard_ExtraLight text-sm text-[#9AA9AF]
-						{avatarInfo?.liked ? 'h-8' : 'h-4'}
+						{avatarInfo?.liked ? 'h-8' : 'h-2'}
 			"
 			>
 				<div

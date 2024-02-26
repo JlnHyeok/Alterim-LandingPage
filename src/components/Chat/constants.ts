@@ -39,20 +39,20 @@ const talkingChatPropsArray: ITalkingChatProps[] = [
 	{
 		uid: 2,
 		sender: 'you',
-		message: 'HEY! Just spotted a HOT new token, $AIT! Ready to BLAST OFF! You in?',
+		message: 'HEY! Just spotted a HOT new token, $AIM! Ready to BLAST OFF! You in?',
 		time: 'Sat 5:10 AM'
 	},
 	{
 		uid: 3,
 		sender: 'me',
-		message: 'Sounds interesting. Tell me more about $AIT',
+		message: 'Sounds interesting. Tell me more about $AIM',
 		time: 'Sat 5:10 AM'
 	},
 	{
 		uid: 4,
 		sender: 'you',
 		message:
-			"It's the talk of the town! $AIT is all about revolutionizing digital interactions with AI. Gonna be HUGE!",
+			"It's the talk of the town! $AIM is all about revolutionizing digital interactions with AI. Gonna be HUGE!",
 		time: 'Sat 5:10 AM'
 	},
 	{

@@ -49,7 +49,7 @@
 		<div class="flex flex-col items-center justify-start gap-12">
 			<!-- BUTTON SECTION -->
 			<div
-				class="inline-flex w-[90%] flex-wrap items-start justify-center gap-5 md:w-[924px] md:justify-between md:gap-10"
+				class="z-20 inline-flex w-[90%] flex-wrap items-start justify-center gap-5 md:w-[924px] md:justify-between md:gap-10"
 			>
 				{#each roadMapTexts as { text }, idx (text)}
 					<button on:mouseenter={() => handleHover(idx)}>

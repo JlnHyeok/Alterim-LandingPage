@@ -9,7 +9,7 @@
 	{sender == 'me' ? 'items-end' : 'items-start'}"
 >
 	<div
-		class="flex w-fit min-w-0 max-w-[96%] shrink-0 flex-row items-end justify-start gap-2.5 break-all rounded-[40px] px-[0.85rem] py-[0.75rem] text-sm text-white
+		class="flex w-fit min-w-0 max-w-[96%] shrink-0 flex-row items-end justify-start gap-2.5 break-all rounded-[40px] px-[0.85rem] py-[0.75rem] text-xs text-white
 		{sender == 'me' ? 'me_background' : 'you_background'}"
 		style="box-shadow: 0px 3.09px 12.36px 0px rgba(0, 0, 0, 0.08); "
 	>

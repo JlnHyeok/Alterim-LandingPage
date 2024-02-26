@@ -42,7 +42,7 @@
 <div class="relative box-border h-[120vh] w-screen p-10">
 	<main
 		class="relative flex h-full w-full flex-col justify-center gap-0 md:gap-10"
-		use:inview={{ unobserveOnEnter: false, rootMargin: '-40%' }}
+		use:inview={{ unobserveOnEnter: false, rootMargin: '-65%' }}
 		on:inview_change={({ detail }) => {
 			const { inView } = detail;
 			isTextInView = inView;

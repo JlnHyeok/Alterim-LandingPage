@@ -10,7 +10,7 @@
 
 <!-- CHAT BOX SECTION -->
 <div
-	class="chatbox_background relative mx-auto flex h-[450px] w-[90%] flex-col justify-start rounded-xl xl:h-[600px] xl:w-[450px]"
+	class="chatbox_background relative mx-auto flex h-[450px] w-[90%] flex-col justify-start rounded-xl sm:w-[450px] xl:h-[600px] xl:w-[450px]"
 >
 	<!-- NAME SECTION -->
 	<div class="overflow-hidden rounded-t-xl">
@@ -49,19 +49,19 @@
 			transform: translateY(700px);
 		}
 		15% {
-			transform: translateY(570px);
+			transform: translateY(520px);
 		}
 		30% {
-			transform: translateY(470px);
+			transform: translateY(440px);
 		}
 		45% {
-			transform: translateY(390px);
+			transform: translateY(360px);
 		}
 		60% {
-			transform: translateY(280px);
+			transform: translateY(260px);
 		}
 		75% {
-			transform: translateY(200px);
+			transform: translateY(190px);
 		}
 		90% {
 			transform: translateY(90px);
