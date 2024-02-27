@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="flex h-[80vh] w-full items-center justify-center"
+	class="flex h-[100vh] w-full items-center justify-center"
 	use:inview={{ unobserveOnEnter: false, rootMargin: '-40%' }}
 	on:inview_change={({ detail }) => {
 		const { inView } = detail;

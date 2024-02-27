@@ -60,7 +60,7 @@
 <svelte:window bind:scrollY bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />
 
 <div
-	class="w-full items-center justify-center xl:h-[400vh]"
+	class="h-[300vh] w-full items-center justify-center xl:h-[400vh]"
 	use:inview={{ unobserveOnEnter: false, threshold: 0.1 }}
 	on:inview_change={({ detail }) => {
 		const { inView } = detail;
@@ -113,7 +113,7 @@
 		</div>
 
 		<!-- SMALL SIZE -->
-		<div class="flex flex-col gap-44 xl:hidden">
+		<div class="flex h-full flex-col justify-evenly xl:hidden">
 			{#each Array(3) as _, idx}
 				<div
 					class="flex flex-col items-center justify-center gap-10"
