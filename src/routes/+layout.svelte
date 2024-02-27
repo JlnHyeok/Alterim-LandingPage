@@ -4,6 +4,11 @@
 	import '../global.css';
 </script>
 
+<svelte:head>
+	<title>Alterim Ai</title>
+	<meta property="og:image" content="/og-thumbnail.png" />
+</svelte:head>
+
 <div class="relative box-border w-screen">
 	<Background />
 	<BackgroundIntro />
