@@ -61,7 +61,7 @@
 
 <div
 	class="w-full items-center justify-center xl:h-[400vh]"
-	use:inview={{ unobserveOnEnter: false, threshold: 0.2 }}
+	use:inview={{ unobserveOnEnter: false, threshold: 0.1 }}
 	on:inview_change={({ detail }) => {
 		const { inView } = detail;
 		isInView = inView;
