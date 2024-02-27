@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="fixed z-20 flex h-20 w-screen items-center justify-between bg-black bg-opacity-100 px-2 md:px-5"
+	class="fixed z-[100] flex h-20 w-screen items-center justify-between bg-black bg-opacity-100 px-2 md:px-5"
 >
 	<div>
 		<Title iconColor="white" textColor="white" />
