@@ -60,7 +60,7 @@
 <svelte:window bind:scrollY bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />
 
 <div
-	class="h-[300vh] w-full items-center justify-center xl:h-[400vh]"
+	class="w-full items-center justify-center xl:h-[400vh]"
 	use:inview={{ unobserveOnEnter: false, threshold: 0.2 }}
 	on:inview_change={({ detail }) => {
 		const { inView } = detail;
@@ -68,12 +68,11 @@
 		startEnterY = scrollY;
 	}}
 >
-	<div class="relative flex h-screen w-full items-center justify-center">
+	{#if isInView}
 		<!-- XL SIZE -->
-		{#if isInView}
-			<!-- content here -->
+		<div class="relative hidden h-screen w-full items-center justify-center xl:flex">
 			<div
-				class=" fixed top-[50%] hidden translate-y-[-50%] items-center justify-center gap-10 xl:flex"
+				class=" fixed top-[50%] flex translate-y-[-50%] items-center justify-center gap-10"
 				in:fade={{ duration: 500 }}
 				out:fade={{ duration: 500 }}
 			>
@@ -111,43 +110,43 @@
 					{/if}
 				</div>
 			</div>
-		{/if}
-	</div>
+		</div>
 
-	<!-- SMALL SIZE -->
-	<div class="flex flex-col gap-44 xl:hidden">
-		{#each Array(3) as _, idx}
-			<div
-				class="flex flex-col items-center justify-center gap-10"
-				use:inview={{ unobserveOnEnter: false, rootMargin: '-30%' }}
-				on:inview_change={({ detail }) => {
-					const { inView } = detail;
-					isInViewArr[idx] = inView;
-				}}
-			>
-				<div class="flex flex-col items-start gap-4 text-center">
-					<TitleBox
-						isInView={isInViewArr[idx]}
-						titleArray={titleArray[idx]}
-						subTitleArray={subTitleArray[idx]}
-					/>
-				</div>
-
-				<div class="relative flex w-full flex-col gap-3 sm:w-[600px]">
-					{#if idx == 0}
-						<!-- CHAT BOX SECTION -->
-						<ChatBox screenSize="sm" isInView={isInViewArr[idx]} {talkingChatPropsArray} />
-					{:else if idx == 1}
-						<SocialBox
-							screenSize="sm"
+		<!-- SMALL SIZE -->
+		<div class="flex flex-col gap-44 xl:hidden">
+			{#each Array(3) as _, idx}
+				<div
+					class="flex flex-col items-center justify-center gap-10"
+					use:inview={{ unobserveOnEnter: false, rootMargin: '-30%' }}
+					on:inview_change={({ detail }) => {
+						const { inView } = detail;
+						isInViewArr[idx] = inView;
+					}}
+				>
+					<div class="flex flex-col items-start gap-4 text-center">
+						<TitleBox
 							isInView={isInViewArr[idx]}
-							avatarInfoArray={socialAvatarInfoArray}
+							titleArray={titleArray[idx]}
+							subTitleArray={subTitleArray[idx]}
 						/>
-					{:else}
-						<InvestBox screenSize="sm" isInView={isInViewArr[idx]} {investChatPropsArray} />
-					{/if}
+					</div>
+
+					<div class="relative flex w-full flex-col gap-3 sm:w-[600px]">
+						{#if idx == 0}
+							<!-- CHAT BOX SECTION -->
+							<ChatBox screenSize="sm" isInView={isInViewArr[idx]} {talkingChatPropsArray} />
+						{:else if idx == 1}
+							<SocialBox
+								screenSize="sm"
+								isInView={isInViewArr[idx]}
+								avatarInfoArray={socialAvatarInfoArray}
+							/>
+						{:else}
+							<InvestBox screenSize="sm" isInView={isInViewArr[idx]} {investChatPropsArray} />
+						{/if}
+					</div>
 				</div>
-			</div>
-		{/each}
-	</div>
+			{/each}
+		</div>
+	{/if}
 </div>
