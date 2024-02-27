@@ -27,7 +27,7 @@
 		<!-- LOGO -->
 		{#if isInView}
 			<div
-				class="mt-[160px] h-20 w-16"
+				class="mt-20 h-20 w-16 md:mt-[160px]"
 				in:scale={{ duration: 400, delay: delay, start: 1.5, opacity: 0 }}
 			>
 				<img src={Logo} alt="logo" class="object-cover" />
@@ -46,20 +46,21 @@
 			>
 				<p>Where Your Digital Clone Comes to Life powered by AI</p>
 			</div>
-		{/if}
 
-		<a
-			href="#welcome"
-			class="absolute -bottom-36 z-20 flex h-14 flex-col items-center md:-bottom-24"
-		>
-			<span
-				class="font-Pretendard_ExtraLight text-[1rem] text-[#ffffffbf] [text-shadow:0px_0px_10px_#ffffff80]"
-				>scroll down</span
+			<a
+				href="#welcome"
+				class="absolute -bottom-36 z-20 flex h-14 flex-col items-center md:-bottom-24"
+				in:scale={{ duration: 800, delay: delay + 800, start: 1, opacity: 0 }}
 			>
-			<div class="relative mt-4">
-				<img src={ScrollDown} alt="scroll-down" />
-			</div>
-		</a>
+				<span
+					class="font-Pretendard_ExtraLight text-[1rem] text-[#ffffffbf] [text-shadow:0px_0px_10px_#ffffff80]"
+					>scroll down</span
+				>
+				<div class="relative mt-4">
+					<img src={ScrollDown} alt="scroll-down" />
+				</div>
+			</a>
+		{/if}
 	</div>
 
 	<!-- AVATAR SECTION -->
