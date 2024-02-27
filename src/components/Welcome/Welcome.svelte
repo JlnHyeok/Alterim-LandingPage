@@ -53,7 +53,7 @@
 		>
 			<div
 				class="absolute left-[0px] flex h-14 w-14 flex-col gap-4 text-center opacity-0 duration-300 md:h-14 md:w-14
-				{isInView ? `serial-wrap-animation` : 'disappear-wrap'}"
+				{isInView ? `serial-wrap-animation` : 'disappear-wrap hidden'}"
 			>
 				<span
 					class="font-Pretendard_ExtraLight text-xs
@@ -64,7 +64,7 @@
 			<div
 				id="card-in"
 				class="absolute right-[0px] flex h-14 w-14 flex-col gap-4 text-center opacity-0 duration-300 md:h-14 md:w-14
-				{isInView ? `serial-in-animation` : 'disappear-in'}"
+				{isInView ? `serial-in-animation` : 'disappear-in hidden'}"
 			>
 				<span
 					id="card-in-text"
