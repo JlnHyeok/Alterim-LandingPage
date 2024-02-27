@@ -7,7 +7,6 @@
 	import SecondCard from './SecondCard.svelte';
 
 	let isTextInView: boolean;
-	let isCardInView: boolean;
 	let currentNumber: number = 2;
 	let timer: number;
 
@@ -19,7 +18,7 @@
 		}
 	}
 
-	$: if (isCardInView) {
+	$: if (isTextInView) {
 		if (timer) clearInterval(timer);
 
 		timer = setInterval(() => {
