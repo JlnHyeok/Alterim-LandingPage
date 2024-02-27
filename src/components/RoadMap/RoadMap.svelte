@@ -21,7 +21,7 @@
 		},
 		{
 			text: '2024 Q4',
-			contents: ['Launch Community Agora DevelopmentEnhancement', 'of AI-based Algorithms']
+			contents: ['Launch Community Agora DevelopmentEnhancement', 'Of AI-based Algorithms']
 		},
 		{
 			text: '2025 Q1',
@@ -60,7 +60,7 @@
 
 			<!-- INFO SECTION -->
 			<div
-				class="mt-10 w-[85%] border-b-[1px] border-t-[1px] border-emerald-50 border-opacity-25 py-8 md:h-[180px] md:w-full"
+				class="mt-10 h-36 w-[85%] border-b-[1px] border-t-[1px] border-emerald-50 border-opacity-25 py-8 md:h-[180px] md:w-full"
 			>
 				<div class="flex h-full items-center justify-start gap-4 self-stretch md:gap-12">
 					<div
@@ -70,8 +70,8 @@
 					</div>
 					<ul class="h-30 text-left font-Pretendard_Light font-normal text-white">
 						{#each roadMapTexts[infoIndex].contents as content (content)}
-							<li class="flex w-full justify-start" in:fade out:fade={{ duration: 0 }}>
-								{content}
+							<li class="flex w-full" in:fade out:fade={{ duration: 0 }}>
+								<span class="w-full">{content}</span>
 							</li>
 						{/each}
 					</ul>
