@@ -147,10 +147,10 @@
 	}
 
 	.card-wrap-animation {
-		animation: card-wrap-animation 1.5s 1.2s ease-in-out forwards;
+		animation: card-wrap-animation 1s 1.2s ease-in-out forwards;
 	}
 	.card-in-animation {
-		animation: card-in-animation 1.5s 1.2s ease-in-out forwards;
+		animation: card-in-animation 1s 1.2s ease-in-out forwards;
 	}
 	.disappear-wrap {
 		animation: disappear-wrap 0.6s ease-in-out forwards;
@@ -163,17 +163,5 @@
 	}
 	.fade-out {
 		animation: fade-out 1s 1.4s ease-in-out forwards;
-	}
-	.serial-wrap-animation {
-		animation-name: fade-in, card-wrap-animation;
-		animation-delay: 0.6s, 1.7s;
-		animation-duration: 1s, 1.2s;
-		animation-fill-mode: forwards, forwards;
-	}
-	.serial-in-animation {
-		animation-name: fade-in, card-in-animation;
-		animation-delay: 0.6s, 1.7s;
-		animation-duration: 1s, 1.2s;
-		animation-fill-mode: forwards, forwards;
 	}
 </style>
