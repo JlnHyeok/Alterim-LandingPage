@@ -134,7 +134,7 @@
 					<div class="relative flex w-full flex-col gap-3 sm:w-[600px]">
 						{#if idx == 0}
 							<!-- CHAT BOX SECTION -->
-							<ChatBox screenSize="sm" isInView={isInViewArr[idx]} {talkingChatPropsArray} />
+							<ChatBox isInView={isInViewArr[idx]} {talkingChatPropsArray} />
 						{:else if idx == 1}
 							<SocialBox
 								screenSize="sm"

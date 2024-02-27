@@ -1,5 +1,4 @@
 <script lang="ts">
-	export let screenSize: 'sm' | 'xl' = 'xl';
 	export let isInView: boolean;
 	export let talkingChatPropsArray: ITalkingChatProps[];
 
@@ -24,7 +23,7 @@
 
 	<!-- CHATTING SECTION -->
 	<div class="flex h-full flex-col justify-end overflow-hidden p-3">
-		<div class={isInView ? 'talking_y_animation' : ''}>
+		<div class={isInView ? 'talking_y_animation' : 'translate-y-[100%]'}>
 			{#each talkingChatPropsArray as { sender, message, time, uid } (uid)}
 				<div animate:flip>
 					<TalkingChat {sender} {message} {time} />

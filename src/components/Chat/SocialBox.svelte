@@ -20,7 +20,7 @@
 >
 	<div
 		class="relative flex h-full w-full flex-col items-center justify-center gap-4 p-2
-		{isInView ? animationClass : ''}"
+		{isInView ? animationClass : 'translate-y-[100%]'}"
 	>
 		<!-- SOCIAL CHAT BOX -->
 		{#each avatarInfoArray as avatarInfo}

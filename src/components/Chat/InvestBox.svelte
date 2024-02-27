@@ -36,7 +36,7 @@
 
 	<!-- CHATTING SECTION -->
 	<div class="flex h-full flex-col justify-end overflow-hidden p-3">
-		<div id="invest-chat" class={isInView ? animationClass : ''}>
+		<div id="invest-chat" class={isInView ? animationClass : 'translate-y-[100%]'}>
 			{#each investChatPropsArray as { sender, message, time, component }}
 				<InvestChat {sender} {message} {time} {component} />
 			{/each}
