@@ -49,69 +49,67 @@
 		}}
 	>
 		<!-- TEXT SECTION -->
-		<div
-			class="mx-auto flex h-[300px] w-full flex-col items-center justify-center gap-4 font-Pretendard_Light text-2xl duration-[1.5s] md:gap-8 md:text-[3rem]
-      {isTextInView ? 'opacity-100' : 'opacity-0'}"
-		>
-			<div>
-				<span class="text-white">Revitalize Your </span>
-				<span class="text-font-highlight"> PFP </span>
-				<span class="text-white">into </span>
-				<span class="text-font-highlight">Clone</span>
+		{#if isTextInView}
+			<div
+				class="mx-auto flex h-[300px] w-full flex-col items-center justify-center gap-4 font-Pretendard_Light text-2xl duration-[1.5s] md:gap-8 md:text-[3rem]"
+				in:fade={{ duration: 500 }}
+				out:fade={{ duration: 500 }}
+			>
+				<div>
+					<span class="text-white">Revitalize Your </span>
+					<span class="text-font-highlight"> PFP </span>
+					<span class="text-white">into </span>
+					<span class="text-font-highlight">Clone</span>
+				</div>
+				<div class="flex flex-col gap-0 text-center text-[0.8rem] md:gap-3 md:text-[1.5rem]">
+					<span class="flex h-5 items-center justify-center"
+						>Your PFP is no longer just a collectible</span
+					>
+					<span class="flex h-5 items-center justify-center"
+						>it’s uniquely crafted personas with their own</span
+					>
+					<span class="flex h-5 items-center justify-center"
+						>identity powered by &nbsp;<strong class="text-font-subHighlight">Alterim.ai</strong
+						></span
+					>
+				</div>
 			</div>
-			<div class="flex flex-col gap-0 text-center text-[0.8rem] md:gap-3 md:text-[1.5rem]">
-				<span class="flex h-5 items-center justify-center"
-					>Your PFP is no longer just a collectible</span
-				>
-				<span class="flex h-5 items-center justify-center"
-					>it’s uniquely crafted personas with their own</span
-				>
-				<span class="flex h-5 items-center justify-center"
-					>identity powered by &nbsp;<strong class="text-font-subHighlight">Alterim.ai</strong
-					></span
-				>
+			<!-- SOUL CARD SECTION -->
+			<div
+				class="relative mx-auto flex h-full w-full flex-col items-center justify-start gap-12 duration-[1s] 3xl:w-[1200px]"
+				in:fade={{ duration: 500, delay: 300 }}
+				out:fade={{ duration: 500 }}
+			>
+				<div class="flex w-full items-center justify-center gap-5">
+					<ClickBtn number={1} text="Select Your NFT" onClick={() => {}} />
+					<Arrow />
+					<ClickBtn
+						number={2}
+						text="Generating AI Soul"
+						isSelect={currentNumber == 2}
+						onClick={() => onClickNumberBtn(2)}
+					/>
+					<Arrow />
+					<ClickBtn
+						number={3}
+						text="Meet Clone"
+						isSelect={currentNumber == 3}
+						onClick={() => onClickNumberBtn(3)}
+					/>
+				</div>
+				<div class="flex h-full w-full justify-center">
+					{#if currentNumber === 2}
+						<!-- content here -->
+						<div in:fade={{ duration: 300 }} out:fade={{ duration: 0 }}>
+							<SecondCard />
+						</div>
+					{:else if currentNumber === 3}
+						<div in:fade={{ duration: 300 }} out:fade={{ duration: 0 }}>
+							<ThirdCard />
+						</div>
+					{/if}
+				</div>
 			</div>
-		</div>
-
-		<!-- SOUL CARD SECTION -->
-		<div
-			class="relative mx-auto flex h-full w-full flex-col items-center justify-start gap-12 duration-[1s] 3xl:w-[1200px]
-      {isCardInView ? 'opacity-100' : 'opacity-0'}"
-			use:inview={{ unobserveOnEnter: false, rootMargin: '-45%' }}
-			on:inview_change={({ detail }) => {
-				const { inView } = detail;
-				isCardInView = inView;
-			}}
-		>
-			<div class="flex w-full items-center justify-center gap-5">
-				<ClickBtn number={1} text="Select Your NFT" onClick={() => {}} />
-				<Arrow />
-				<ClickBtn
-					number={2}
-					text="Generating AI Soul"
-					isSelect={currentNumber == 2}
-					onClick={() => onClickNumberBtn(2)}
-				/>
-				<Arrow />
-				<ClickBtn
-					number={3}
-					text="Meet Clone"
-					isSelect={currentNumber == 3}
-					onClick={() => onClickNumberBtn(3)}
-				/>
-			</div>
-			<div class="flex h-full w-full justify-center">
-				{#if currentNumber === 2}
-					<!-- content here -->
-					<div in:fade={{ duration: 300 }} out:fade={{ duration: 0 }}>
-						<SecondCard />
-					</div>
-				{:else if currentNumber === 3}
-					<div in:fade={{ duration: 300 }} out:fade={{ duration: 0 }}>
-						<ThirdCard />
-					</div>
-				{/if}
-			</div>
-		</div>
+		{/if}
 	</main>
 </div>
