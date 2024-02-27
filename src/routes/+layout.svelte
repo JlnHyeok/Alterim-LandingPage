@@ -6,7 +6,12 @@
 
 <svelte:head>
 	<title>Alterim Ai</title>
-	<meta property="og:image" content="/og-thumbnail.png" />
+	<meta property="og:image" content="/og-image.png" />
+	<meta property="twitter:image" content="/alterim-icon.png" />
+	<meta
+		property="og:description"
+		content="Alterim Ai is a company that provides AI solutions for businesses."
+	/>
 </svelte:head>
 
 <div class="relative box-border w-screen">
