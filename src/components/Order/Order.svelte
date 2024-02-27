@@ -42,7 +42,7 @@
 <div class="relative box-border h-[120vh] w-screen p-10">
 	<main
 		class="relative flex h-full w-full flex-col justify-center gap-0 md:gap-10"
-		use:inview={{ unobserveOnEnter: false, rootMargin: '-40%' }}
+		use:inview={{ unobserveOnEnter: false, threshold: 0.2 }}
 		on:inview_change={({ detail }) => {
 			const { inView } = detail;
 			isTextInView = inView;
@@ -52,7 +52,7 @@
 		{#if isTextInView}
 			<div
 				class="mx-auto flex h-[300px] w-full flex-col items-center justify-center gap-4 font-Pretendard_Light text-2xl duration-[1.5s] md:gap-8 md:text-[3rem]"
-				in:fade={{ duration: 500 }}
+				in:fade={{ duration: 1000 }}
 				out:fade={{ duration: 500 }}
 			>
 				<div>

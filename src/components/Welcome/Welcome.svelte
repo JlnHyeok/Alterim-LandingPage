@@ -28,7 +28,7 @@
 	id="welcome"
 	class="relative h-[100vh] w-full overflow-hidden p-10 duration-300
 	{!isInView && 'z-0 opacity-0'}"
-	use:inview={{ unobserveOnEnter: false, threshold: 0.6 }}
+	use:inview={{ unobserveOnEnter: false, threshold: 0.7 }}
 	on:inview_change={({ detail }) => {
 		const { inView } = detail;
 		isInView = inView;
@@ -40,7 +40,7 @@
 			<div
 				class="mx-auto flex h-[130px] w-full flex-col justify-center text-center font-Pretendard_ExtraLight text-xl duration-[0.6s] md:h-[300px] md:text-[3rem]"
 				in:scale={{ duration: 500, start: 0, opacity: 0 }}
-				out:fade={{ duration: 500 }}
+				out:fade={{ duration: 1500 }}
 			>
 				<span class="text-white"
 					>Welcome to <strong class="text-font-highlight">Alterim</strong> , where your</span
