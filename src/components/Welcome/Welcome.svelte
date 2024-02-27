@@ -166,12 +166,12 @@
 		animation-name: fade-in, card-wrap-animation;
 		animation-delay: 0.6s, 1.7s;
 		animation-duration: 1s, 1.2s;
-		animation-fill-mode: forwards;
+		animation-fill-mode: forwards, forwards;
 	}
 	.serial-in-animation {
 		animation-name: fade-in, card-in-animation;
 		animation-delay: 0.6s, 1.7s;
 		animation-duration: 1s, 1.2s;
-		animation-fill-mode: forwards;
+		animation-fill-mode: forwards, forwards;
 	}
 </style>
