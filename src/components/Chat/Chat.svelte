@@ -19,22 +19,26 @@
 	let currentNumber = 0;
 	let scrollY: number;
 	let screenWidth: number;
+	let screenHeight: number;
+	let startEnterY: number;
 
 	$: isInView = false;
 	$: isInViewArr = [false, false, false];
 	$: {
 		if (screenWidth >= 1280) {
-			if (scrollY > 3800 && scrollY < 5000) {
-				isInView = true;
+			console.log(screenHeight, startEnterY);
+			if (scrollY > startEnterY && scrollY < startEnterY + screenHeight) {
 				onClickButton(0);
-			} else if (scrollY >= 5000 && scrollY < 6200) {
-				isInView = true;
+			} else if (
+				scrollY >= startEnterY + screenHeight &&
+				scrollY < startEnterY + screenHeight * 2
+			) {
 				onClickButton(1);
-			} else if (scrollY >= 6000 && scrollY < 7400) {
-				isInView = true;
+			} else if (
+				scrollY >= startEnterY + screenHeight * 2 &&
+				scrollY < startEnterY + screenHeight * 3
+			) {
 				onClickButton(2);
-			} else {
-				isInView = false;
 			}
 		}
 	}
@@ -53,16 +57,24 @@
 	}
 </script>
 
-<svelte:window bind:scrollY bind:innerWidth={screenWidth} />
+<svelte:window bind:scrollY bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />
 
-<div class="h-[400vh] w-full items-center justify-center">
+<div
+	class="h-[300vh] w-full items-center justify-center xl:h-[400vh]"
+	use:inview={{ unobserveOnEnter: false, threshold: 0.2 }}
+	on:inview_change={({ detail }) => {
+		const { inView } = detail;
+		isInView = inView;
+		startEnterY = scrollY;
+	}}
+>
 	<div class="relative flex h-screen w-full items-center justify-center">
 		<!-- XL SIZE -->
 		{#if isInView}
 			<!-- content here -->
 			<div
 				class=" fixed top-[50%] hidden translate-y-[-50%] items-center justify-center gap-10 xl:flex"
-				in:fade={{ duration: 1000 }}
+				in:fade={{ duration: 500 }}
 				out:fade={{ duration: 500 }}
 			>
 				<!-- LEFT SECTION -->

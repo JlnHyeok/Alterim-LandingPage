@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { fade, scale } from 'svelte/transition';
 	import { browser } from '$app/environment';
 	import { CardIn, CardWrap } from '$lib/assets/images';
 	import { onMount } from 'svelte';
@@ -8,10 +9,9 @@
 	let cardInElement: HTMLElement;
 
 	$: if (isInView && browser) {
-		cardInElement = document.getElementById('card-in-text')!;
-
 		setTimeout(() => {
-			cardInElement.innerText = 'Clone';
+			cardInElement = document.getElementById('card-in-text')!;
+			cardInElement.textContent = 'Clone';
 			cardInElement.classList.remove('fade-out');
 			cardInElement.setAttribute('opacity', '1');
 		}, 2500);
@@ -36,44 +36,46 @@
 >
 	<main class="fixed left-0 top-0 flex h-full w-full flex-col justify-center gap-4">
 		<!-- TEXT SECTION -->
-		<div
-			class="mx-auto flex h-[130px] w-full flex-col justify-center text-center font-Pretendard_ExtraLight text-xl duration-[0.6s] md:h-[300px] md:text-[3rem]
-			{isInView ? 'opacity-1 scale-100' : 'opacity-0'}"
-		>
-			<span class="text-white"
-				>Welcome to <strong class="text-font-highlight">Alterim</strong> , where your</span
-			> <br class="hidden md:inline" />
-			<span class=""> PFP now has a story, </span><br class="hidden md:inline" />
-			<span>a personality, and a life of its own </span>
-		</div>
+		{#if isInView}
+			<div
+				class="mx-auto flex h-[130px] w-full flex-col justify-center text-center font-Pretendard_ExtraLight text-xl duration-[0.6s] md:h-[300px] md:text-[3rem]"
+				in:scale={{ duration: 500, start: 0, opacity: 0 }}
+				out:fade={{ duration: 500 }}
+			>
+				<span class="text-white"
+					>Welcome to <strong class="text-font-highlight">Alterim</strong> , where your</span
+				> <br class="hidden md:inline" />
+				<span class=""> PFP now has a story, </span><br class="hidden md:inline" />
+				<span>a personality, and a life of its own </span>
+			</div>
+		{/if}
 
 		<!-- SOUL CARD SECTION -->
-		<div
-			class="relative mx-auto flex h-14 w-[300px] items-center justify-center md:h-20 3xl:w-[450px]"
-		>
+		{#if isInView}
 			<div
-				class="absolute left-[0px] flex h-14 w-14 flex-col gap-4 text-center opacity-0 duration-300 md:h-14 md:w-14
-				{isInView ? `serial-wrap-animation` : 'disappear-wrap hidden'}"
+				class="relative mx-auto flex h-14 w-[300px] items-center justify-center md:h-20 3xl:w-[450px]"
+				in:fade={{ duration: 500, delay: 500 }}
+				out:fade={{ duration: 500 }}
 			>
-				<span
-					class="font-Pretendard_ExtraLight text-xs
-				{isInView ? 'fade-out' : 'opacity-0'}">PFP</span
+				<div
+					class="card-wrap-animation absolute left-[0px] flex h-14 w-14 flex-col gap-4 text-center duration-300 md:h-14 md:w-14"
 				>
-				<img src={CardWrap} alt="card-wrap" class="w-full object-cover" />
-			</div>
-			<div
-				id="card-in"
-				class="absolute right-[0px] flex h-14 w-14 flex-col gap-4 text-center opacity-0 duration-300 md:h-14 md:w-14
-				{isInView ? `serial-in-animation` : 'disappear-in hidden'}"
-			>
-				<span
-					id="card-in-text"
-					class="w-full text-center font-Pretendard_ExtraLight text-xs duration-1000
-				{isInView ? 'fade-out' : 'opacity-0'}">Ai Soul</span
+					<span class="fade-out font-Pretendard_ExtraLight text-xs">PFP</span>
+					<img src={CardWrap} alt="card-wrap" class="w-full object-cover" />
+				</div>
+				<div
+					id="card-in"
+					class="card-in-animation absolute right-[0px] flex h-14 w-14 flex-col gap-4 text-center duration-300 md:h-14 md:w-14"
 				>
-				<img src={CardIn} alt="card-in" class="mx-auto mt-2 h-10 w-10 object-cover" />
+					<span
+						id="card-in-text"
+						class="fade-out w-full text-center font-Pretendard_ExtraLight text-xs duration-1000"
+						>Ai Soul</span
+					>
+					<img src={CardIn} alt="card-in" class="mx-auto mt-2 h-10 w-10 object-cover" />
+				</div>
 			</div>
-		</div>
+		{/if}
 	</main>
 </div>
 
