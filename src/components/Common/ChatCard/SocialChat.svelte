@@ -80,7 +80,7 @@
 
 			<!-- BOTTOM SECTION -->
 			<div class="h-10 w-full">
-				<div class="flex h-full w-full font-Pretendard_ExtraLight text-sm">
+				<div class="flex h-full w-full font-Pretendard_ExtraLight text-xs">
 					<button class="flex h-full w-1/4 items-center">
 						<figure class="pr-[5px]">
 							<img src={Comment} alt="comment" />
