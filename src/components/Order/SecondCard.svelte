@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="relative flex h-[60vh] w-[82vw] flex-row items-center justify-center gap-[49px] rounded-[20px] border border-white border-opacity-30 bg-black p-10 md:h-[65vh] md:w-[80vw] md:max-w-[1000px]"
+	class="relative flex h-[50vh] w-[82vw] flex-row items-center justify-center gap-[49px] rounded-[20px] border border-white border-opacity-30 bg-black p-10 md:h-[65vh] md:w-[80vw] md:max-w-[1000px]"
 	style="background: linear-gradient(180deg, rgba(200, 207, 214, 0.11) 0%,rgba(200, 207, 214, 0.00) 100%); backdrop-filter:blur(32px);"
 >
 	<div class="relative flex shrink-0 flex-col items-center justify-start gap-[49px]">

@@ -26,21 +26,20 @@
 
 <div
 	id="welcome"
-	class="relative h-[100vh] w-full overflow-hidden p-10 duration-300
-	{!isInView && 'z-0 opacity-0'}"
+	class="relative h-[100vh] w-full overflow-hidden p-10"
 	use:inview={{ unobserveOnEnter: false, threshold: 0.7 }}
 	on:inview_change={({ detail }) => {
 		const { inView } = detail;
 		isInView = inView;
 	}}
 >
-	<main class="fixed left-0 top-0 flex h-full w-full flex-col justify-center gap-4">
+{#if isInView}
+	<main class="fixed left-0 top-0 flex h-full w-full flex-col justify-center gap-4 z-10">
 		<!-- TEXT SECTION -->
-		{#if isInView}
 			<div
 				class="mx-auto flex h-[130px] w-full flex-col justify-center text-center font-Pretendard_ExtraLight text-xl duration-[0.6s] md:h-[300px] md:text-[3rem]"
 				in:scale={{ duration: 500, start: 0, opacity: 0 }}
-				out:fade={{ duration: 1500 }}
+				out:fade={{ duration: 300 }}
 			>
 				<span class="text-white"
 					>Welcome to <strong class="text-font-highlight">Alterim</strong> , where your</span
@@ -48,10 +47,7 @@
 				<span class=""> PFP now has a story, </span><br class="hidden md:inline" />
 				<span>a personality, and a life of its own </span>
 			</div>
-		{/if}
 
-		<!-- SOUL CARD SECTION -->
-		{#if isInView}
 			<div
 				class="relative mx-auto flex h-14 w-[300px] items-center justify-center md:h-20 3xl:w-[450px]"
 				in:fade={{ duration: 500, delay: 500 }}
@@ -75,8 +71,9 @@
 					<img src={CardIn} alt="card-in" class="mx-auto mt-2 h-10 w-10 object-cover" />
 				</div>
 			</div>
+			
+		</main>
 		{/if}
-	</main>
 </div>
 
 <style>

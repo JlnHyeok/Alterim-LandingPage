@@ -26,7 +26,6 @@
 	$: isInViewArr = [false, false, false];
 	$: {
 		if (screenWidth >= 1280) {
-			console.log(screenHeight, startEnterY);
 			if (scrollY > startEnterY && scrollY < startEnterY + screenHeight) {
 				onClickButton(0);
 			} else if (
