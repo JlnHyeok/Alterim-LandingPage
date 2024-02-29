@@ -26,7 +26,7 @@
 			{avatarInfo?.liked ? 'mt-9' : 'mt-4'}
 			"
 			>
-				<img src={avatarInfo?.src} alt="twitter_profile" />
+				<img src={avatarInfo?.src} alt="twitter_profile" class="w-full h-full" />
 			</figure>
 		</section>
 

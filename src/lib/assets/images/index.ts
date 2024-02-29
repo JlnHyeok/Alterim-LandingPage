@@ -18,6 +18,7 @@ import ScrollDown from './scroll-down.png';
 import CardWrap from './card-wrap.png';
 import CardIn from './card-in.png';
 import ProfileCat from './profile/profile-cat.png';
+import ProfileCat2 from './profile/profile-cat2.png'
 import StartingImg from './starting.png';
 import Comming1 from './comming-1.png';
 import Comming2 from './comming-2.png';
@@ -80,6 +81,7 @@ export {
 	RoadMapHover,
 	CommingBottom,
 	ProfileWhiteCat,
+	ProfileCat2,
 	Learn,
 	ChatClick,
 	FriendNormal,
