@@ -19,14 +19,14 @@
 			class="font-Pretendard_Regular text-2xl text-font-dark opacity-0 duration-500 md:text-[3rem]
       {isTextInView ? 'scale-100 opacity-100' : 'scale-[2]'}"
 		>
-			Join Alterim World with
+			Join Alterim World
 		</h1>
 		<br class="hidden md:flex" />
 		<h1
 			class="font-Pretendard_Regular text-2xl text-font-dark opacity-0 duration-500 md:text-[3rem]
       {isTextInView ? 'scale-100 opacity-100' : 'scale-[2]'}"
 		>
-			your NFT
+			with your NFT
 		</h1>
 	</div>
 	{#if isTextInView}
@@ -41,7 +41,7 @@
 				target="_blank"
 				class="relative text-center font-Pretendard_Regular text-sm text-[#020202] md:text-lg"
 			>
-				Comming Soon
+				Launch Demo
 			</a>
 		</div>
 	{/if}

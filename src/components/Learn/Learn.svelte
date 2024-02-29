@@ -41,7 +41,7 @@
 
 				<!-- DESCRIPTION SECTION -->
 				<div
-					class="relative flex items-center justify-start self-stretch text-left font-['Pretendard-Light',_sans-serif] text-base font-light leading-[140%] text-[#d3d3d3]"
+					class="relative flex items-center justify-start self-stretch text-center md:text-left font-['Pretendard-Light',_sans-serif] text-base font-light leading-[140%] text-[#d3d3d3]"
 					in:fade={{ duration: 1000, delay: 700 }}
 					out:fade={{ duration: 1000, delay: 0 }}
 				>
