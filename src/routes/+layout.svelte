@@ -11,7 +11,7 @@
 	<meta property="og:description" content="Alterim Ai Demo Page" />
 </svelte:head>
 
-<div class="relative box-border w-screen">
+<div class="relative box-border w-screen bg-black">
 	<Background />
 	<BackgroundIntro />
 	<slot />
