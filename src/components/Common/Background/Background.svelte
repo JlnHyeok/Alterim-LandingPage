@@ -17,7 +17,7 @@
 	];
 </script>
 
-<div class="fixed z-0 h-screen w-screen bg-black">
+<div class="fixed z-10 h-screen w-screen bg-black">
 	<!-- CLOUD SECTION -->
 	<!-- TOP RIGHT -->
 	<Cloud position="top-[200px] right-[600px]" />

@@ -34,7 +34,7 @@
 	}}
 >
 {#if isInView}
-	<main class="fixed left-0 top-0 flex h-full w-full flex-col justify-center gap-4 z-10">
+	<main class="fixed left-0 top-0 flex h-full w-full flex-col justify-center gap-4 z-0">
 		<!-- TEXT SECTION -->
 			<div
 				class="mx-auto flex h-[130px] w-full flex-col justify-center text-center font-Pretendard_ExtraLight text-xl duration-[0.6s] md:h-[300px] md:text-[3rem]"
