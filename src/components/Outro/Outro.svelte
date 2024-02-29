@@ -14,7 +14,7 @@
 		isTextInView = inView;
 	}}
 >
-	<div class="text-center">
+	<div class="text-center md:flex md:justify-center md:gap-2">
 		<h1
 			class="font-Pretendard_Regular text-2xl text-font-dark opacity-0 duration-500 md:text-[3rem]
       {isTextInView ? 'scale-100 opacity-100' : 'scale-[2]'}"
