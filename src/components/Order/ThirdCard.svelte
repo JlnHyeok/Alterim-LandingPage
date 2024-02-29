@@ -10,7 +10,7 @@
 	<!-- LEFT SECTION -->
 	<div
 		in:fade={{ duration: 500 }}
-		class="relative flex w-full shrink-0 flex-col items-start justify-start gap-3 pb-7 md:pt-7 xl:w-1/2 xl:gap-[35px]"
+		class="relative flex w-full shrink-0 flex-col items-start justify-start gap-3 pb-0 md:pt-7 xl:w-1/2 xl:gap-[35px]"
 	>
 		<!-- NAME SECTION -->
 		<div
@@ -95,18 +95,18 @@
 
 		<!-- SKILLS SECTION -->
 		<div
-			class="relative flex shrink-0 flex-col items-start justify-start self-stretch border-t-[1px] border-white border-opacity-20 pt-3 xl:flex-row xl:gap-16 xl:border-t-0 xl:pt-0"
+			class="relative flex shrink-0 flex-col items-start text-xs md:text-base justify-start self-stretch border-t-[1px] border-white border-opacity-20 pt-4 xl:flex-row xl:gap-16 xl:border-t-0 xl:pt-0"
 		>
 			<div class="relative flex shrink-0 items-start justify-center gap-10 xl:flex-col xl:gap-1">
 				<div
-					class="relative w-24 text-left font-Pretendard_Regular text-base font-normal leading-[159%] text-[#ffffff]"
+					class="relative w-24 text-left font-Pretendard_Regular  font-normal leading-[159%] text-[#ffffff]"
 					style="opacity: 0.5; "
 				>
 					Trading Style
 				</div>
 				<div class="relative flex w-[108px] shrink-0 flex-row items-center justify-start gap-2">
 					<div
-						class="relative text-left font-Pretendard_Regular text-base font-normal leading-[159%] text-[#ffffff]"
+						class="relative text-left font-Pretendard_Regular  font-normal leading-[159%] text-[#ffffff]"
 					>
 						Risk Taker
 					</div>
@@ -117,39 +117,39 @@
 			>
 				<div class="relative flex shrink-0 flex-row items-center justify-start gap-10">
 					<div
-						class="relative w-24 text-left font-Pretendard_Regular text-base font-normal leading-[159%] text-[#ffffff]"
+						class="relative w-24 text-left font-Pretendard_Regular  font-normal leading-[159%] text-[#ffffff]"
 						style="opacity: 0.5; "
 					>
 						Category
 					</div>
 					<div
-						class="relative text-left font-Pretendard_Regular text-base font-normal leading-[159%] text-[#ffffff]"
+						class="relative text-left font-Pretendard_Regular  font-normal leading-[159%] text-[#ffffff]"
 					>
 						Trendy
 					</div>
 				</div>
 				<div class="relative flex shrink-0 flex-row items-center justify-start gap-10">
 					<div
-						class="relative w-24 text-left font-Pretendard_Regular text-base font-normal leading-[159%] text-[#ffffff]"
+						class="relative w-24 text-left font-Pretendard_Regular  font-normal leading-[159%] text-[#ffffff]"
 						style="opacity: 0.5; "
 					>
 						Type
 					</div>
 					<div
-						class="relative text-left font-Pretendard_Regular text-base font-normal leading-[159%] text-[#ffffff]"
+						class="relative text-left font-Pretendard_Regular  font-normal leading-[159%] text-[#ffffff]"
 					>
 						Meme coin lover
 					</div>
 				</div>
 				<div class="relative flex shrink-0 flex-row items-center justify-start gap-10">
 					<div
-						class="relative w-24 text-left font-Pretendard_Regular text-base font-normal leading-[159%] text-[#ffffff]"
+						class="relative w-24 text-left font-Pretendard_Regular  font-normal leading-[159%] text-[#ffffff]"
 						style="opacity: 0.5; "
 					>
 						Style
 					</div>
 					<div
-						class="relative text-left font-Pretendard_Regular text-base font-normal leading-[159%] text-[#ffffff]"
+						class="relative text-left font-Pretendard_Regular  font-normal leading-[159%] text-[#ffffff]"
 					>
 						Prefer DEX trading
 					</div>
