@@ -68,7 +68,7 @@
 						>it’s uniquely crafted personas with their own</span
 					>
 					<span class="flex h-5 items-center justify-center"
-						>identity powered by &nbsp;<strong class="text-font-subHighlight">Alterim.ai</strong
+						>identity powered by &nbsp;<strong class="text-font-subHighlight">Alterim.AI</strong
 						></span
 					>
 				</div>
@@ -96,7 +96,7 @@
 						onClick={() => onClickNumberBtn(3)}
 					/>
 				</div>
-				<div class="flex h-full w-full justify-center">
+				<div class="flex h-full w-full justify-center mt-[-24px]">
 					{#if currentNumber === 2}
 						<!-- content here -->
 						<div in:fade={{ duration: 300 }} out:fade={{ duration: 0 }}>
