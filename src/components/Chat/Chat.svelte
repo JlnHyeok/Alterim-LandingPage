@@ -4,7 +4,8 @@
 	import {
 		infoCardArr,
 		titleArray,
-		subTitleArray,
+		lgSubTitleArray,
+		smSubTitleArray,
 		snsIconArray,
 		talkingChatPropsArray,
 		socialAvatarInfoArray,
@@ -15,12 +16,14 @@
 	import ChatBox from './ChatBox.svelte';
 	import NavBox from './NavBox.svelte';
 	import TitleBox from './TitleBox.svelte';
+	import { browser } from '$app/environment';
 
 	let currentNumber = 0;
 	let scrollY: number;
 	let screenWidth: number;
 	let screenHeight: number;
 	let startEnterY: number;
+	let subTitleArray: string[][];
 
 	$: isInView = false;
 	$: isInViewArr = [false, false, false];
@@ -38,6 +41,15 @@
 				scrollY < startEnterY + screenHeight * 3
 			) {
 				onClickButton(2);
+			}
+		}
+	}
+	$: {
+		if (browser) {
+			if (screenWidth < 1280) {
+				subTitleArray = smSubTitleArray;
+			} else {
+				subTitleArray = lgSubTitleArray;
 			}
 		}
 	}

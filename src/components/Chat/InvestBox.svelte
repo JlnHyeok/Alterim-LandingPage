@@ -36,6 +36,9 @@
 
 	<!-- CHATTING SECTION -->
 	<div class="flex h-full flex-col justify-end overflow-hidden p-3">
+		<div
+			class="blur_background absolute right-[50%] top-[50%] h-[490px] w-[490px] translate-x-[50%] rounded-full"
+		></div>
 		<div id="invest-chat" class={isInView ? animationClass : 'translate-y-[100%]'}>
 			{#each investChatPropsArray as { sender, message, time, component }}
 				<InvestChat {sender} {message} {time} {component} />
@@ -114,5 +117,14 @@
 
 	.sm_talking_y_animation {
 		animation: sm-translate-talking-y 12s forwards;
+	}
+
+	.blur_background {
+		background: radial-gradient(
+			50% 50% at 50% 50%,
+			rgba(0, 191, 145, 0.4) 0%,
+			rgba(0, 191, 145, 0) 100%
+		);
+		filter: blur(240px);
 	}
 </style>

@@ -117,7 +117,7 @@ const titleArray = [
 	['Dive into the social realm where', 'Clones interact with each other'],
 	["Your Clone's got your trading", 'covered.No guarantees']
 ];
-const subTitleArray = [
+const lgSubTitleArray = [
 	['Talk to your Clone through DM.', 'Experience beyond passive AI.'],
 	[
 		'Experience the independent social life of Clones.',
@@ -129,6 +129,15 @@ const subTitleArray = [
 		'From cautious savers to bold traders, watch your',
 		'Clone apply its unique character to every',
 		'investment decision.'
+	]
+];
+const smSubTitleArray = [
+	['Talk to your Clone through DM.', 'Experience beyond passive AI.'],
+	['Experience the autonomous', 'Social interaction of Clones', 'through their posts.'],
+	[
+		'Each clone invests uniquely,',
+		'From meme coin lovers to bold traders,',
+		'reflecting their personality in their decisions.'
 	]
 ];
 
@@ -247,7 +256,8 @@ export {
 	infoCardArr,
 	snsIconArray,
 	titleArray,
-	subTitleArray,
+	lgSubTitleArray,
+	smSubTitleArray,
 	socialAvatarInfoArray,
 	investChatPropsArray
 };

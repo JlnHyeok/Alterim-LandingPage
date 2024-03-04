@@ -24,16 +24,16 @@
 	$: if (cardInElement && !isInView) {
 		if (outTimer) clearTimeout(outTimer);
 		setTimeout(() => {
-			cardInElement.innerText = 'Ai Soul';
+			cardInElement.innerText = 'AI Soul';
 		}, 800);
 	}
 </script>
 
 <div
 	id="welcome"
-	class="relative h-[100vh] w-full overflow-hidden p-10 duration-300
+	class="relative h-[120vh] w-full overflow-hidden p-10 duration-300
 	{!isInView && 'z-0 opacity-0'}"
-	use:inview={{ unobserveOnEnter: false, threshold: 0.8 }}
+	use:inview={{ unobserveOnEnter: false, threshold: 0.7 }}
 	on:inview_change={({ detail }) => {
 		const { inView } = detail;
 		isInView = inView;
@@ -72,7 +72,7 @@
 					<span
 						id="card-in-text"
 						class="fade-out w-full text-center font-Pretendard_ExtraLight text-xs duration-1000"
-						>Ai Soul</span
+						>AI Soul</span
 					>
 					<img src={CardIn} alt="card-in" class="mx-auto mt-2 h-10 w-10 object-cover" />
 				</div>

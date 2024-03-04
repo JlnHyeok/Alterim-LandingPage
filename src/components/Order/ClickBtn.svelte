@@ -6,7 +6,10 @@
 </script>
 
 <!-- For more features use the AutoHTML plugin window in figma ... -->
-<button on:click={onClick} class="relative flex shrink-0 flex-row items-center justify-start gap-2">
+<button
+	on:click={onClick}
+	class="relative flex shrink-0 flex-row items-center justify-start gap-2 focus:border-none focus:outline-none"
+>
 	<div
 		class="relative flex h-8 w-8 shrink-0 flex-row items-center justify-center gap-0 rounded-[48px] pb-2 pl-[15px] pr-[15px] pt-2
 		{isSelect ? `bg-[#c4dacc]` : 'bg-[rgba(255,255,255,0.20)]'} "

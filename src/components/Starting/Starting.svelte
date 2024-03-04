@@ -28,7 +28,7 @@
 				</div>
 			</div>
 			<div
-				class="relative flex w-[85vw] items-center justify-end text-left font-Pretendard_Light font-light leading-[160%] text-[#ffffff] md:w-[420px] md:text-right"
+				class="relative flex w-[85vw] items-center justify-end text-left font-Pretendard_Light text-base font-light leading-[160%] text-[#ffffff] md:w-[480px] md:text-right md:text-lg"
 				in:fade={{ duration: 1000, delay: 700 }}
 				out:fade={{ duration: 1000, delay: 0 }}
 			>
