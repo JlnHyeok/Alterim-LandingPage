@@ -37,7 +37,7 @@
 	<!-- CHATTING SECTION -->
 	<div class="flex h-full flex-col justify-end overflow-hidden p-3">
 		<div
-			class="blur_background absolute right-[50%] top-[50%] h-[490px] w-[490px] translate-x-[50%] rounded-full"
+			class="blur_background absolute right-[50%] top-[50%] h-[280px] w-[280px] translate-x-[50%] rounded-full"
 		></div>
 		<div id="invest-chat" class={isInView ? animationClass : 'translate-y-[100%]'}>
 			{#each investChatPropsArray as { sender, message, time, component }}
@@ -52,7 +52,7 @@
 		background: linear-gradient(91deg, #131c1a 10.8%, rgba(19, 28, 26, 0) 94.74%);
 	}
 	.chatbox_background {
-		background: rgba(31, 31, 31, 0.6);
+		background: rgba(31, 31, 31, 0.5);
 		backdrop-filter: blur(17px);
 		box-shadow: 0px 4px 40px 0px rgba(174, 246, 203, 0.2);
 	}
@@ -125,6 +125,6 @@
 			rgba(0, 191, 145, 0.4) 0%,
 			rgba(0, 191, 145, 0) 100%
 		);
-		filter: blur(240px);
+		filter: blur(120px);
 	}
 </style>
