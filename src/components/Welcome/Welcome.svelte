@@ -7,17 +7,22 @@
 
 	let isInView: boolean;
 	let cardInElement: HTMLElement;
-
+	let inTimer: number;
+	let outTimer: number;
 	$: if (isInView && browser) {
-		setTimeout(() => {
-			cardInElement = document.getElementById('card-in-text')!;
-			cardInElement.textContent = 'Clone';
-			cardInElement.classList.remove('fade-out');
-			cardInElement.setAttribute('opacity', '1');
+		if (inTimer) clearTimeout(inTimer);
+		inTimer = setTimeout(() => {
+			cardInElement = document?.getElementById('card-in-text')!;
+			if (cardInElement) {
+				cardInElement.textContent = 'Clone';
+				cardInElement.classList.remove('fade-out');
+				cardInElement.setAttribute('opacity', '1');
+			}
 		}, 2500);
 	}
 
 	$: if (cardInElement && !isInView) {
+		if (outTimer) clearTimeout(outTimer);
 		setTimeout(() => {
 			cardInElement.innerText = 'Ai Soul';
 		}, 800);
@@ -26,20 +31,21 @@
 
 <div
 	id="welcome"
-	class="relative h-[100vh] w-full overflow-hidden p-10"
-	use:inview={{ unobserveOnEnter: false, threshold: 0.7 }}
+	class="relative h-[100vh] w-full overflow-hidden p-10 duration-300
+	{!isInView && 'z-0 opacity-0'}"
+	use:inview={{ unobserveOnEnter: false, threshold: 0.8 }}
 	on:inview_change={({ detail }) => {
 		const { inView } = detail;
 		isInView = inView;
 	}}
 >
-{#if isInView}
-	<main class="fixed left-0 top-0 flex h-full w-full flex-col justify-center gap-4 z-0">
-		<!-- TEXT SECTION -->
+	{#if isInView}
+		<main class="fixed left-0 top-0 z-0 flex h-full w-full flex-col justify-center gap-4">
+			<!-- TEXT SECTION -->
 			<div
 				class="mx-auto flex h-[130px] w-full flex-col justify-center text-center font-Pretendard_ExtraLight text-xl duration-[0.6s] md:h-[300px] md:text-[3rem]"
 				in:scale={{ duration: 500, start: 0, opacity: 0 }}
-				out:fade={{ duration: 300 }}
+				out:fade={{ duration: 0 }}
 			>
 				<span class="text-white"
 					>Welcome to <strong class="text-font-highlight">Alterim</strong> , where your</span
@@ -71,9 +77,8 @@
 					<img src={CardIn} alt="card-in" class="mx-auto mt-2 h-10 w-10 object-cover" />
 				</div>
 			</div>
-			
 		</main>
-		{/if}
+	{/if}
 </div>
 
 <style>
