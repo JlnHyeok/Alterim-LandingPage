@@ -13,7 +13,7 @@
 	import Outro from '$components/Outro/Outro.svelte';
 </script>
 
-<div class="relative z-20 w-full overflow-x-hidden text-white md:min-w-[768px]">
+<div class="relative z-20 w-full text-white md:min-w-[768px]">
 	<Header />
 	<div class="relative w-full pt-16">
 		<Intro />

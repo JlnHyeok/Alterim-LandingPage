@@ -38,12 +38,13 @@
 				onClickButton(1);
 			} else if (
 				scrollY >= startEnterY + screenHeight * 2 &&
-				scrollY < startEnterY + screenHeight * 3
+				scrollY < startEnterY + screenHeight * 4
 			) {
 				onClickButton(2);
 			}
 		}
 	}
+
 	$: {
 		if (browser) {
 			if (screenWidth < 1280) {
@@ -72,7 +73,7 @@
 
 <div
 	class="h-[300vh] w-full items-center justify-center xl:h-[400vh]"
-	use:inview={{ unobserveOnEnter: false, threshold: 0.1 }}
+	use:inview={{ unobserveOnEnter: true, threshold: 0.1 }}
 	on:inview_change={({ detail }) => {
 		const { inView } = detail;
 		isInView = inView;
@@ -81,9 +82,9 @@
 >
 	{#if isInView}
 		<!-- XL SIZE -->
-		<div class="relative hidden h-screen w-full items-center justify-center xl:flex">
+		<div class="relative hidden h-full w-full items-start justify-center xl:flex">
 			<div
-				class=" fixed top-[50%] flex translate-y-[-50%] items-center justify-center gap-10"
+				class="sticky top-[20%] flex items-center justify-center gap-10"
 				in:fade={{ duration: 500 }}
 				out:fade={{ duration: 500 }}
 			>

@@ -31,21 +31,21 @@
 
 <div
 	id="welcome"
-	class="relative h-[120vh] w-full overflow-hidden p-10 duration-300
+	class="relative h-[120vh] w-full p-10 duration-300
 	{!isInView && 'z-0 opacity-0'}"
-	use:inview={{ unobserveOnEnter: false, threshold: 0.7 }}
+	use:inview={{ unobserveOnEnter: false, threshold: 0.6 }}
 	on:inview_change={({ detail }) => {
 		const { inView } = detail;
 		isInView = inView;
 	}}
 >
 	{#if isInView}
-		<main class="fixed left-0 top-0 z-0 flex h-full w-full flex-col justify-center gap-4">
+		<main class="z-0 flex h-full w-full flex-col justify-start gap-4">
 			<!-- TEXT SECTION -->
 			<div
-				class="mx-auto flex h-[130px] w-full flex-col justify-center text-center font-Pretendard_ExtraLight text-xl duration-[0.6s] md:h-[300px] md:text-[3rem]"
+				class="sticky left-0 top-[30%] mx-auto flex h-[130px] w-full flex-col justify-center text-center font-Pretendard_ExtraLight text-xl duration-[0.6s] md:h-[300px] md:text-[3rem]"
 				in:scale={{ duration: 500, start: 0, opacity: 0 }}
-				out:fade={{ duration: 0 }}
+				out:fade={{ duration: 1500 }}
 			>
 				<span class="text-white"
 					>Welcome to <strong class="text-font-highlight">Alterim</strong> , where your</span
@@ -55,7 +55,7 @@
 			</div>
 
 			<div
-				class="relative mx-auto flex h-14 w-[300px] items-center justify-center md:h-20 3xl:w-[450px]"
+				class="sticky left-0 top-[60%] mx-auto flex h-14 w-[300px] items-center justify-center md:h-20 3xl:w-[450px]"
 				in:fade={{ duration: 500, delay: 500 }}
 				out:fade={{ duration: 500 }}
 			>

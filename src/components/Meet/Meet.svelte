@@ -25,7 +25,7 @@
 					Meet your AI Soul
 				</div>
 				<div
-					class="relative w-52 flex items-center justify-center text-center font-Pretendard_ExtraLight text-base font-light leading-[140%] text-white md:w-full"
+					class="relative flex w-52 items-center justify-center text-center font-Pretendard_ExtraLight text-base font-light leading-[140%] text-white md:w-full"
 					in:fade={{ duration: 1000, delay: 300 }}
 					out:fade={{ duration: 1000, delay: 0 }}
 				>
