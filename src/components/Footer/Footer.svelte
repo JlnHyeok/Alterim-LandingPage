@@ -18,12 +18,12 @@
 	class="mx-auto flex h-20 w-[96%] items-center justify-between overflow-hidden rounded-b-none rounded-t-2xl bg-white px-2 py-7 duration-300 md:mb-2 md:rounded-b-2xl md:px-4 xl:px-8"
 >
 	<!-- Title -->
-	<div>
+	<div class="">
 		<Title iconColor="black" />
 	</div>
 
 	<!-- Links -->
-	<div class="relative flex shrink-0 flex-row items-start justify-start gap-4 md:gap-8">
+	<div class="relative mr-2 flex shrink-0 flex-row items-start justify-start gap-4 md:gap-8">
 		{#each iconArray as { icon, link }}
 			<SnsIcon {icon} {link} />
 		{/each}
