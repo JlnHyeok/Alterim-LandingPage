@@ -38,7 +38,7 @@
 				onClickButton(1);
 			} else if (
 				scrollY >= startEnterY + screenHeight * 2 &&
-				scrollY < startEnterY + screenHeight * 4
+				scrollY < startEnterY + screenHeight * 3
 			) {
 				onClickButton(2);
 			}

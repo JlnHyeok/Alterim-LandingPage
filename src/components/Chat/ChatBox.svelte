@@ -71,6 +71,6 @@
 	}
 
 	.talking_y_animation {
-		animation: translate-talking-y 10s forwards;
+		animation: translate-talking-y 5s forwards;
 	}
 </style>

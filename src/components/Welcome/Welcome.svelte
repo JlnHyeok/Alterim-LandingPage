@@ -43,7 +43,7 @@
 		<main class="z-0 flex h-full w-full flex-col justify-start gap-4">
 			<!-- TEXT SECTION -->
 			<div
-				class="sticky left-0 top-[30%] mx-auto flex h-[130px] w-full flex-col justify-center text-center font-Pretendard_ExtraLight text-xl duration-[0.6s] md:h-[300px] md:text-[3rem]"
+				class="sticky left-0 top-[45%] mx-auto flex h-[130px] w-full flex-col justify-center text-center font-Pretendard_ExtraLight text-xl duration-[0.6s] md:top-[30%] md:h-[300px] md:text-[3rem]"
 				in:scale={{ duration: 500, start: 0, opacity: 0 }}
 				out:fade={{ duration: 1500 }}
 			>
@@ -55,7 +55,7 @@
 			</div>
 
 			<div
-				class="sticky left-0 top-[60%] mx-auto flex h-14 w-[300px] items-center justify-center md:h-20 3xl:w-[450px]"
+				class="sticky left-0 top-[60%] mx-auto flex h-14 w-[300px] items-center justify-center md:top-[60%] md:h-20 3xl:w-[450px]"
 				in:fade={{ duration: 500, delay: 500 }}
 				out:fade={{ duration: 500 }}
 			>

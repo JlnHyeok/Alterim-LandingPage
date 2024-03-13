@@ -22,7 +22,7 @@
 		<Order />
 		<Starting />
 		<Chat />
-		<Meet />
+		<!-- <Meet /> -->
 		<Comming />
 		<Learn />
 		<RoadMap />

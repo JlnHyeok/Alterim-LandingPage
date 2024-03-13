@@ -112,11 +112,11 @@
 	}
 
 	.xl_talking_y_animation {
-		animation: xl-translate-talking-y 12s forwards;
+		animation: xl-translate-talking-y 5s forwards;
 	}
 
 	.sm_talking_y_animation {
-		animation: sm-translate-talking-y 12s forwards;
+		animation: sm-translate-talking-y 5s forwards;
 	}
 
 	.blur_background {

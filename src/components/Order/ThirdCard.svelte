@@ -31,10 +31,10 @@
 			class="relative flex w-full shrink-0 flex-col items-start justify-start gap-4 border-b border-t border-none md:pt-10 xl:gap-8 xl:border-solid xl:border-[rgba(217,217,217,0.27)] xl:pb-10"
 		>
 			<!-- TITLE & DESCRIPTION -->
-			<div class="relative flex w-full shrink-0 flex-col items-start justify-start gap-3">
+			<div class="relative flex w-full shrink-0 flex-col items-start justify-start gap-1.5">
 				<!-- TITLE SECTION -->
 				<h1
-					class="relative w-3/4 text-left font-Pretendard_Regular text-base font-semibold leading-[166%] text-[#ffffff] md:w-full"
+					class="relative w-3/4 text-left font-Pretendard_Regular text-base font-bold leading-[166%] text-[#ffffff] md:w-full"
 				>
 					Anime style PFP collector and meme coin trader
 				</h1>
@@ -58,7 +58,7 @@
 					class="relative flex shrink-0 flex-row items-start justify-start gap-2.5 rounded-[50px] bg-[rgba(255,255,255,0.10)] pb-2.5 pl-2.5 pr-3.5 pt-2.5"
 				>
 					<div
-						class="relative flex items-center justify-start px-1 text-left font-Pretendard_Regular text-base font-normal leading-[140%] text-[#ffffff]"
+						class="relative flex items-center justify-start px-1 text-left font-Pretendard_Regular text-sm font-normal leading-[140%] text-[#ffffff]"
 					>
 						#playful
 					</div>
@@ -67,7 +67,7 @@
 					class="relative hidden shrink-0 flex-row items-start justify-start gap-2.5 rounded-[50px] bg-[rgba(255,255,255,0.10)] pb-2.5 pl-2.5 pr-3.5 pt-2.5 xl:flex"
 				>
 					<div
-						class="relative items-center justify-start px-1 text-left font-Pretendard_Regular text-base font-normal leading-[140%] text-[#ffffff]"
+						class="relative items-center justify-start px-1 text-left font-Pretendard_Regular text-sm font-normal leading-[140%] text-[#ffffff]"
 					>
 						#Meme is my life
 					</div>
@@ -76,7 +76,7 @@
 					class="relative hidden shrink-0 flex-row items-start justify-start gap-2.5 rounded-[50px] bg-[rgba(255,255,255,0.10)] pb-2.5 pl-2.5 pr-3.5 pt-2.5 xl:flex"
 				>
 					<div
-						class="relative flex items-center justify-start px-1 text-left font-Pretendard_Regular text-base font-normal leading-[140%] text-[#ffffff]"
+						class="relative flex items-center justify-start px-1 text-left font-Pretendard_Regular text-sm font-normal leading-[140%] text-[#ffffff]"
 					>
 						#GM
 					</div>
@@ -85,7 +85,7 @@
 					class="relative flex shrink-0 flex-row items-start justify-start gap-2.5 rounded-[50px] bg-[rgba(255,255,255,0.10)] pb-2.5 pl-2.5 pr-3.5 pt-2.5"
 				>
 					<div
-						class="relative flex items-center justify-start px-1 text-left font-Pretendard_Regular text-base font-normal leading-[140%] text-[#ffffff]"
+						class="relative flex items-center justify-start px-1 text-left font-Pretendard_Regular text-sm font-normal leading-[140%] text-[#ffffff]"
 					>
 						#PFP
 					</div>

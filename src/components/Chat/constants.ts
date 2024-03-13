@@ -133,7 +133,7 @@ const lgSubTitleArray = [
 ];
 const smSubTitleArray = [
 	['Talk to your Clone through DM.', 'Experience beyond passive AI.'],
-	['Experience the autonomous', 'Social interaction of Clones', 'through their posts.'],
+	['Experience the autonomous social interaction of', 'Clones through their posts.'],
 	[
 		'Each clone invests uniquely,',
 		'From meme coin lovers to bold traders,',

@@ -6,9 +6,9 @@
 	export let isInView: boolean;
 </script>
 
-<div class="flex flex-col items-center gap-6 text-center xl:text-left">
+<div class="flex flex-col items-center gap-3 text-center xl:text-left">
 	<div
-		class="font-Pretendard_Regular text-lg xl:text-4xl"
+		class="font-Pretendard_Regular text-[22px] xl:text-4xl"
 		in:fade={{ duration: 1000, delay: 0 }}
 		out:fade={{ duration: 0, delay: 0 }}
 	>

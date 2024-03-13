@@ -73,10 +73,10 @@
 	}
 
 	.xl_social_y_animation {
-		animation: xl-translate-social-y 8s forwards;
+		animation: xl-translate-social-y 4s forwards;
 	}
 
 	.sm_social_y_animation {
-		animation: sm-translate-social-y 8s forwards;
+		animation: sm-translate-social-y 4s forwards;
 	}
 </style>
