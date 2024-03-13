@@ -18,7 +18,7 @@ import ScrollDown from './scroll-down.png';
 import CardWrap from './card-wrap.png';
 import CardIn from './card-in.png';
 import ProfileCat from './profile/profile-cat.png';
-import ProfileCat2 from './profile/profile-cat2.png'
+import ProfileCat2 from './profile/profile-cat2.png';
 import StartingImg from './starting.png';
 import Comming1 from './comming-1.png';
 import Comming2 from './comming-2.png';
@@ -29,6 +29,7 @@ import RoadMapHover from './roadmap-hover.png';
 import CommingBottom from './comming-card-bottom.png';
 import Learn from './learn.png';
 import ProfileWhiteCat from './profile/profile-white-cat.png';
+import ProfilePenguin from './profile/profile-penguin.avif';
 import ChatClick from './icon/chat-click.png';
 import ChatNormal from './icon/chat-normal.png';
 import FriendNormal from './icon/friend-normal.png';
@@ -100,5 +101,6 @@ export {
 	Comment,
 	EmptyLiked,
 	Share,
+	ProfilePenguin,
 	Sub
 };

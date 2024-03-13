@@ -27,23 +27,23 @@
 					<span>
 						<span
 							class=""
-							in:fade={{ duration: 1000, delay: 0 }}
-							out:fade={{ duration: 1000, delay: 0 }}
+							in:fade={{ duration: 500, delay: 0 }}
+							out:fade={{ duration: 500, delay: 0 }}
 							>Introducing
 						</span>
 						<span
 							class="text-font-highlight"
-							in:fade={{ duration: 1000, delay: 300 }}
-							out:fade={{ duration: 1000, delay: 0 }}>$AIM</span
+							in:fade={{ duration: 500, delay: 200 }}
+							out:fade={{ duration: 500, delay: 0 }}>$AIM</span
 						>
 					</span>
 				</div>
 
 				<!-- DESCRIPTION SECTION -->
 				<div
-					class="relative flex items-center justify-start self-stretch text-center md:text-left font-['Pretendard-Light',_sans-serif] text-base font-light leading-[140%] text-[#d3d3d3]"
-					in:fade={{ duration: 1000, delay: 700 }}
-					out:fade={{ duration: 1000, delay: 0 }}
+					class="relative flex items-center justify-start self-stretch text-center font-['Pretendard-Light',_sans-serif] text-base font-light leading-[140%] text-[#d3d3d3] md:text-left"
+					in:fade={{ duration: 500, delay: 400 }}
+					out:fade={{ duration: 500, delay: 0 }}
 				>
 					Each clone invests based on its distinct persona.<br />From cautious savers to bold
 					traders,<br />watch your Clone apply its unique character to.
@@ -53,8 +53,8 @@
 				<div
 					class="relative flex w-[200px] shrink-0 flex-row items-center justify-center gap-2.5 overflow-hidden rounded-[40px] bg-[#ffffff] py-2"
 					style="box-shadow: 0px 9px 34px 0px rgba(212, 212, 212, 0.50); "
-					in:fade={{ duration: 1000, delay: 1000 }}
-					out:fade={{ duration: 1000, delay: 0 }}
+					in:fade={{ duration: 500, delay: 600 }}
+					out:fade={{ duration: 500, delay: 0 }}
 				>
 					<a
 						href="https://alterim-ai.gitbook.io/welcometoalterim/usdaim/usdaim"
@@ -69,8 +69,8 @@
 			<!-- IMAGE SECTION -->
 			<div
 				class="h-[350px] w-[350px] shrink-0"
-				in:fade={{ duration: 1000, delay: 0 }}
-				out:fade={{ duration: 1000, delay: 0 }}
+				in:fade={{ duration: 500, delay: 0 }}
+				out:fade={{ duration: 500, delay: 0 }}
 			>
 				<img src={Learn} alt="Learn" class="w-full object-cover" />
 			</div>

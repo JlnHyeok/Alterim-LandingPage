@@ -15,7 +15,7 @@
 </script>
 
 <div
-	class="mx-auto flex h-full w-[96%] items-center justify-between rounded-b-none rounded-t-2xl bg-white px-2 py-7 md:mb-2 md:rounded-b-2xl md:px-4 xl:px-8"
+	class="mx-auto flex h-20 w-[96%] items-center justify-between overflow-hidden rounded-b-none rounded-t-2xl bg-white px-2 py-7 duration-300 md:mb-2 md:rounded-b-2xl md:px-4 xl:px-8"
 >
 	<!-- Title -->
 	<div>

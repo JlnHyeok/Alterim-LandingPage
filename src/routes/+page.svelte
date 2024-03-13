@@ -25,9 +25,7 @@
 		<Meet />
 		<Comming />
 		<Learn />
-
 		<RoadMap />
 		<Outro />
-		<Footer />
 	</div>
 </div>

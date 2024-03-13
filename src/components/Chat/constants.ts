@@ -220,7 +220,7 @@ const investChatPropsArray: {
 	},
 	{
 		sender: 'me',
-		message: 'Hey Charles, lemme give you $100. Show me how much you can make in 7 days.',
+		message: 'Hey James, lemme give you $100. Show me how much you can make in 7 days.',
 		time: 'Sat 5:11 AM'
 	},
 	{

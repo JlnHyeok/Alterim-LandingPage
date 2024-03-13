@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ProfileCat } from '$lib/assets/images';
+	import { ProfileCat, ProfilePenguin } from '$lib/assets/images';
 	import { fade } from 'svelte/transition';
 </script>
 
@@ -19,10 +19,10 @@
 		>
 			<!-- SMALL SIZE PROFILE -->
 			<div class="block h-20 w-20 overflow-hidden rounded-md xl:hidden">
-				<img src={ProfileCat} alt="Profile" class="h-20 w-20 object-cover" />
+				<img src={ProfilePenguin} alt="Profile" class="h-20 w-20 object-cover" />
 			</div>
 			<span class="flex w-40 flex-col justify-center md:block md:w-60 xl:w-full"
-				>Bitcoin Cats #9260</span
+				>Bitcoin Penguin #9260</span
 			>
 		</div>
 
@@ -164,16 +164,16 @@
 		class="relative hidden shrink-0 flex-col items-start justify-around self-stretch xl:flex"
 	>
 		<!-- PROFILE IMAGE SECTION -->
-		<div class="h static h-[360px] w-[360px] shrink-0">
+		<div class=" static h-[360px] w-[360px] shrink-0">
 			<div
-				class="h absolute left-0 top-0 h-[360px] w-[360px] rounded-3xl"
+				class=" absolute left-0 top-0 h-[360px] w-[360px] rounded-3xl"
 				style="background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%,rgba(255, 255, 255, 0.00) 100%); border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%,rgba(255, 255, 255, 0.00) 100%); border-image-slice: 1; box-shadow: 0px 4px 20px 0px rgba(174, 246, 203, 0.30); "
 			></div>
 			<img
-				class="absolute left-[calc(50%_-_160px)] top-5 h-64 w-64 xl:h-80 xl:w-80"
+				class="absolute left-[calc(50%_-_160px)] top-5 h-64 w-64 rounded-lg xl:h-80 xl:w-80"
 				style="object-fit: cover; "
-				src={ProfileCat}
-				alt="ProfileCat"
+				src={ProfilePenguin}
+				alt="ProfilePenguin"
 			/>
 		</div>
 
