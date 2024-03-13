@@ -39,14 +39,6 @@
 
 	<!-- STAR SECTION -->
 	{#each Array(10) as _, index}
-		<!-- content here -->
 		<Star infos={EachStarInfos[index]} {index} />
 	{/each}
-
-	<div
-		class="absolute bottom-0 flex w-screen justify-center md:hidden
-		{isEnd ? `h-20 duration-500` : `h-0 duration-100`}"
-	>
-		<div class="h-full w-[96%] rounded-t-2xl bg-white"></div>
-	</div>
 </div>
