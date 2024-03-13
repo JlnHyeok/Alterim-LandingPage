@@ -27,7 +27,7 @@
 	<!-- SMALL SIZE TITLE SECTION -->
 	{#if isSmallSizeTitleView}
 		<div
-			class="relative items-center justify-start text-left font-Pretendard_Regular text-[32px] font-medium leading-[120%] text-[#f5f5f5] md:hidden"
+			class="relative items-center justify-start text-center font-Pretendard_Regular text-[32px] font-medium leading-[120%] text-[#f5f5f5] md:hidden md:text-left"
 			in:fade={{ duration: 1000, delay: 0 }}
 			out:fade={{ duration: 1000, delay: 0 }}
 		>
