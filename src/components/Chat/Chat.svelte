@@ -24,6 +24,7 @@
 	let screenHeight: number;
 	let startEnterY: number;
 	let subTitleArray: string[][];
+	let screenSize: 'sm' | 'xl' = 'xl';
 
 	$: isInView = false;
 	$: isInViewArr = [false, false, false];
@@ -49,8 +50,10 @@
 		if (browser) {
 			if (screenWidth < 1280) {
 				subTitleArray = smSubTitleArray;
+				screenSize = 'sm';
 			} else {
 				subTitleArray = lgSubTitleArray;
+				screenSize = 'xl';
 			}
 		}
 	}
@@ -116,9 +119,9 @@
 						<!-- CHAT BOX SECTION -->
 						<ChatBox {isInView} {talkingChatPropsArray} />
 					{:else if currentNumber == 1}
-						<SocialBox {isInView} avatarInfoArray={socialAvatarInfoArray} />
+						<SocialBox {isInView} avatarInfoArray={socialAvatarInfoArray} {screenSize} />
 					{:else}
-						<InvestBox {isInView} {investChatPropsArray} />
+						<InvestBox {isInView} {investChatPropsArray} {screenSize} />
 					{/if}
 				</div>
 			</div>
