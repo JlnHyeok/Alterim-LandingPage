@@ -17,7 +17,7 @@
 </script>
 
 <div
-	class="relative flex h-[120vh] w-full flex-col items-center justify-center gap-14 md:flex-row md:gap-[90px]"
+	class="relative flex h-[120vh] w-full flex-col items-center justify-center gap-8 md:flex-row md:gap-[90px]"
 	use:inview={{ unobserveOnEnter: false, rootMargin: '-10%' }}
 	on:inview_change={({ detail }) => {
 		const { inView } = detail;
@@ -70,7 +70,7 @@
 				</p>
 			</div>
 			<div
-				class="relative mx-auto flex w-[200px] shrink-0 flex-row items-center justify-center gap-2.5 overflow-hidden rounded-[40px] bg-[#ffffff] py-2 md:mx-0"
+				class="relative mx-auto flex w-[200px] shrink-0 flex-row items-center justify-center overflow-hidden rounded-[40px] bg-[#ffffff] py-2 md:mx-0"
 				style="box-shadow: 0px 9px 34px 0px rgba(212, 212, 212, 0.50); "
 				in:fade={{ duration: 1000, delay: 2000 }}
 				out:fade={{ duration: 1000, delay: 0 }}
