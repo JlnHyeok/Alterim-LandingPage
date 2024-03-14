@@ -119,8 +119,8 @@
 						y2="114.5"
 						gradientUnits="userSpaceOnUse"
 					>
-						<stop stop-color="#D3F9FF" />
-						<stop offset="1" stop-color="#96CDFF" />
+					<stop stop-color="white" />
+					<stop offset="1" stop-color="#AEF6CB" />
 					</linearGradient>
 					<linearGradient
 						id="paint2_linear_80_7106"
@@ -130,8 +130,8 @@
 						y2="114.5"
 						gradientUnits="userSpaceOnUse"
 					>
-						<stop stop-color="#ECFFED" />
-						<stop offset="1" stop-color="#ECF6FF" stop-opacity="0" />
+					<stop stop-color="#ECFFED" />
+					<stop offset="1" stop-color="#ECF6FF" stop-opacity="0" />
 					</linearGradient>
 				</defs>
 			</svg>
