@@ -15,7 +15,7 @@
 </script>
 
 <div
-	class="relative z-50  h-[calc(100vh-80px)] w-full text-white"
+	class="relative z-50 h-[calc(100vh-80px)] w-full text-white"
 	use:inview={{ unobserveOnEnter: true, rootMargin: '-40%' }}
 	on:inview_change={({ detail }) => {
 		const { inView } = detail;

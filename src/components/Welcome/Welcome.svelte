@@ -31,9 +31,9 @@
 
 <div
 	id="welcome"
-	class="relative h-[120vh] w-full p-10 duration-300
+	class="relative mt-24 h-[150vh] w-full p-10 duration-300 md:mt-0 md:h-[120vh]
 	{!isInView && 'z-0 opacity-0'}"
-	use:inview={{ unobserveOnEnter: false, threshold: 0.6 }}
+	use:inview={{ unobserveOnEnter: false, threshold: 0.5 }}
 	on:inview_change={({ detail }) => {
 		const { inView } = detail;
 		isInView = inView;
@@ -43,7 +43,7 @@
 		<main class="z-0 flex h-full w-full flex-col justify-start gap-4">
 			<!-- TEXT SECTION -->
 			<div
-				class="sticky left-0 top-[45%] mx-auto flex h-[130px] w-full flex-col justify-center text-center font-Pretendard_ExtraLight text-xl duration-[0.6s] md:top-[30%] md:h-[300px] md:text-[3rem]"
+				class="sticky left-0 top-[35%] mx-auto flex h-[130px] w-full flex-col justify-center text-center font-Pretendard_ExtraLight text-xl duration-[0.6s] md:top-[30%] md:h-[300px] md:text-[3rem]"
 				in:scale={{ duration: 500, start: 0, opacity: 0 }}
 				out:fade={{ duration: 1500 }}
 			>
