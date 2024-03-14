@@ -1,9 +1,16 @@
 <script lang="ts">
-	export let iconColor: string;
+	export let size: string;
 	export let textColor: string = 'black';
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg" width="118" height="24" viewBox="0 0 118 24" fill="none">
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width="118"
+	height="24"
+	viewBox="0 0 118 24"
+	fill="none"
+	class={size}
+>
 	<rect x="38.0859" width="3.5266" height="5.64256" fill={textColor} />
 	<rect x="38.0859" y="5.64355" width="3.5266" height="3.5266" fill={textColor} />
 	<rect x="38.0859" y="9.16699" width="3.5266" height="3.5266" fill={textColor} />

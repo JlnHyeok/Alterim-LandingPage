@@ -6,7 +6,7 @@
 	class="fixed z-[100] flex h-20 w-screen items-center justify-between bg-black bg-opacity-100 px-4 md:px-8"
 >
 	<div>
-		<Title iconColor="white" textColor="white" />
+		<Title size="" textColor="white" />
 	</div>
 	<!-- For more features use the AutoHTML plugin window in figma ... -->
 	<a

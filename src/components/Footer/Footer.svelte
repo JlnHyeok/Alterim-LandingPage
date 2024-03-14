@@ -19,7 +19,7 @@
 >
 	<!-- Title -->
 	<div class="">
-		<Title iconColor="black" />
+		<Title size="scale-[0.8]" />
 	</div>
 
 	<!-- Links -->
