@@ -38,7 +38,7 @@
 	}
 </script>
 
-<div class="relative box-border h-[120vh] w-screen p-10">
+<div class="relative box-border h-[120vh] w-screen p-4 md:p-10">
 	<main
 		class="relative flex h-full w-full flex-col justify-center gap-0 md:gap-10"
 		use:inview={{ unobserveOnEnter: false, threshold: 0.2 }}
@@ -96,7 +96,7 @@
 						onClick={() => onClickNumberBtn(3)}
 					/>
 				</div>
-				<div class="flex h-full w-full justify-center mt-[-24px]">
+				<div class="mt-[-24px] flex h-full w-full justify-center">
 					{#if currentNumber === 2}
 						<!-- content here -->
 						<div in:fade={{ duration: 300 }} out:fade={{ duration: 0 }}>

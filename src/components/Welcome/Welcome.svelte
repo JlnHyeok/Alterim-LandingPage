@@ -55,7 +55,7 @@
 			</div>
 
 			<div
-				class="sticky left-0 top-[60%] mx-auto flex h-14 w-[300px] items-center justify-center md:top-[60%] md:h-20 3xl:w-[450px]"
+				class="sticky left-0 top-[55%] mx-auto flex h-14 w-[300px] items-center justify-center md:top-[60%] md:h-20 3xl:w-[450px]"
 				in:fade={{ duration: 500, delay: 500 }}
 				out:fade={{ duration: 500 }}
 			>
