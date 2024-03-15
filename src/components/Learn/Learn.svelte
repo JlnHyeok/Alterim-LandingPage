@@ -34,7 +34,7 @@
 						<span
 							class="text-font-highlight"
 							in:fade={{ duration: 500, delay: 200 }}
-							out:fade={{ duration: 500, delay: 0 }}>$AIM</span
+							out:fade={{ duration: 500, delay: 0 }}>$ATRM</span
 						>
 					</span>
 				</div>

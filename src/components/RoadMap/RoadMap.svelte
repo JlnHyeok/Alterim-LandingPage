@@ -5,7 +5,7 @@
 	const roadMapTexts = [
 		{
 			text: '2024 Q1',
-			contents: ['$AIM token Launchpad', 'Genesis NFT Sale: AI Soul', 'Launching MVP product(Chat)']
+			contents: ['$ATRM token Launchpad', 'Genesis NFT Sale: AI Soul', 'Launching MVP product(Chat)']
 		},
 		{
 			text: '2024 Q2',
