@@ -45,7 +45,7 @@
 			</a>
 		</div>
 
-		<div class="absolute bottom-0 w-full overflow-hidden">
+		<div class="absolute bottom-0 w-full overflow-hidden bg-black">
 			<div
 				class="relative"
 				in:fly={{ duration: 500, delay: 100, y: 100, opacity: 0 }}
