@@ -66,7 +66,7 @@
 	}
 
 	.scale-animation {
-		animation: scale-animation 0.8s 2.8s ease-in-out forwards;
+		animation: scale-animation 0.8s 2.5s ease-in-out forwards;
 	}
 	.fade-in {
 		animation: fade-in 0.4s 0.3s linear forwards;
