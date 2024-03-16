@@ -12,7 +12,7 @@
 		isFirstTime = false;
 	}, 5000);
 
-	$: delay = isFirstTime ? 3300 : 0;
+	$: delay = isFirstTime ? 2600 : 0;
 </script>
 
 <Background />
