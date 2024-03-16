@@ -13,7 +13,6 @@
 </svelte:head>
 
 <div class="relative box-border w-screen bg-black">
-	<Background />
 	<BackgroundIntro />
 	<slot />
 </div>

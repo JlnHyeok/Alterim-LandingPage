@@ -22,7 +22,7 @@
 				<img src={ProfilePenguin} alt="Profile" class="h-20 w-20 object-cover" />
 			</div>
 			<span class="flex w-40 flex-col justify-center md:block md:w-60 xl:w-full"
-				>Bitcoin Penguin #9260</span
+				>Pudgy Penguin #9260</span
 			>
 		</div>
 

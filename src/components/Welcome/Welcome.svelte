@@ -31,7 +31,7 @@
 
 <div
 	id="welcome"
-	class="relative mt-24 h-[150vh] w-full p-10 duration-300 md:mt-0 md:h-[120vh]
+	class="relative mt-24 h-[150vh] w-full p-10 duration-300 md:mt-0
 	{!isInView && 'z-0 opacity-0'}"
 	use:inview={{ unobserveOnEnter: false, threshold: 0.5 }}
 	on:inview_change={({ detail }) => {
@@ -40,17 +40,17 @@
 	}}
 >
 	{#if isInView}
-		<main class="z-0 flex h-full w-full flex-col justify-start gap-4">
+		<main class="z-0 flex h-full w-full flex-col justify-start gap-4 pt-10">
 			<!-- TEXT SECTION -->
 			<div
-				class="sticky left-0 top-[35%] mx-auto flex h-[130px] w-full flex-col justify-center text-center font-Pretendard_ExtraLight text-xl duration-[0.6s] md:top-[30%] md:h-[300px] md:text-[3rem]"
+				class="sticky left-0 top-[35%] mx-auto flex h-[130px] w-full flex-col justify-center gap-0 text-center font-Pretendard_ExtraLight text-xl duration-[0.6s] md:top-[30%] md:h-[300px] md:gap-10 md:text-[3rem]"
 				in:scale={{ duration: 500, start: 0, opacity: 0 }}
-				out:fade={{ duration: 1500 }}
+				out:fade={{ duration: 500 }}
 			>
 				<span class="text-white"
 					>Welcome to <strong class="text-font-highlight">Alterim</strong> , where your</span
-				> <br class="hidden md:inline" />
-				<span class=""> PFP now has a story, </span><br class="hidden md:inline" />
+				>
+				<span class=""> PFP now has a story, </span>
 				<span>a personality, and a life of its own </span>
 			</div>
 
@@ -60,14 +60,14 @@
 				out:fade={{ duration: 500 }}
 			>
 				<div
-					class="card-wrap-animation absolute left-[0px] flex h-14 w-14 flex-col gap-4 text-center duration-300 md:h-14 md:w-14"
+					class="card-wrap-animation absolute left-[0px] flex h-14 w-14 flex-col gap-10 text-center duration-300 md:h-14 md:w-14"
 				>
 					<span class="fade-out font-Pretendard_ExtraLight text-xs">PFP</span>
 					<img src={CardWrap} alt="card-wrap" class="w-full object-cover" />
 				</div>
 				<div
 					id="card-in"
-					class="card-in-animation absolute right-[0px] flex h-14 w-14 flex-col gap-4 text-center duration-300 md:h-14 md:w-14"
+					class="card-in-animation absolute right-[0px] flex h-14 w-14 flex-col gap-10 text-center duration-300 md:h-14 md:w-14"
 				>
 					<span
 						id="card-in-text"

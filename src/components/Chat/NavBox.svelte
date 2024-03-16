@@ -28,7 +28,7 @@
 				class="absolute left-[calc(50%-90px)] top-4 h-[180px] w-[180px] rounded-md"
 				style="object-fit: cover; "
 				src={ProfilePenguin}
-				alt="ProfileCat"
+				alt="ProfilePenguin"
 			/>
 		</div>
 	</div>
@@ -37,7 +37,7 @@
 	<div class="profile_info_background h-[100px] w-[90%] rounded-md pl-2">
 		<div class="flex h-[60px] flex-col items-start justify-center gap-1">
 			<span class="font-Pretendard_Regular">James</span>
-			<span class="font-Pretendard_Light text-xs text-[#6E7984]">@Bitcoin Penguin #9260</span>
+			<span class="font-Pretendard_Light text-xs text-[#6E7984]">@Pudgy Penguin #9260</span>
 		</div>
 		<div
 			class="flex h-[40px] items-center justify-start border-t-[1px] border-white border-opacity-30 font-Pretendard_Light text-xs"

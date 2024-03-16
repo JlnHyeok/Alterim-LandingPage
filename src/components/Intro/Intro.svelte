@@ -3,6 +3,7 @@
 	import { inview } from 'svelte-inview';
 	import { Logo, ScrollDown } from '$lib/assets/images';
 	import AvatarList from './AvatarList.svelte';
+	import Background from '$components/Common/Background/Background.svelte';
 
 	let isFirstTime: boolean = true;
 	let isInView: boolean;
@@ -13,6 +14,8 @@
 
 	$: delay = isFirstTime ? 3300 : 0;
 </script>
+
+<Background />
 
 <div
 	class="relative z-50 h-[calc(100vh-80px)] w-full text-white"

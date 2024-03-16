@@ -26,7 +26,8 @@
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight={height} />
-<div class="fixed z-10 h-screen w-screen bg-black">
+
+<div class="absolute z-10 h-screen w-screen overflow-hidden bg-black">
 	<!-- CLOUD SECTION -->
 	<!-- TOP RIGHT -->
 	<Cloud position="z-10 top-[200px] right-[600px]" />
