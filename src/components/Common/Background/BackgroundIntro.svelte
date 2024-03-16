@@ -1,11 +1,14 @@
 <script lang="ts">
+	import Title from '$components/Common/Title.svelte';
 	import Typewritter from 'svelte-typewriter';
 </script>
 
 <div
-	class="scale-animation w-screen h-screen text-font-dark z-30 fixed bg-black font-Pretendard_Light flex justify-center items-center text-[3rem] gap-3"
+	class="scale-animation fixed z-30 flex h-screen w-screen items-center justify-center gap-3 bg-black font-Pretendard_Light text-[3rem] text-font-dark"
 >
-	<svg
+	<div class="move-right absolute z-10 h-10 w-48 bg-black"></div>
+	<Title textColor="white" size="scale-[1.5]" />
+	<!-- <svg
 		class="fade-in opacity-0 duration-200 w-[60px] h-[60px] scale-90 relative overflow-visible flex justify-center items-center"
 		width="40"
 		height="40"
@@ -22,7 +25,7 @@
 	</svg>
 	<Typewritter cursor={true} delay={450} interval={80} keepCursorOnFinish={true}>
 		<h1>Alterim</h1>
-	</Typewritter>
+	</Typewritter> -->
 </div>
 
 <style>
@@ -52,10 +55,23 @@
 		}
 	}
 
+	@keyframes move-right {
+		0% {
+			transform: translateX(0);
+		}
+
+		100% {
+			transform: translateX(12rem);
+		}
+	}
+
 	.scale-animation {
 		animation: scale-animation 0.8s 2.8s ease-in-out forwards;
 	}
 	.fade-in {
 		animation: fade-in 0.4s 0.3s linear forwards;
+	}
+	.move-right {
+		animation: move-right 1s 0.4s linear forwards;
 	}
 </style>
