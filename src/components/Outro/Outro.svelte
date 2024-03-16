@@ -4,7 +4,6 @@
 	import { fade, fly, scale } from 'svelte/transition';
 
 	let isTextInView: boolean;
-	let isBtnInView: boolean;
 </script>
 
 <div
@@ -48,8 +47,8 @@
 		<div class="absolute bottom-0 w-full overflow-hidden bg-black">
 			<div
 				class="relative"
-				in:fly={{ duration: 500, delay: 100, y: 100, opacity: 0 }}
-				out:fly={{ duration: 500, delay: 0, y: 100, opacity: 0 }}
+				in:fly={{ duration: 500, delay: 100, y: 200, opacity: 0 }}
+				out:fly={{ duration: 500, delay: 0, y: 200, opacity: 0 }}
 			>
 				<Footer />
 			</div>
