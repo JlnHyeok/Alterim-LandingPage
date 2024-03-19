@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>Alterim Ai</title>
+	<title>Alterim AI</title>
 	<meta property="og:image" content="/og-image.png" />
 	<meta property="twitter:image" content="/og-image.png" />
 	<meta property="og:description" content="Alterim Ai Demo Page" />

@@ -9,7 +9,7 @@
 
 	const iconArray: ISnsIconProps[] = [
 		{ icon: 'telegram', link: 'https://t.me/pretendard' },
-		{ icon: 'discord', link: 'https://discord.gg/pretendard' },
+		// { icon: 'discord', link: 'https://discord.gg/pretendard' },
 		{ icon: 'twitter', link: 'https://twitter.com/Alterim_ai' }
 	];
 </script>
