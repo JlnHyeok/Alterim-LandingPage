@@ -50,8 +50,8 @@
 
 				<div class="mb-4 mt-8 flex justify-center" style="position: relative; z-index: 999;">
 					<a
-						href="/generate-ai"
-						class="hover:bg-gray-200 flex flex-row items-center justify-center gap-2.5 rounded-[40px] border-[#ffffff] bg-lightGray px-4 py-3 font-Pretendard_Regular text-sm font-normal text-font-lightDeepGreen transition duration-300 hover:text-black dark:bg-white dark:text-black md:w-[240px] md:text-lg"
+						href="/"
+						class="hover:bg-gray-200 flex flex-row items-center justify-center gap-2.5 rounded-[40px] border-[#ffffff] bg-lightGray px-4 py-3 font-Pretendard_Regular text-sm font-normal text-font-lightDeepGreen transition duration-300 hover:cursor-default hover:text-black dark:bg-white dark:text-black md:w-[240px] md:text-lg"
 					>
 						<span>Start Generate AI Soul</span>
 					</a>
