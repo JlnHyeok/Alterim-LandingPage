@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Star from './Star.svelte';
 	import Cloud from './Cloud.svelte';
+	import Smile from './Smile.svelte';
 
 	const EachStarInfos = [
 		// make 10 Position
@@ -27,16 +28,16 @@
 
 <svelte:window bind:scrollY bind:innerHeight={height} />
 
-<div class="absolute z-10 h-screen w-screen overflow-hidden bg-black">
+<div class="absolute z-10 h-screen w-screen overflow-hidden bg-light duration-300 dark:bg-black">
 	<!-- CLOUD SECTION -->
 	<!-- TOP RIGHT -->
-	<Cloud position="z-10 top-[200px] right-[600px]" />
+	<Smile position="z-10 top-[400px] right-[200px]" />
 	<!-- TOP LEFR -->
-	<Cloud position="z-10 top-[225px] left-[-40px]" />
+	<Smile position="z-10 top-[125px] left-[-80px]" />
 	<!-- BOTTOM RIGHT -->
-	<Cloud position="z-10 top-[400px] right-[-10px] md:block hidden" />
+	<Smile position="z-10 top-[100px] right-[-80px] md:block hidden" />
 	<!-- BOTTOM LEFT -->
-	<Cloud position="z-10 top-[555px] left-[300px]" />
+	<Smile position="z-10 top-[355px] left-[200px]" />
 
 	<!-- STAR SECTION -->
 	{#each Array(10) as _, index}

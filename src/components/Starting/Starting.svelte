@@ -7,7 +7,7 @@
 </script>
 
 <div
-	class="relative flex h-[120vh] flex-col-reverse items-center justify-center gap-10 md:flex-row md:gap-[98px]"
+	class="relative flex h-[120vh] flex-col-reverse items-center justify-center gap-10 bg-light duration-300 dark:bg-dark md:flex-row md:gap-[98px]"
 	use:inview={{ unobserveOnEnter: false, rootMargin: '-40%' }}
 	on:inview_change={({ detail }) => {
 		const { inView } = detail;
@@ -15,20 +15,23 @@
 	}}
 >
 	{#if isInView}
-		<div class="relative flex shrink-0 flex-col items-center justify-start gap-12">
+		<div class="relative flex shrink-0 flex-col items-center justify-start gap-12 text-white">
 			<div
 				class="relative flex w-full items-center justify-center self-stretch text-left font-['Pretendard-Medium',_sans-serif] text-[32px] font-medium leading-[120%] md:text-right"
 				in:fade={{ duration: 1000, delay: 0 }}
 				out:fade={{ duration: 1000, delay: 0 }}
 			>
-				<div class="w-full">
+				<div class="w-full text-font-lightShallowGreen dark:text-font-darkBase">
 					<span class="relative w-full">Starting from</span><br />
-					<span class="relative w-full text-font-highlight">BRC-20</span>
+					<span
+						class="relative w-full text-font-lightHighlightGreen1 dark:text-font-darkHighLightGreen1"
+						>BRC-20</span
+					>
 					<span class="relative w-full"> to multichain </span>
 				</div>
 			</div>
 			<div
-				class="relative flex w-[85vw] items-center justify-end text-left font-Pretendard_Light text-base font-light leading-[160%] text-[#ffffff] md:w-[480px] md:text-right md:text-lg"
+				class="relative flex w-[85vw] items-center justify-end text-left font-Pretendard_Light text-base font-light leading-[160%] text-font-lightShallowGreen dark:text-font-darkBase md:w-[480px] md:text-right md:text-lg"
 				in:fade={{ duration: 1000, delay: 700 }}
 				out:fade={{ duration: 1000, delay: 0 }}
 			>

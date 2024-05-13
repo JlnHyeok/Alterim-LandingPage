@@ -12,17 +12,21 @@
 >
 	<div
 		class="relative flex h-6 w-6 shrink-0 flex-row items-center justify-center gap-0 rounded-[48px] pb-2 pl-[12px] pr-[12px] pt-2
-		{isSelect ? `bg-[#c4dacc]` : 'bg-[rgba(255,255,255,0.20)]'} "
+		{isSelect
+			? `dark:bg-darkNumberHighlight bg-lightNumberHighlight`
+			: 'bg-white dark:bg-[rgba(255,255,255,0.20)]'} "
 	>
 		<div
 			class=" relative flex items-center justify-center text-center font-Pretendard_Regular text-sm font-normal leading-normal
-			 {isSelect ? 'text-[#020202]' : 'text-white'}"
+			 {isSelect
+				? 'text-font-lightShallowGreen dark:text-[#020202]'
+				: 'text-font-lightShallowGreen dark:text-white'}"
 		>
 			{number}
 		</div>
 	</div>
 	<div
-		class="relative flex items-center justify-start text-left font-Pretendard_Regular text-base font-normal leading-normal text-[#ffffff]
+		class="text-font-lightShallowGreen dark:text-font-darkBase relative flex items-center justify-start text-left font-Pretendard_Regular text-base font-normal leading-normal
 		{isSelect ? 'block' : 'hidden'}"
 	>
 		{text}

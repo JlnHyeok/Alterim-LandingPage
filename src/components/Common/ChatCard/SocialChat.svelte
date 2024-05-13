@@ -7,8 +7,14 @@
 		EmptyLiked,
 		Sub,
 		Share,
-		Comment
+		Comment,
+		CommentLight,
+		RetweetLight,
+		EmptyLikedLight,
+		SubLight,
+		ShareLight
 	} from '$lib/assets/images';
+	import { darkMode } from '$lib/store';
 	import type { IAvatarInfo } from './type';
 
 	export let avatarInfo: IAvatarInfo;
@@ -16,7 +22,11 @@
 	const textAlign: string = 'flex justify-start items-center';
 </script>
 
-<div class="talkbox_background relative w-full rounded-2xl">
+<div
+	class="{$darkMode
+		? 'talkbox_background_dark_mode'
+		: 'talkbox_background_light_mode'} relative w-full rounded-2xl"
+>
 	<div class="relative flex">
 		<!-- LEFT SIDE -->
 		<section class="flex h-full w-20 flex-col items-center justify-center">
@@ -26,7 +36,7 @@
 			{avatarInfo?.liked ? 'mt-9' : 'mt-4'}
 			"
 			>
-				<img src={avatarInfo?.src} alt="twitter_profile" class="w-full h-full" />
+				<img src={avatarInfo?.src} alt="twitter_profile" class="h-full w-full" />
 			</figure>
 		</section>
 
@@ -56,7 +66,9 @@
       "
 			>
 				<div class="h-full w-full {textAlign}">
-					<strong class="font-Pretendard_Light text-white"> {avatarInfo.name} </strong>
+					<strong class="font-Pretendard_Light text-font-lightShallowGreen dark:text-white">
+						{avatarInfo.name}
+					</strong>
 					<figure class="pl-1 pt-[1px]">
 						<img
 							src={Certed}
@@ -71,7 +83,7 @@
 
 			<!-- MESSAGE SECTION -->
 			<p
-				class="h-fit w-full break-all pr-6 font-Pretendard_ExtraLight text-xs
+				class="h-fit w-full break-all pr-6 font-Pretendard_ExtraLight text-xs text-font-lightSocialChatGreen dark:text-white
       {textAlign}
       "
 			>
@@ -80,28 +92,34 @@
 
 			<!-- BOTTOM SECTION -->
 			<div class="h-10 w-full">
-				<div class="flex h-full w-full font-Pretendard_ExtraLight text-xs">
+				<div
+					class="flex h-full w-full font-Pretendard_ExtraLight text-xs text-[#22203480] dark:text-white"
+				>
 					<button class="flex h-full w-1/4 items-center">
 						<figure class="pr-[5px]">
-							<img src={Comment} alt="comment" />
+							<img src={$darkMode ? Comment : CommentLight} alt="comment" />
 						</figure>
 						<span> {avatarInfo.like} </span>
 					</button>
 					<button class="flex h-full w-1/4 items-center">
 						<figure class="pr-[5px]">
-							<img src={Retweet} alt="retweet" />
+							<img src={$darkMode ? Retweet : RetweetLight} alt="retweet" />
 						</figure>
 						<span> {avatarInfo.retweet} </span>
 					</button>
 					<button class="flex h-full w-1/4 items-center">
 						<figure class="pr-[5px]">
-							<img src={EmptyLiked} alt="empty-like" />
+							<img src={$darkMode ? EmptyLiked : EmptyLikedLight} alt="empty-like" />
 						</figure>
 						<span> {avatarInfo.comment} </span>
 					</button>
 					<div class="flex h-full w-1/4 justify-center gap-4">
-						<button><figure><img src={Sub} alt="subscribe" /></figure></button>
-						<button><figure><img src={Share} alt="share" /></figure></button>
+						<button
+							><figure><img src={$darkMode ? Sub : SubLight} alt="subscribe" /></figure></button
+						>
+						<button
+							><figure><img src={$darkMode ? Share : ShareLight} alt="share" /></figure></button
+						>
 					</div>
 				</div>
 			</div>
@@ -110,8 +128,12 @@
 </div>
 
 <style>
-	.talkbox_background {
+	.talkbox_background_dark_mode {
 		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(17px);
+	}
+	.talkbox_background_light_mode {
+		background-color: white;
 		backdrop-filter: blur(17px);
 	}
 </style>

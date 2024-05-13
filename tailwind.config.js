@@ -7,6 +7,7 @@ delete colors['coolGray'];
 delete colors['blueGray'];
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
+	darkMode: 'class',
 	theme: {
 		extend: {
 			screens: {
@@ -20,12 +21,23 @@ export default {
 			},
 			colors: {
 				...colors,
+				light: '#f5f5f5',
+				lightNumberHighlight: '#aef6cb',
+				dark: 'black',
+				darkNumberHighlight: '#c4dacc',
+				gray: '#ddd',
+				lightGray: '#2220341a',
 				font: {
-					light: '#f5f5f5',
-					dark: '#fff',
-					highlight: '#AEF6CB',
+					lightBase: 'black',
+					lightDeepGreen: '#004a50',
+					lightShallowGreen: '#367378',
+					lightSocialChatGreen: '#03494f',
+					lightHighlightGreen1: '#00a57d',
+					lightHighlightGreen2: '#3da0a0',
+					darkBase: '#f5f5f5',
+					darkHighLightGreen1: '#AEF6CB',
 					sub: '#F2F2F2',
-					subHighlight: '#C4DACC'
+					darkHighLightGreen2: '#C4DACC'
 				}
 			}
 		}

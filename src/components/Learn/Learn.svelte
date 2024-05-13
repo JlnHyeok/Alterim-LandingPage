@@ -7,7 +7,7 @@
 </script>
 
 <div
-	class="flex h-screen w-full items-center justify-center"
+	class="flex h-screen w-full items-center justify-center bg-light duration-300 dark:bg-dark"
 	use:inview={{ unobserveOnEnter: false, rootMargin: '-40%' }}
 	on:inview_change={({ detail }) => {
 		isInView = detail.inView;
@@ -26,13 +26,13 @@
 				>
 					<span>
 						<span
-							class=""
+							class="text-font-lightShallowGreen dark:text-font-darkBase"
 							in:fade={{ duration: 500, delay: 0 }}
 							out:fade={{ duration: 500, delay: 0 }}
 							>Introducing
 						</span>
 						<span
-							class="text-font-highlight"
+							class="text-font-lightHighlightGreen2 dark:text-font-darkHighLightGreen1"
 							in:fade={{ duration: 500, delay: 200 }}
 							out:fade={{ duration: 500, delay: 0 }}>$ATRM</span
 						>
@@ -41,7 +41,7 @@
 
 				<!-- DESCRIPTION SECTION -->
 				<div
-					class="relative flex items-center justify-start self-stretch text-center font-['Pretendard-Light',_sans-serif] text-base font-light leading-[140%] text-[#d3d3d3] md:text-left"
+					class="relative flex items-center justify-start self-stretch text-center font-['Pretendard-Light',_sans-serif] text-base font-light leading-[140%] text-font-lightDeepGreen dark:text-[#d3d3d3] md:text-left"
 					in:fade={{ duration: 500, delay: 400 }}
 					out:fade={{ duration: 500, delay: 0 }}
 				>
@@ -51,7 +51,7 @@
 
 				<!-- BUTTON SECTION -->
 				<div
-					class="relative flex w-[200px] shrink-0 flex-row items-center justify-center gap-2.5 overflow-hidden rounded-[40px] bg-[#ffffff] py-2"
+					class="relative flex w-[200px] shrink-0 flex-row items-center justify-center gap-2.5 overflow-hidden rounded-[40px] bg-font-lightDeepGreen py-2 dark:bg-white"
 					style="box-shadow: 0px 9px 34px 0px rgba(212, 212, 212, 0.50); "
 					in:fade={{ duration: 500, delay: 600 }}
 					out:fade={{ duration: 500, delay: 0 }}
@@ -59,7 +59,7 @@
 					<a
 						href="https://alterim-ai.gitbook.io/welcometoalterim/usdaim/usdaim"
 						target="_blank"
-						class="relative text-center font-Pretendard_Regular text-lg font-normal text-[#020202]"
+						class="relative text-center font-Pretendard_Regular text-lg font-normal text-light dark:text-[#020202]"
 					>
 						Learn More
 					</a>

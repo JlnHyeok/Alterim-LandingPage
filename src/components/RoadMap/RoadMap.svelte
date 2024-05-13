@@ -5,7 +5,11 @@
 	const roadMapTexts = [
 		{
 			text: '2024 Q1',
-			contents: ['$ATRM token Launchpad', 'Genesis NFT Sale: AI Soul', 'Launching MVP product(Chat)']
+			contents: [
+				'$ATRM token Launchpad',
+				'Genesis NFT Sale: AI Soul',
+				'Launching MVP product(Chat)'
+			]
 		},
 		{
 			text: '2024 Q2',
@@ -39,10 +43,12 @@
 	}
 </script>
 
-<div class="flex h-[100vh] w-full items-center justify-center md:h-[80vh]">
+<div
+	class="flex h-[100vh] w-full items-center justify-center bg-light duration-300 dark:bg-dark md:h-[80vh]"
+>
 	<div class="inline-flex flex-col items-start justify-start gap-[72px]">
 		<div
-			class="w-full text-center font-Pretendard_Regular text-[3rem] font-normal text-neutral-100"
+			class="w-full text-center font-Pretendard_Regular text-[3rem] font-normal text-font-lightDeepGreen dark:text-neutral-100"
 		>
 			<span> Roadmap </span>
 		</div>
@@ -64,14 +70,16 @@
 			>
 				<div class="flex h-full items-center justify-start gap-4 self-stretch md:gap-12">
 					<div
-						class="h-20 w-32 flex-shrink-0 text-center font-Pretendard_Regular text-2xl text-emerald-200"
+						class="h-20 w-32 flex-shrink-0 text-center font-Pretendard_Regular text-2xl text-font-lightDeepGreen dark:text-emerald-200"
 					>
 						{roadMapTexts[infoIndex].text}
 					</div>
-					<ul class="h-30 text-left font-Pretendard_Light font-normal text-white">
+					<ul
+						class="min-h-[70px] text-left font-Pretendard_Regular font-normal text-font-lightDeepGreen dark:font-Pretendard_Light dark:text-white"
+					>
 						{#each roadMapTexts[infoIndex].contents as content (content)}
 							<li class="flex w-full" in:fade out:fade={{ duration: 0 }}>
-								<span class="w-full">{content}</span>
+								<span class="block w-full">{content}</span>
 							</li>
 						{/each}
 					</ul>

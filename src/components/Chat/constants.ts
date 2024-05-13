@@ -10,7 +10,9 @@ import {
 	SocialJason,
 	SocialMario,
 	SocialNormal,
-	SocialTommy
+	SocialTommy,
+	ChatClickLight,
+	SocialClickLight
 } from '$lib/assets/images';
 import type { ComponentType, SvelteComponent } from 'svelte';
 import TradingCard from './TradingCard.svelte';
@@ -79,27 +81,31 @@ const talkingChatPropsArray: ITalkingChatProps[] = [
 const infoCardArr = [
 	{
 		title: 'Chat',
-		icon: { normal: ChatNormal, clicked: ChatClick },
+		icon: { normal: ChatNormal, clicked_dark: ChatClick, clicked_light: ChatClickLight },
 		isClick: true
 	},
 	{
 		title: 'Social',
-		icon: { normal: SocialNormal, clicked: SocialClick },
+		icon: { normal: SocialNormal, clicked_dark: SocialClick, clicked_light: SocialClickLight },
 		isClick: false
 	},
 	{
 		title: 'Investment',
-		icon: { normal: InvestmentNormal, clicked: InvestmentNormal },
+		icon: {
+			normal: InvestmentNormal,
+			clicked_dark: InvestmentNormal,
+			clicked_light: InvestmentNormal
+		},
 		isClick: false
 	},
 	{
 		title: 'Add friends',
-		icon: { normal: FriendNormal, clicked: FriendNormal },
+		icon: { normal: FriendNormal, clicked_dark: FriendNormal, clicked_light: FriendNormal },
 		isClick: false
 	},
 	{
 		title: 'Settings',
-		icon: { normal: SettingNormal, clicked: SettingNormal },
+		icon: { normal: SettingNormal, clicked_dark: SettingNormal, clicked_light: SettingNormal },
 		isClick: false
 	}
 ];

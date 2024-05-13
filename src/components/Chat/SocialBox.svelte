@@ -1,6 +1,7 @@
 <script lang="ts">
 	import SocialChat from '$components/Common/ChatCard/SocialChat.svelte';
 	import type { IAvatarInfo } from '$components/Common/ChatCard/type';
+	import { darkMode } from '$lib/store';
 
 	export let screenSize: 'sm' | 'xl' = 'xl';
 	export let isInView: boolean;
@@ -16,7 +17,9 @@
 </script>
 
 <div
-	class="chatbox_background relative mx-auto flex h-[450px] w-[90%] flex-col justify-start overflow-hidden rounded-xl xl:h-[600px] xl:w-[450px]"
+	class="{$darkMode
+		? 'chatbox_background_dark_mode'
+		: 'chatbox_background_light_mode'} relative mx-auto flex h-[450px] w-[90%] flex-col justify-start overflow-hidden rounded-xl xl:h-[600px] xl:w-[450px]"
 >
 	<div
 		class="relative flex h-full w-full flex-col items-center justify-center gap-4 p-2
@@ -78,5 +81,16 @@
 
 	.sm_social_y_animation {
 		animation: sm-translate-social-y 4s forwards;
+	}
+
+	.chatbox_background_dark_mode {
+		background: rgba(31, 31, 31, 0.6);
+		backdrop-filter: blur(17px);
+		box-shadow: 0px 4px 40px 0px rgba(174, 246, 203, 0.2);
+	}
+	.chatbox_background_light_mode {
+		backdrop-filter: blur(17px);
+		background: rgba(255, 255, 255, 0.949);
+		box-shadow: 0px 4px 40px 0px rgba(174, 246, 203, 0.2);
 	}
 </style>

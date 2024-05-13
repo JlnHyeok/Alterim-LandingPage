@@ -1,14 +1,17 @@
 <script lang="ts">
+	import { darkMode } from '$lib/store';
 	import { fade } from 'svelte/transition';
 </script>
 
 <div
-	class="relative flex h-[50vh] w-[82vw] flex-row items-center justify-center gap-[49px] rounded-[20px] border border-white border-opacity-30 bg-black p-10 md:h-[65vh] md:w-[80vw] md:max-w-[1000px]"
-	style="background: linear-gradient(180deg, rgba(200, 207, 214, 0.11) 0%,rgba(200, 207, 214, 0.00) 100%); backdrop-filter:blur(32px);"
+	class="relative flex h-[50vh] w-[82vw] flex-row items-center justify-center gap-[49px] rounded-[20px] border border-white border-opacity-30 p-10 dark:bg-black md:h-[65vh] md:w-[80vw] md:max-w-[1000px]"
+	style="{$darkMode
+		? 'background: linear-gradient(180deg, rgba(200, 207, 214, 0.11) 0%,rgba(200, 207, 214, 0.00) 100%);'
+		: 'background: var(--bg-default03, #FFF);'}  backdrop-filter:blur(32px);"
 >
 	<div class="relative flex shrink-0 flex-col items-center justify-start gap-[49px]">
 		<div
-			class="relative flex items-center justify-center text-center font-Pretendard_Light text-base font-normal leading-[120%] text-[#ffffff]"
+			class="relative flex items-center justify-center text-center font-Pretendard_Regular text-xl font-normal leading-[120%] text-font-lightShallowGreen dark:font-Pretendard_Light dark:text-base dark:text-font-darkBase"
 		>
 			Crafting Soul for your pfp<br />with Alterim AI...
 		</div>
@@ -119,8 +122,8 @@
 						y2="114.5"
 						gradientUnits="userSpaceOnUse"
 					>
-					<stop stop-color="white" />
-					<stop offset="1" stop-color="#AEF6CB" />
+						<stop stop-color="white" />
+						<stop offset="1" stop-color="#AEF6CB" />
 					</linearGradient>
 					<linearGradient
 						id="paint2_linear_80_7106"
@@ -130,8 +133,8 @@
 						y2="114.5"
 						gradientUnits="userSpaceOnUse"
 					>
-					<stop stop-color="#ECFFED" />
-					<stop offset="1" stop-color="#ECF6FF" stop-opacity="0" />
+						<stop stop-color="#ECFFED" />
+						<stop offset="1" stop-color="#ECF6FF" stop-opacity="0" />
 					</linearGradient>
 				</defs>
 			</svg>

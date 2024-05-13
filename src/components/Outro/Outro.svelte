@@ -7,7 +7,7 @@
 </script>
 
 <div
-	class="flex h-screen w-screen flex-col items-center justify-center gap-10 overflow-hidden md:h-[120vh]"
+	class="flex h-screen w-screen flex-col items-center justify-center gap-10 overflow-hidden bg-light duration-300 dark:bg-dark md:h-[120vh]"
 	use:inview={{ unobserveOnEnter: false, rootMargin: '-40%' }}
 	on:inview_change={({ detail }) => {
 		const { inView } = detail;
@@ -17,14 +17,14 @@
 	{#if isTextInView}
 		<div class="text-center md:flex md:justify-center md:gap-2">
 			<h1
-				class="font-Pretendard_Regular text-2xl text-font-dark md:text-[3rem]"
+				class="font-Pretendard_Regular text-2xl text-font-lightDeepGreen dark:text-font-darkBase md:text-[3rem]"
 				in:scale={{ duration: 500, delay: 100, start: 1.5, opacity: 0 }}
 			>
 				Join Alterim World
 			</h1>
 			<br class="hidden md:flex" />
 			<h1
-				class="font-Pretendard_Regular text-2xl text-font-dark duration-500 md:text-[3rem]"
+				class="font-Pretendard_Regular text-2xl text-font-lightDeepGreen duration-500 dark:text-font-darkBase md:text-[3rem]"
 				in:scale={{ duration: 500, delay: 300, start: 1.5, opacity: 0 }}
 			>
 				with your NFT
@@ -38,13 +38,13 @@
 			<a
 				href="https://alterim-ai.gitbook.io/welcometoalterim/usdaim/usdaim"
 				target="_blank"
-				class="relative text-center font-Pretendard_Regular text-sm text-[#020202] md:text-lg"
+				class="relative text-center font-Pretendard_Regular text-sm text-font-lightDeepGreen dark:text-[#020202] md:text-lg"
 			>
 				Launch Demo
 			</a>
 		</div>
 
-		<div class="absolute bottom-0 w-full overflow-hidden bg-black">
+		<div class="absolute bottom-0 w-full overflow-hidden bg-light dark:bg-black">
 			<div
 				class="relative"
 				in:fly={{ duration: 500, delay: 100, y: 200, opacity: 0 }}

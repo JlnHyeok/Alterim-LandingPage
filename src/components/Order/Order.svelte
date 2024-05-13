@@ -8,7 +8,7 @@
 
 	let isTextInView: boolean;
 	let currentNumber: number = 2;
-	let timer: number;
+	let timer: NodeJS.Timeout;
 
 	function changeNumber() {
 		if (currentNumber == 2) {
@@ -38,7 +38,7 @@
 	}
 </script>
 
-<div class="relative box-border h-[120vh] w-screen p-4 md:p-10">
+<div class="relative box-border h-[120vh] w-screen bg-light p-4 duration-300 dark:bg-dark md:p-10">
 	<main
 		class="relative flex h-full w-full flex-col justify-center gap-0 md:gap-10"
 		use:inview={{ unobserveOnEnter: false, threshold: 0.2 }}
@@ -55,12 +55,18 @@
 				out:fade={{ duration: 500 }}
 			>
 				<div>
-					<span class="text-white">Revitalize Your </span>
-					<span class="text-font-highlight"> PFP </span>
-					<span class="text-white">into </span>
-					<span class="text-font-highlight">Clone</span>
+					<span class="text-font-lightDeepGreen dark:text-white">Revitalize Your </span>
+					<span class="text-font-lightHighlightGreen1 dark:text-font-darkHighLightGreen1">
+						PFP
+					</span>
+					<span class="text-font-lightDeepGreen dark:text-white">into </span>
+					<span class="text-font-lightHighlightGreen1 dark:text-font-darkHighLightGreen1"
+						>Clone</span
+					>
 				</div>
-				<div class="flex flex-col gap-0 text-center text-[0.8rem] md:gap-3 md:text-[1.5rem]">
+				<div
+					class="flex flex-col gap-0 text-center text-[0.8rem] text-font-lightShallowGreen dark:text-font-darkBase md:gap-3 md:text-[1.5rem]"
+				>
 					<span class="flex h-5 items-center justify-center"
 						>Your PFP is no longer just a collectible</span
 					>
@@ -68,7 +74,9 @@
 						>it’s uniquely crafted personas with their own</span
 					>
 					<span class="flex h-5 items-center justify-center"
-						>identity powered by &nbsp;<strong class="text-font-subHighlight">Alterim.AI</strong
+						>identity powered by &nbsp;<strong
+							class="text-font-lightShallowGreen dark:text-font-darkHighLightGreen2"
+							>Alterim.AI</strong
 						></span
 					>
 				</div>

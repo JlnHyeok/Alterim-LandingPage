@@ -75,7 +75,7 @@
 <svelte:window bind:scrollY bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />
 
 <div
-	class="h-[300vh] w-full items-center justify-center xl:h-[400vh]"
+	class="h-[300vh] w-full items-center justify-center bg-light duration-300 dark:bg-dark xl:h-[400vh]"
 	use:inview={{ unobserveOnEnter: true, threshold: 0.1 }}
 	on:inview_change={({ detail }) => {
 		const { inView } = detail;
@@ -100,12 +100,13 @@
 						{#each Array(3) as _, idx}
 							<button
 								on:click={() => onClickButton(idx)}
-								class="h-[6px] w-[6px] {currentNumber == idx ? 'bg-green-200' : 'bg-green-900'}"
+								class="h-[10px] w-[10px] dark:h-[6px] dark:w-[6px] {currentNumber == idx
+									? 'bg-font-lightDeepGreen dark:bg-green-200'
+									: 'bg-[#004a5033] dark:bg-green-900'}"
 							></button>
 						{/each}
 					</div>
 					<TitleBox
-						{isInView}
 						titleArray={titleArray[currentNumber]}
 						subTitleArray={subTitleArray[currentNumber]}
 					/>
@@ -139,11 +140,7 @@
 					}}
 				>
 					<div class="flex flex-col items-start gap-4 text-center">
-						<TitleBox
-							isInView={isInViewArr[idx]}
-							titleArray={titleArray[idx]}
-							subTitleArray={subTitleArray[idx]}
-						/>
+						<TitleBox titleArray={titleArray[idx]} subTitleArray={subTitleArray[idx]} />
 					</div>
 
 					<div class="relative flex w-full flex-col gap-3 sm:w-[600px]">

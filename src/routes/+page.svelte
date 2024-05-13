@@ -13,8 +13,8 @@
 	import Outro from '$components/Outro/Outro.svelte';
 </script>
 
-<div class="relative z-20 w-full bg-black text-white md:min-w-[768px]">
-	<Header />
+<div class="relative z-20 w-full bg-light text-white dark:bg-dark md:min-w-[768px]">
+	<Header hideElements={['arrow']} />
 	<div class="relative w-full pt-16">
 		<Intro />
 		<Welcome />
@@ -26,6 +26,7 @@
 		<Comming />
 		<Learn />
 		<RoadMap />
-		<Outro />
+		<Footer />
+		<!-- <Outro /> -->
 	</div>
 </div>

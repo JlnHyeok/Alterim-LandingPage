@@ -14,6 +14,7 @@ import Avatar13 from './avatar/avatar13.png';
 import Avatar14 from './avatar/avatar14.png';
 import Avatar15 from './avatar/avatar15.png';
 import Logo from './logo.png';
+import LightLogo from './light_logo.png';
 import ScrollDown from './scroll-down.png';
 import CardWrap from './card-wrap.png';
 import CardIn from './card-in.png';
@@ -48,6 +49,16 @@ import Comment from './icon/comment.png';
 import EmptyLiked from './icon/empty-liked.png';
 import Share from './icon/share.png';
 import Sub from './icon/sub.png';
+import BackArrow from './icon/back-arrow.png';
+import ChatClickLight from './icon/chat-click-light.png';
+import SocialClickLight from './icon/social-click-light.png';
+import ShareLight from './icon/share-light.png';
+import SubLight from './icon/sub-light.png';
+import EmptyLikedLight from './icon/empty-liked-light.png';
+import CommentLight from './icon/comment-light.png';
+import RetweetLight from './icon/retweet-light.png';
+import RoadMapDefaultLight from './roadmap-default-light.png';
+import Footer from './footer.png';
 
 export const Avatar = [
 	Avatar1,
@@ -69,6 +80,7 @@ export const Avatar = [
 
 export {
 	Logo,
+	LightLogo,
 	ScrollDown,
 	CardWrap,
 	CardIn,
@@ -91,6 +103,8 @@ export {
 	SocialNormal,
 	SocialClick,
 	ChatNormal,
+	ChatClickLight,
+	SocialClickLight,
 	SocialJames,
 	SocialJason,
 	SocialMario,
@@ -102,5 +116,13 @@ export {
 	EmptyLiked,
 	Share,
 	ProfilePenguin,
-	Sub
+	Sub,
+	BackArrow,
+	ShareLight,
+	SubLight,
+	EmptyLikedLight,
+	CommentLight,
+	RetweetLight,
+	RoadMapDefaultLight,
+	Footer
 };

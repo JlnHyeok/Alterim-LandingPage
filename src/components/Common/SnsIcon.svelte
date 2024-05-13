@@ -1,8 +1,10 @@
 <script lang="ts">
+	import { darkMode } from '$lib/store';
+
 	export let icon: 'telegram' | 'discord' | 'twitter';
 	export let link: string;
 	export let size: 'sm' | 'lg' = 'lg';
-	export let color: string = 'black';
+	export let color: string = $darkMode ? 'black' : 'white';
 </script>
 
 <a href={link} class="relative h-6 w-6 shrink-0 {size == 'sm' && 'scale-75'}">
