@@ -2,7 +2,7 @@
 
 ## LINK
 
-- Dev Link ( 화면 구현까지 된 페이지 )
+- Demo Link ( 화면 구현까지 된 페이지 )
     - https://alterim-test.netlify.app/
 - Product Link
     - https://alterim.ai/
